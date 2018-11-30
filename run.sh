@@ -1,2 +1,2 @@
-sudo chmod +x xploit/termux.sh
-bash xploit/termux.sh
+sudo chmod +x SecXploit/termux.sh
+bash SecXploit/termux.sh
