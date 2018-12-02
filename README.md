@@ -1,78 +1,78 @@
 [+] Wordpress Exploit [+]
 
-wpinstallcheck
-revslider
-addblockblocker
-blaze
-catpro
-cherry
-downloadsmanager
-formcraft
-levoslideshow
-powerzoomer
-gravityforms
-getconfig
-getconfig2
-showbiz
-ads
-slideshowpro
-wpmobiledetector
-wysija
-inboundiomarketing
-dzszoomsounds
-reflexgallery
-sexycontactform
-sexycontactform2
-simpleplugin
-wtffu
-phpeventcalendar
-synoptic
-Wpshop
-wpinjetc
-gravityy
-acento
-ajaxstore
-Antioch
-Authentic
-Churchope
-Epic
-Felis
-Force
-FR0
-hbaudio
-History
-Imageex
-kbslider
-Linenity
-Lote27
-Markant
-MichaelCanthony
-mTheme
-NativeChurch
-Parallelus
-RedSteel
-Revsliderss
-S3bubble
-SMWF
-TheLoft
-Trinity
-Urbancity
-Yakimabait
-Membership
-FileManagerwp
-Googlemp3
-Justifiedim
-Justified2
-Justified3
-Aspose
-Asposedoc
-MiwoFTP
-MiwoFTP2
-miniaudioplayer
-Ypotheme
-Media14
-wpmon
-mapprolbs
+    wpinstallcheck
+    revslider
+    addblockblocker
+    blaze
+    catpro
+    cherry
+    downloadsmanager
+    formcraft
+    levoslideshow
+    powerzoomer
+    gravityforms
+    getconfig
+    getconfig2
+    showbiz
+    ads
+    slideshowpro
+    wpmobiledetector
+    wysija
+    inboundiomarketing
+    dzszoomsounds
+    reflexgallery
+    sexycontactform
+    sexycontactform2
+    simpleplugin
+    wtffu
+    phpeventcalendar
+    synoptic
+    Wpshop
+    wpinjetc
+    gravityy
+    acento
+    ajaxstore
+    Antioch
+    Authentic
+    Churchope
+    Epic
+    Felis
+    Force
+    FR0
+    hbaudio
+    History
+    Imageex
+    kbslider
+    Linenity
+    Lote27
+    Markant
+    MichaelCanthony
+    mTheme
+    NativeChurch
+    Parallelus
+    RedSteel
+    Revsliderss
+    S3bubble
+    SMWF
+    TheLoft
+    Trinity
+    Urbancity
+    Yakimabait
+    Membership
+    FileManagerwp
+    Googlemp3
+    Justifiedim
+    Justified2
+    Justified3
+    Aspose
+    Asposedoc
+    MiwoFTP
+    MiwoFTP2
+    miniaudioplayer
+    Ypotheme
+    Media14
+    wpmon
+    mapprolbs
 
 
 [+] Joomla Exploit [+]
