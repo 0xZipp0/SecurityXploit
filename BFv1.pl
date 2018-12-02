@@ -35,18 +35,10 @@ print color('bold red'),"   > <   "; print color('bold white')," |  _ <| '__| | 
 print color('bold red'),"  / . \\ "; print color('bold white'),"  | |_) | |  | |_| | ||  __/  | | | (_) | | | (_|  __/ | \n";
 print color('bold red')," /_/ \\_\\ "; print color('bold white')," |____/|_|   \\__,_|\\__\\___|  |_|  \\___/|_|  \\___\\___|_|";   
 print color('bold red'),"v1.3\n\n";
-print color('bold red'),"\t\t        [";
+print color('bold white'),"\t\t\tCopyright (c) 2018 All right reserve\n";
+print color('bold red'),"\tPut your website list to brute.txt and automatically brute force when you choose a number\n";
 print color('reset');
 };
-
-sub help {
-print q(
-Usage:  perl XBruteForcer.pl -l list.txt -p passwords.txt 
-OPTIONS:
-   -l   => websites list
-   -p  => Passwords list
-);
-}
 
 sub XBruteForcer {
 print color('bold red')," [";
@@ -74,6 +66,10 @@ print color('bold red')," [";
 print color('bold green'),"6";
 print color('bold red'),"]";
 print color('bold white')," Auto \n";
+print color('bold red')," [";
+print color('bold green'),"0";
+print color('bold red'),"]";
+print color('bold green')," back\n";
 print color('bold red')," [";
 print color('bold green'),"+";
 print color('bold red'),"]";
@@ -458,4 +454,7 @@ close (TEXT);
 next OUTER;
 }
 }
+}
+if($number eq '0'){
+system("xploit.pl");
 }
