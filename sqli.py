@@ -1,12 +1,6 @@
-       #########################################
-       # Author : Debby anggraini ( @ciku370 ) #
-       # Team   : Blackhole Security           #
-       # Date   : 2 - 5 - 2018                 #
-       # Github : https://github.com/ciku370   #
-       #########################################
-
 import urllib2 , cookielib , random , re , sys , socket , time , httplib , ssl ,os
-	
+from datetime import datetime
+from time import time	
 if sys.platform == "linux2" or sys.platform == "linux":
 	R = ("\033[31m")
 	W = ("\033[0;1m")
@@ -25,7 +19,6 @@ else:
 filename = ("Result/SQLi.txt")
 vuln = open(filename,"a")
 finallist = []
-
 # Thanks Google for User-Agent , sites and list sqlerrors --
 
 header = ['Mozilla/4.0 (compatible; MSIE 5.0; SunOS 5.10 sun4u; X11)',
@@ -206,21 +199,21 @@ def cari(inurl , site , maxc):
     print ("\n"+W+43*"=")
     print (B+"[+] "+G+"Urls (sorted) "+W+": %s Url" % (len(finallist)))
     if site == '':
-	    print (B+"[+] "+G+"country       "+W+": random")
+	    print (B+"[+] "+G+"Site       "+W+": random")
     else:
-	    print (B+"[+] "+G+"country       "+W+": %s"%(site))
+	    print (B+"[+] "+G+"Site       "+W+": %s"%(site))
     return finallist
 
 if __name__ == "__main__":
-	os.system("clear")
-	print (R+" _____ _____ __    _  "+B+" _____")
-	print (R+"|   __|     |  |  |_| "+B+"|   __|___ ___ ___ ___ ___ ___")
+	date = datetime.now()
+	print (R+" _____ _____ __    _  "+B+" _____ "+W+"Copyright(c)2018. All right reserve")
+	print (R+"|   __|     |  |  |_| "+B+"|   __|___ ___ ___ ___ ___ ___ ")
 	print (R+"|__   |  |  |  |__| | "+B+"|__   |  _| .'|   |   | -_|  _|")
-	print (R+"|_____|__  _|_____|_| "+B+"|_____|___|__,|_|_|_|_|___|_|")
-	print (R+"         |__|")
-	
+	print (R+"|_____|__  _|_____|_| "+B+"|_____|___|__,|_|_|_|_|___|_|  ")
+	print (R+"         |__|      Started at: "),date
+
 	inurl = raw_input(B+"[+]"+G+" Inurl    "+W+": ")
-	site  = raw_input(B+"[+]"+G+" country  "+W+": ")
+	site  = raw_input(B+"[+]"+G+" Site  "+W+": ")
 	maxc  = raw_input(B+"[+]"+G+" Max Page "+W+": ")
 			
 	print (43*"=")
