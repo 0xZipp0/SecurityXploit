@@ -195,9 +195,7 @@
         
 [+] Shells Finder [+] 
 
-     WSO Shell
-     
-    7513 Wordlist 
+     WSO Shell 
 
 [+] FTP Scanner [+]
         
@@ -206,7 +204,7 @@
      WSO Shell
      
 	 
-[+] File Uploader Finder [+]
+[+] File Upload Checker [+]
 	 
 [+] IP Generator [+]
 
