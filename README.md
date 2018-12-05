@@ -137,7 +137,7 @@
 
 [+] Drupal Exploit [+]
 
-    drupal brute
+    add admin
     drupalgeddon
 
 [+] Prestashop Exploit [+]
@@ -172,7 +172,7 @@
 
 [+] Magento Exploit [+] 
 
-    magento brute
+    add admin
 
 [+] Open Cart [+]
 
