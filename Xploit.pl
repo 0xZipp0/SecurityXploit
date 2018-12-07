@@ -4646,7 +4646,7 @@ if ($check =~ /200/){
     close(TEXT);
     print color('bold green');
 	print "[Success]\n";
-	print "$def";
+	print "$def\n";
     print color('reset');
 }
 
