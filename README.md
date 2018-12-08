@@ -223,4 +223,6 @@
 
      Mass Poster
 
-
+[+] BIN Generator [+]
+	
+	range of 200 BIN'S
