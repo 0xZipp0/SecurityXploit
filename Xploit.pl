@@ -134,13 +134,13 @@ print color("green" ), "[";print color("white"),"13";print color("green"),"]";pr
 print color("green" ), "[";print color("white"),"14";print color("green"),"]";print color("red"),"Exploit Joomla only\n";
 print color("green" ), "[";print color("white"),"15";print color("green"),"]";print color("yellow"),"Exploit OpenCart only\n";
 print color("green" ), "[";print color("white"),"16";print color("green"),"]";print color("green"),"Shells Finder [ WSO Shell ]\n";
-print color("green" ), "[";print color("white"),"17";print color("green"),"]";print color("red"),"File Upload Checker\n";
-print color("green" ), "[";print color("white"),"18";print color("green"),"]";print color("blue"),"IP Generator\n";
-print color("green" ), "[";print color("white"),"19";print color("green"),"]";print color("red"),"List Sites to IP\n";
+print color("green" ), "[";print color("white"),"17";print color("green"),"]";print color("blue"),"File Upload Checker\n";
+print color("green" ), "[";print color("white"),"18";print color("green"),"]";print color("red"),"IP Generator\n";
+print color("green" ), "[";print color("white"),"19";print color("green"),"]";print color("yellow"),"List Sites to IP\n";
 print color("green" ), "[";print color("white"),"20";print color("green"),"]";print color("green"),"Reverse IP [ Get site from IP ] \n";
 print color("green" ), "[";print color("white"),"21";print color("green"),"]";print color("blue"),"DDos Attack\n";
 print color("green" ), "[";print color("white"),"22";print color("green"),"]";print color("red"),"Zone-h [poster]\n";
-print color("green" ), "[";print color("white"),"23";print color("green"),"]";print color("red"),"BIN Generator [ Range of 200 ]\n";
+print color("green" ), "[";print color("white"),"23";print color("green"),"]";print color("yellow"),"BIN Generator [ Range of 200 ]\n";
 print color("green" ), "[";print color("white"),"24";print color("green"),"]";print color("red"),"Exit\n";
 print color("red"),"SecurityXploit";print color("green"),"~";print color("white")," #";	
 print color ('reset');
