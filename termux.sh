@@ -23,8 +23,6 @@ cpan install Term::ANSIColor
 cpan install URI::URL
 cpan install IO::Socket::INET
 cpan install Try::Tiny
-cpan install HTML::TreeBuilder
-cpan install WWW::Mechanize
 echo "[✔]====================================================================[✔]";
 echo "[✔]  Tool installed successfully! You can execute SecurityXploit now   [✔]";
 echo "[✔]====================================================================[✔]";
