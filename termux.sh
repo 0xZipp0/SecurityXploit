@@ -24,7 +24,5 @@ cpan install URI::URL
 cpan install IO::Socket::INET
 cpan install Try::Tiny
 echo "[✔]====================================================================[✔]";
-echo "[✔]  Tool installed successfully! You can execute SecurityXploit now   [✔]";
+echo "[✔]  Tool installed successfully! \nYou can execute SecurityXploit now [✔]";
 echo "[✔]====================================================================[✔]";
-cd SecurityXploit
-perl Xploit.pl
