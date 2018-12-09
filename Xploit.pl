@@ -19,7 +19,6 @@ use URI::URL;
 use IO::Select;
 use IO::Socket::INET;
 use MIME::Base64;
-use HTML::Entities;
 my $ua = LWP::UserAgent->new;
 $ua->timeout(10);
 main:;
