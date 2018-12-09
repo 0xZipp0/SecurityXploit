@@ -28,4 +28,5 @@ cpan install WWW::Mechanize
 echo "[✔]====================================================================[✔]";
 echo "[✔]  Tool installed successfully! You can execute SecurityXploit now   [✔]";
 echo "[✔]====================================================================[✔]";
-cd 
+cd SecurityXploit
+perl Xploit.pl
