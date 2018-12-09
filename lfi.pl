@@ -40,7 +40,7 @@ $logo="
                                             XXXbb   ddXXX
                                            x.X         X.x
                                           b'             'd     
-
+                               Copyright (c) 2018. All right reseved
 ";
 print $logo;
 print "\n\n";
