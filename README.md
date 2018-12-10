@@ -1,49 +1,49 @@
-<h1>XAttacker Tool</h1>
-<p><a href="https://github.com/Moham3dRiahi/XAttacker"><img src="https://img.shields.io/badge/SecurityXploit-v2.5-green.svg" alt="Version" data-canonical-src="https://img.shields.io/badge/XAttacker-2.5-brightgreen.svg?maxAge=259200" style="max-width:100%;"></a>
-<a href="https://github.com/Moham3dRiahi/XAttacker"><img src="https://img.shields.io/badge/Release-Stable-orange.svg" alt="Stage" data-canonical-src="https://img.shields.io/badge/Release-Stable-orange.svg" style="max-width:100%;"></a>
-<a href="https://github.com/Moham3dRiahi/XAttacker"><img src="https://img.shields.io/badge/Supported%20OS-Linux%2FWindows-brightgreengreen.svg" alt="Build" data-canonical-src="https://img.shields.io/badge/Supported%20OS-Linux%2FWindows-brightgreengreen.svg" style="max-width:100%;"></a></p>
+<h1>Security Xploit</h1>
+<p><a href="https://github.com/PhHitachi/SecurityXploit"><img src="https://img.shields.io/badge/SecurityXploit-v2.5-green.svg" alt="Version" data-canonical-src="https://img.shields.io/badge/XAttacker-2.5-brightgreen.svg?maxAge=259200" style="max-width:100%;"></a>
+<a href="https://github.com/PhHitachi/SecurityXploit"><img src="https://img.shields.io/badge/Release-Stable-orange.svg" alt="Stage" data-canonical-src="https://img.shields.io/badge/Release-Stable-orange.svg" style="max-width:100%;"></a>
+<a href="https://github.com/PhHitachi/SecurityXploit"><img src="https://img.shields.io/badge/Supported%20OS-Linux%2FWindows-brightgreengreen.svg" alt="Build" data-canonical-src="https://img.shields.io/badge/Supported%20OS-Linux%2FWindows-brightgreengreen.svg" style="max-width:100%;"></a></p>
 <p><a href="https://github.com/PhHitachi/SecurityXploit/blob/master/COPYING.GPL"><img src="https://img.shields.io/github/license/PhHitachi/SecurityXploit.svg?style=social" alt="License"style="max-width:100%;"></a>
-<p>X Attacker Tool ☣ Website Vulnerability Scanner & Auto Exploiter<br>You can use this tool to check the security by finding the vulnerability in your website or you can use this tool to Get Shells | Sends | Deface | cPanels | Databases | Brute Force |SQli Scanner | Local File Inclusion | Shell Finder | File Upload Checker | FTP Scanner | Admin Finder | BIN Generator |</p>
+<p>Security Xploit Tool Website Vulnerability Scanner & Auto Exploiter<br>You can use this tool to check the security by finding the vulnerability in your website or you can use this tool to Get Shells | Sends | Deface | cPanels | Databases | Brute Force |SQli Scanner | Local File Inclusion | Shell Finder | File Upload Checker | FTP Scanner | Admin Finder | BIN Generator |</p>
 
-<h2>X Attacker</h2>
+<h2>Security Xploit</h2>
 
-X Attacker Tool ☣ Website Vulnerability Scanner & Auto Exploiter
-<img src="https://i.imgur.com/DxZyQit.jpg" data-canonical-src="https://i.imgur.com/DxZyQit.jpg" style="max-width:100%;">
+Security Xploit Tool Website Vulnerability Scanner & Auto Exploiter
+<img src="https://imgur.com/jYYJCTF.jpg" data-canonical-src="https://imgur.com/jYYJCTF.jpg" style="max-width:100%;">
 
 <b>[+] Auto Cms Detect<b>
 
 [+] Wordpress Exploit [+]
 
-wpinstallcheck
-revslider
-addblockblocker
-blaze
-catpro
-cherry
-downloadsmanager
-formcraft
-levoslideshow
-powerzoomer
-gravityforms
-getconfig
-getconfig2
-showbiz
-ads
-slideshowpro
-wpmobiledetector
-wysija
-inboundiomarketing
-dzszoomsounds
-reflexgallery
-sexycontactform
-sexycontactform2
-simpleplugin
-wtffu
-phpeventcalendar
-synoptic
-Wpshop
-wpinjetc
-gravityy
+<br>wpinstallcheck
+<br>revslider
+<br>addblockblocker
+<br>blaze
+<br>catpro
+<br>cherry
+<br>downloadsmanager
+<br>formcraft
+<br>levoslideshow
+<br>powerzoomer
+<br>gravityforms
+<br>getconfig
+<br>getconfig2
+<br>showbiz
+<br>ads
+<br>slideshowpro
+<br>wpmobiledetector
+<br>wysija
+<br>inboundiomarketing
+<br>dzszoomsounds
+<br>reflexgallery
+<br>sexycontactform
+<br>sexycontactform2
+<br>simpleplugin
+<br>wtffu
+<br>phpeventcalendar
+<br>synoptic
+<br>Wpshop
+<br>wpinjetc
+<br>gravityy
 acento
 ajaxstore
 Antioch
