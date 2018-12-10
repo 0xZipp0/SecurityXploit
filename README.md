@@ -44,186 +44,186 @@ Security Xploit Tool Website Vulnerability Scanner & Auto Exploiter
 <br>Wpshop
 <br>wpinjetc
 <br>gravityy
-acento
-ajaxstore
-Antioch
-Authentic
-Churchope
-Epic
-Felis
-Force
-FR0
-hbaudio
-History
-Imageex
-kbslider
-Linenity
-Lote27
-Markant
-MichaelCanthony
-mTheme
-NativeChurch
-Parallelus
-RedSteel
-Revsliderss
-S3bubble
-SMWF
-TheLoft
-Trinity
-Urbancity
-Yakimabait
-Membership
-FileManagerwp
-Googlemp3
-Justifiedim
-Justified2
-Justified3
-Aspose
-Asposedoc
-MiwoFTP
-MiwoFTP2
-miniaudioplayer
-Ypotheme
-Media14
-wpmon
-mapprolbs
+<br>acento
+<br>ajaxstore
+<br>Antioch
+<br>Authentic
+<br>Churchope
+<br>Epic
+<br>Felis
+<br>Force
+<br>FR0
+<br>hbaudio
+<br>History
+<br>Imageex
+<br>kbslider
+<br>Linenity
+<br>Lote27
+<br>Markant
+<br>MichaelCanthony
+<br>mTheme
+<br>NativeChurch
+<br>Parallelus
+<br>RedSteel
+<br>Revsliderss
+<br>S3bubble
+<br>SMWF
+<br>TheLoft
+<br>Trinity
+<br>Urbancity
+<br>Yakimabait
+<br>Membership
+<br>FileManagerwp
+<br>Googlemp3
+<br>Justifiedim
+<br>Justified2
+<br>Justified3
+<br>Aspose
+<br>Asposedoc
+<br>MiwoFTP
+<br>MiwoFTP2
+<br>miniaudioplayer
+<br>Ypotheme
+<br>Media14
+<br>wpmon
+<br>mapprolbs<br><br>
 [+] Joomla Exploit [+]
 
-com_installer
-comjdownloads
-comjdownloadsdef
-comfabrik
-comfabrikdef
-comfabrik2
-comfabrikdef2
-hdflvplayer
-comadsmanager
-comblog
-comusers
-comweblinks
-com_content
-mod_simplefileupload
-com_search
-com_admin1
-com_admin2
-com_content1
-com_content2
-com_weblinks
-com_mailto
-com_content3
-com_content4
-com_users
-com_search1
-com_poll
-com_banners
-com_mailto1
-com_a6mambocredits
-com_a6mambohelpdesk
-com_advancedpoll
-com_akocomment
-com_articles
-com_artlinks
-com_trade
-com_bayesiannaivefilter
-com_babackup
-redmy
-facile
-sujks
-rocks
-genesissimple
-developertools
-artuploader
-fancys
-hwdvideoshare
-ksadvertiser
-osproperty
-collector
-NovaSFH
-Jimtawl
-Proclaim
-fox2
-b22j
-b2j
-comjce
-comedia
-[+] Drupal Exploit [+]
+<br>com_installer
+<br>comjdownloads
+<br>comjdownloadsdef
+<br>comfabrik
+<br>comfabrikdef
+<br>comfabrik2
+<br>comfabrikdef2
+<br>hdflvplayer
+<br>comadsmanager
+<br>comblog
+<br>comusers
+<br>comweblinks
+<br>com_content
+<br>mod_simplefileupload
+<br>com_search
+<br>com_admin1
+<br>com_admin2
+<br>com_content1
+<br>com_content2
+<br>com_weblinks
+<br>com_mailto
+<br>com_content3
+<br>com_content4
+<br>com_users
+<br>com_search1<br>
+com_poll<br>
+com_banners<br>
+com_mailto1<br>
+com_a6mambocredits<br>
+com_a6mambohelpdesk<br>
+com_advancedpoll<br>
+com_akocomment<br>
+com_articles<br>
+com_artlinks<br>
+com_trade<br>
+com_bayesiannaivefilter<br>
+com_babackup<br>
+redmy<br>
+facile<br>
+sujks<br>
+rocks<br>
+genesissimple<br>
+developertools<br>
+artuploader<br>
+fancys<br>
+hwdvideoshare<br>
+ksadvertiser<br>
+osproperty<br>
+collector<br>
+NovaSFH<br>
+Jimtawl<br>
+Proclaim<br>
+fox2<br>
+b22j<br>
+b2j<br>
+comjce<br>
+comedia<br><br>
+[+] Drupal Exploit [+]<br>
 
-add admin
-drupalgeddon
-[+] Prestashop Exploit [+]
+add admin<br>
+drupalgeddon<br><br>
+[+] Prestashop Exploit [+]<br><br>
 
-columnadverts
-soopamobile
-soopabanners
-vtermslideshow
-simpleslideshow
-productpageadverts
-homepageadvertise
-homepageadvertise2
-jro_homepageadvertise
-attributewizardpro
-oneattributewizardpro
-attributewizardproOLD
-attributewizardpro_x
-advancedslider
-cartabandonmentpro
-cartabandonmentproOld
-videostab
-wg24themeadministration
-fieldvmegamenu
-wdoptionpanel
-pk_flexmenu
-pk_vertflexmenu
-n   vn_export_orders
-megamenu
-tdpsthemeoptionpanel
-psmodthemeoptionpanel
-masseditproduct
-[+] Magento Exploit [+]
+columnadverts<br>
+soopamobile<br>
+soopabanners<br>
+vtermslideshow<br>
+simpleslideshow<br>
+productpageadverts<br>
+homepageadvertise<br>
+homepageadvertise2<br>
+jro_homepageadvertise<br>
+attributewizardpro<br>
+oneattributewizardpro<br>
+attributewizardproOLD<br>
+attributewizardpro_x<br>
+advancedslider<br>
+cartabandonmentpro<br>
+cartabandonmentproOld<br>
+videostab<br>
+wg24themeadministration<br>
+fieldvmegamenu<br>
+wdoptionpanel<br>
+pk_flexmenu<br>
+pk_vertflexmenu<br>
+nvn_export_orders<br>
+megamenu<br>
+tdpsthemeoptionpanel<br>
+psmodthemeoptionpanel<br>
+masseditproduct<br><br>
+[+] Magento Exploit [+]<br><br>
 
-add admin
-[+] Open Cart [+]
+add admin<br><br>
+[+] Open Cart [+]<br><br>
 
-opencart brute
-[+] lokomedia [+]
+opencart brute<br>
+[+] lokomedia [+]<br><br>
 
-Database sqli inject
-[+] Local file Inclusion [+]
+Database sqli inject<br><br>
+[+] Local file Inclusion [+]<br>
 
-/etc/passwd
-/proc/self/
-[+] admin page finder [+]
+/etc/passwd<br>
+/proc/self/<br>
+[+] admin page finder [+]<br>
 
-7513 Wordlist 
-[+] FTP Scanner [+]
+7513 Wordlist <br>
+[+] FTP Scanner [+]<br>
 
-[+] Shells Finder [+]
+[+] Shells Finder [+]<br>
 
- WSO Shell 
-[+] FTP Scanner [+]
+ WSO Shell <br>
+[+] FTP Scanner [+]<br><br>
 
-[+] Shells Finder [+]
+[+] Shells Finder [+]<br><br>
 
- WSO Shell
-[+] File Upload Checker [+]
+ WSO Shell<br>
+[+] File Upload Checker [+]<br><br>
 
-[+] IP Generator [+]
+[+] IP Generator [+]<br><br>
 
-[+] List Sites to IP [+]
+[+] List Sites to IP [+]<br><br>
 
-[+] Reverse IP [+]
+[+] Reverse IP [+]<br><br>
 
-Get site from IP 
-[+] DDos Attack [+]
+Get site from IP <br><br>
+[+] DDos Attack [+]<br><br>
 
-anonymous DDoser
-Skull DDoser
-[+] Zone-h [+]
+anonymous DDoser<br>
+Skull DDoser<br><br>
+[+] Zone-h [+]<br><br>
 
- Mass Poster
-[+] BIN Generator [+]
+ Mass Poster<br><br>
+[+] BIN Generator [+]<br><br>
 
-range of 200 BIN'S
+range of 200 BIN'S<br><br>
 
 <h2>Video</h2>
 <a href="https://www.youtube.com/watch?v=EgqTsrWt2VU"><img src="https://i.imgur.com/5B96biH.png" style="max-width:100%;"></a>
