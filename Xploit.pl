@@ -165,9 +165,9 @@ system("python admin.py");
 }if($item eq '7'){
 system("python FTP_scanner.py");
 }if($item eq '8'){
-system("sqli.py");
+system("python sqli.py");
 }if($item eq '9'){
-system("perl fli.pl");
+system("perl lfi.pl");
 }if($item eq '10'){
 system("perl wpbrute.pl");
 }if($item eq '11'){
