@@ -4,7 +4,7 @@ time.sleep(1)
 def generator():
     bin = raw_input("Enter Bin (Ex :483745) : ")
     m =  raw_input("Month (Ex :01)   : ")
-    y =  raw_input("Year  (Ex :2018) : ")
+    y =  raw_input("Year  (Ex :2022) : ")
     i=1 
 	
     for i in range(0,200): #range of generate
