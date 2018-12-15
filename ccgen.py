@@ -10,7 +10,7 @@ def generator():
     for i in range(0,200): #range of generate
             i=i+1
 	    code = random.randint(100,999) #Security Code
-	    number = random.randint(1000000000,v) # Limit of CreditCard Number
+	    number = random.randint(1000000000,9999999999) # Limit of CreditCard Number
 	    creditcard = (bin,number)
 	    cc = "%s%s"%(creditcard)
 	    all = cc,"|",m,"|",y,"|",code
